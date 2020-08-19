@@ -22,6 +22,9 @@ doi: [`10.1002/hyp.13845`](https://doi.org/10.1002/hyp.13845)
   url = {https://doi.org/10.1002/hyp.13845},<br>&nbsp;&nbsp;
   year = {2020},<br>&nbsp;&nbsp;
   publisher = {Wiley},<br>&nbsp;&nbsp;
+  volume = {34},<br>&nbsp;&nbsp;
+  number = {19},<br>&nbsp;&nbsp;
+  pages = {3848--3866},<br>&nbsp;&nbsp;
   author = {Xing Chen and Mukesh Kumar and Daniel B. Richter and Yair Mau},<br>&nbsp;&nbsp;
   title = {Impact of gully incision on hillslope hydrology},<br>&nbsp;&nbsp;
   journal = {Hydrological Processes}<br>}

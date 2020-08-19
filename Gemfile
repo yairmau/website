@@ -41,3 +41,7 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 gem "faraday", "< 1.0"
 
+# following GitHub's allert:
+# https://github.com/yairmau/website/network/alert/Gemfile.lock/kramdown/open
+gem "kramdown", ">= 2.3.0"
+
