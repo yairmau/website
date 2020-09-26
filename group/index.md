@@ -39,6 +39,11 @@ title: Group
 
 ## Group Pictures
 
+### 2020-09-03, SkyTown, Tel Aviv
+
+Laura Rez, Yuval Bayer, Nurit Goldberg, Avigail Kaner, Yair Mau, Taiwo Adeyemo, Isaac Kramer  
+<img src="/images/group/group_2020-09-03-skytown-TA.png" alt="skytown" style="width: 800px;"/>
+
 ### 2020-03-18, First Corona zoom meeting
 <img src="/images/group/zoom-meeting-2020.jpeg" alt="corona-zoom-meeting-2020" style="width: 800px;"/>
 
@@ -52,5 +57,5 @@ The original sentence was
 ### 2019-01-10, Yatir Forest
 
 Avi Gross, Avigail Kaner, Isaac Kramer, Yair Mau
-<img src="/images/group/group_yatirforest_20190110.jpg" alt="yatir-forest" style="width: 800px;"/>
+<img src="/images/group/group_2019-01-10_yatirforest.jpg" alt="yatir-forest" style="width: 800px;"/>
 
