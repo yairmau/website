@@ -37,6 +37,11 @@ title: Group
 
 <hr style="border-top: 3px solid #ccc;">
 
+### Yuval Bayer, Undergraduate Student  
+<img src="/images/group/yuval-500px.png" alt="yuval" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+
+<hr style="border-top: 3px solid #ccc;">
+
 ### Avigail Kaner, Research Specialist  
 <img src="/images/group/avigail-500px.jpg" alt="avigail" width="350" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
