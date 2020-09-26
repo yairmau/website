@@ -22,6 +22,11 @@ title: Group
 
 <hr style="border-top: 3px solid #ccc;">
 
+### Laura Rez, MSc student  
+<img src="/images/group/laura-500px.png" alt="laura" width="310" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+
+<hr style="border-top: 3px solid #ccc;">
+
 ### Michael Avi Gross, MSc student  
 <img src="/images/group/avi-500px.jpg" alt="avi" width="310" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
