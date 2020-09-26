@@ -3,7 +3,7 @@ layout: page-no-title
 title: More
 ---
 
-## <i class="fas fa-plus fa-fw svv" aria-hidden="true"></i> [Teaching](/teaching/)
+## <i class="fas fa-chalkboard fa-fw svv" aria-hidden="true"></i> [Teaching](/teaching/)
 
 ## <i class="fas fa-tools fa-fw svv" aria-hidden="true"></i> [Tools I recommend](/more/tools/)
 
