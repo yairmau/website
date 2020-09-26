@@ -8,6 +8,31 @@ title: Publications
 </header>
 
 <i class="far fa-file fa-fw fa-lg svv"></i>
+Isaac Kramer and **Yair Mau**. Soil degradation risks assessed by the SOTE model for salinity and sodicity. *Water Resources Research*, 2020.  
+doi: [`10.1029/2020WR027456`](https://doi.org/10.1029/2020WR027456)  
+<a href="javascript:void(0);" onClick="toggleDiv('abstract-kramer2020soil')">Abstract <i class="fas fa-plus-square"></i></a>&emsp;
+<a href="javascript:void(0);" onClick="toggleDiv('bib-kramer2020soil')">BibTeX <i class="fas fa-plus-square"></i></a>&emsp;
+<a href="/archive/papers/kramer-2020-Soil degradation risks assessed by the SOTE model for salinity and sodicity.pdf" target="_blank">PDF <i class="fas fa-file-pdf" aria-hidden="true"></i></a>
+<div id="abstract-kramer2020soil" style="display:none;">
+  Soil salinity and sodicity are serious environmental hazards, with the potential to limit agricultural production and cause destructive soil degradation. These concerns are especially high in dry areas, which often rely on saline and sodic irrigation water to support agriculture. To assess long-term soil degradation risk, we introduce the SOTE model, which describes the dynamics of soil water content, salinity, and sodicity, as driven by irrigation and rainfall. The SOTE model incorporates how changes in salinity and sodicity affect saturated soil hydraulic conductivity, Ks, on a soil-specific basis. The model was successfully validated against results from a multi-year lysimeter experiment involving different irrigation water qualities and precipitation. We evaluated the impact of shorter rainy seasons on the dynamics of soil degradation in a Mediterranean climate. Critical degradation risk, indicated by reductions in Ks greater than 20%, increased from 0 to 3% when the rainy season was shortened from 130 to 80 days. Alarmingly, when irreversible degradation is allowed for, overall risk increases to 68%. Assessing the effect of irrigation water on different soils textures, we found that while greater clay fractions are usually more susceptible to dispersion, accurate risk assessment hinges on soil-water dynamics. SOTE is amenable to large-ensemble simulations of stochastic climatic conditions, for which trends in the statistics of salinization and soil degradation can be identified. As such, SOTE can be a useful land management tool, allowing planners to understand the risk of long-term soil degradation given irrigation practices, soil qualities, and climate conditions.
+
+</div>
+<div id="bib-kramer2020soil" style="display:none; font-family:monospace;">
+@article{kramer2020soil,<br>&nbsp;&nbsp;
+  doi = {10.1029/2020WR027456},<br>&nbsp;&nbsp;
+  url = {https://doi.org/10.1029/2020WR027456},<br>&nbsp;&nbsp;
+  year = {2020},<br>&nbsp;&nbsp;
+  publisher = {Wiley},<br>&nbsp;&nbsp;
+  volume = {},<br>&nbsp;&nbsp;
+  number = {},<br>&nbsp;&nbsp;
+  pages = {},<br>&nbsp;&nbsp;
+  author = {Isaac Kramer and Yair Mau},<br>&nbsp;&nbsp;
+  title = {Soil degradation risks assessed by the SOTE model for salinity and sodicity},<br>&nbsp;&nbsp;
+  journal = {Water Resources Research}<br>}
+</div>
+
+<br>
+<i class="far fa-file fa-fw fa-lg svv"></i>
 Xing Chen, Mukesh Kumar, Daniel de B. Richter, and **Yair Mau**. Impact of gully incision on hillslope hydrology. *Hydrological Processes*, 2020.  
 doi: [`10.1002/hyp.13845`](https://doi.org/10.1002/hyp.13845)  
 <a href="javascript:void(0);" onClick="toggleDiv('abstract-chen2020impact')">Abstract <i class="fas fa-plus-square"></i></a>&emsp;

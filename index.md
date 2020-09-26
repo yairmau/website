@@ -1,9 +1,10 @@
 ---
 layout: page-no-title
 ---
-**Senior Lecturer**  
-**The Institute of Environmental Sciences**  
+**Senior Lecturer** [Assistant Professor]  
 **The Hebrew University of Jerusalem**  
+The Department of **Soil and Water Sciences**  
+Robert H. Smith **Faculty of Agriculture, Food and Environment**  
 
 
 ## About
@@ -28,12 +29,13 @@ I love to write code, and I made available on the [Tutorials](/tutorials/) page 
 <span>&ensp;</span> +972 8 948 9386  
 <i class="fas fa-map-marked-alt fa-fw fa-lg svv"></i> <span>&ensp;</span> Rehovot Campus, Lubell building, office 19. <a href="https://goo.gl/maps/DM62y5VXAxJ2" target="_blank">Map here</a>
 
+
 <button class="my_button_small" onclick="window.open('https://scholar.google.com/citations?user=kiKmEQMAAAAJ', '_blank');">Google Scholar</button>
+<!-- <a href="https://scholar.google.com/citations?user=kiKmEQMAAAAJ" class="btn">Google Scholar</a> -->
+<!-- <a href="/cv_yairmau.pdf" class="btn">Check out my CV</a> -->
 <button class="my_button_small" onclick="window.open('/cv_yairmau.pdf', '_blank');">Check out my CV</button>
 
-<hr class="my_hr">
-
-
+----
 <br>
 **Piet Hein**  
 <i class="fas fa-quote-left fa-4x fa-pull-left fa-border" aria-hidden="true"></i>
