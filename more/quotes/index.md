@@ -140,3 +140,9 @@ A slow stupefied silence crept over the men as they stared at the computer and t
 
 * The fundamental role of a teacher is not to deliver information. It is guide the social process of learning. The job of a teacher is to inspire, to challenge, to excite their students to want to learn. Yes, they also do explain and demonstrate and show things, but fundamentally that is beside the point. The most important thing a teacher does is make every student feel like they are important, to make them feel accountable for doing the work of learning.  
 **Derek Alexander Muller, https://youtu.be/GEmuEWjHr5c**
+
+* What is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows.  
+**Epictetus**
+
+* Confusion is a feeling that precedes learning something. It means you should pay closer attention, not disengage.  
+**The Stoic Emperor, https://twitter.com/TheStoicEmperor/status/1309998964796567552**
