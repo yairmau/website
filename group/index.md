@@ -8,12 +8,12 @@ title: Group
 </header>
   
 ### Yair Mau, Principal Investigator  
-<img src="/images/group/yair-350x350.jpg" alt="yair" width="300" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+<img src="/images/group/yair-350x350.jpg" alt="yair" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
 <hr style="border-top: 3px solid #ccc;">
 
 ### Isaac Kramer, PhD student  
-<img src="/images/group/isaac-500px.jpg" alt="isaac" width="310" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+<img src="/images/group/isaac-500px.jpg" alt="isaac" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
 <hr style="border-top: 3px solid #ccc;">
 
@@ -23,12 +23,12 @@ title: Group
 <hr style="border-top: 3px solid #ccc;">
 
 ### Laura Rez, MSc student  
-<img src="/images/group/laura-500px.png" alt="laura" width="310" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+<img src="/images/group/laura-500px.png" alt="laura" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
 <hr style="border-top: 3px solid #ccc;">
 
 ### Michael Avi Gross, MSc student  
-<img src="/images/group/avi-500px.jpg" alt="avi" width="310" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+<img src="/images/group/avi-500px.jpg" alt="avi" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
 <hr style="border-top: 3px solid #ccc;">
 
@@ -43,7 +43,7 @@ title: Group
 <hr style="border-top: 3px solid #ccc;">
 
 ### Avigail Kaner, Research Specialist  
-<img src="/images/group/avigail-500px.jpg" alt="avigail" width="350" align="left" style="border-radius: 20%;"/><br CLEAR="all">
+<img src="/images/group/avigail-500px.jpg" alt="avigail" width="320" align="left" style="border-radius: 20%;"/><br CLEAR="all">
 
 <hr style="border-top: 3px solid #ccc;">
 
