@@ -23,9 +23,8 @@ doi: [`10.1029/2020WR027456`](https://doi.org/10.1029/2020WR027456)
   url = {https://doi.org/10.1029/2020WR027456},<br>&nbsp;&nbsp;
   year = {2020},<br>&nbsp;&nbsp;
   publisher = {Wiley},<br>&nbsp;&nbsp;
-  volume = {},<br>&nbsp;&nbsp;
-  number = {},<br>&nbsp;&nbsp;
-  pages = {},<br>&nbsp;&nbsp;
+  volume = {56},<br>&nbsp;&nbsp;
+  number = {10},<br>&nbsp;&nbsp;
   author = {Isaac Kramer and Yair Mau},<br>&nbsp;&nbsp;
   title = {Soil degradation risks assessed by the SOTE model for salinity and sodicity},<br>&nbsp;&nbsp;
   journal = {Water Resources Research}<br>}
