@@ -146,3 +146,6 @@ A slow stupefied silence crept over the men as they stared at the computer and t
 
 * Confusion is a feeling that precedes learning something. It means you should pay closer attention, not disengage.  
 **The Stoic Emperor, https://twitter.com/TheStoicEmperor/status/1309998964796567552**
+
+* Let no one ignorant of geometry enter here.  
+**Said to be engraved on the door of Plato's Academy, the oldest recorded entrance requirement of a college**
