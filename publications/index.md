@@ -8,7 +8,7 @@ title: Publications
 </header>
 
 <i class="far fa-file fa-fw fa-lg svv"></i>
- Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and **Yair Mau **. Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework . *HESS (preprint)*, 2020.  
+ Isaac Kramer, Yuval Bayer, Taiwo Adeyemo, and **Yair Mau**. Hysteresis in soil hydraulic conductivity as driven by salinity and sodicity: a modeling framework . *HESS (preprint)*, 2020.  
 doi: [`10.5194/hess-2020-455`](https://doi.org/10.5194/hess-2020-455)  
 <a href="javascript:void(0);" onClick="toggleDiv('abstract-kramer2020hysteresis')">Abstract <i class="fas fa-plus-square"></i></a>&emsp;
 <a href="javascript:void(0);" onClick="toggleDiv('bib-kramer2020hysteresis')">BibTeX <i class="fas fa-plus-square"></i></a>&emsp;
