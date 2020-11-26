@@ -149,3 +149,7 @@ A slow stupefied silence crept over the men as they stared at the computer and t
 
 * Let no one ignorant of geometry enter here.  
 **Said to be engraved on the door of Plato's Academy, the oldest recorded entrance requirement of a college**
+
+
+* We don't use heuristics just because they are fast and efficient. We use them because they are less precise and thus less vulnerable to be misled by noise. A good heuristic is to distrust whoever adds or requires unnecessary precision. Another good heuristic is to distrust whoever thinks that precision always correlates with correctness.  
+** Luca Dellanna https://twitter.com/DellAnnaLuca/status/1287644735016927234**
