@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Spatial distribution - lecture | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Spatial distribution - lecture" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Environmental Modeling" />
+<meta property="og:description" content="Environmental Modeling" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Spatial distribution - lecture" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html"},"url":"https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html","@type":"BlogPosting","headline":"Spatial distribution - lecture","dateModified":"2020-02-07T00:00:00-06:00","datePublished":"2020-02-07T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"Environmental Modeling","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Spatial distribution - lecture | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Spatial distribution - lecture" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Environmental Modeling" />
+<meta property="og:description" content="Environmental Modeling" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-07T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Spatial distribution - lecture" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html"},"url":"https://yairmau.github.io/jupyter/2020/02/07/spatial-distribution.html","@type":"BlogPosting","headline":"Spatial distribution - lecture","dateModified":"2020-02-07T00:00:00-06:00","datePublished":"2020-02-07T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"Environmental Modeling","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/" style="text-decoration:none">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/research/">Research</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/group/">Group</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Spatial distribution - lecture</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-07T00:00:00-06:00" itemprop="datePublished">
+        Feb 7, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-02-07-spatial-distribution.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-02-07-spatial-distribution.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-02-07-spatial-distribution.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#The-problem">The problem </a></li>
+<li class="toc-entry toc-h2"><a href="#Thiessen-method-[Voronoi-diagram]">Thiessen method [Voronoi diagram] </a></li>
+<li class="toc-entry toc-h2"><a href="#Inverse-distance-method">Inverse distance method </a></li>
+<li class="toc-entry toc-h2"><a href="#Isohyetal-method">Isohyetal method </a></li>
+<li class="toc-entry toc-h2"><a href="#How-it-is-actually-done">How it is actually done </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-02-07-spatial-distribution.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-problem">
+<a class="anchor" href="#The-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The problem<a class="anchor-link" href="#The-problem"> </a>
+</h2>
+<p>Let's say we want to calculate the average rainfall on a watershed, and we have data available for 7 stations, as shown in the figure below [Dingman, figure 4.26]:
+<img src="/images/copied_from_nb/hydrology_figures/dingman-figure4.26.png" alt=""></p>
+<p>There are a number of methods for calculating the average precipitation.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Thiessen-method-[Voronoi-diagram]">
+<a class="anchor" href="#Thiessen-method-%5BVoronoi-diagram%5D" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thiessen method [Voronoi diagram]<a class="anchor-link" href="#Thiessen-method-%5BVoronoi-diagram%5D"> </a>
+</h2>
+<p>Brutsaert, Figure 3.11
+<img src="/images/copied_from_nb/hydrology_figures/brutsaert-figure3.11.png" alt=""></p>
+<p>How to compute the areas:
+<img src="/images/copied_from_nb/hydrology_figures/ward-figure2.15.png" alt=""></p>
+<p>Average areal precipitation is a weighted sum:</p>
+$$
+\langle P \rangle = \frac{\sum_i A_i P_i}{\sum_i A_i}
+$$<p>A nice way to understand the Thiessen method is depicted in the gif below (from <a href="https://commons.wikimedia.org/wiki/File:Voronoi_growth_euclidean.gif">Wikipedia</a>):</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Voronoi_growth_euclidean.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Inverse-distance-method">
+<a class="anchor" href="#Inverse-distance-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inverse distance method<a class="anchor-link" href="#Inverse-distance-method"> </a>
+</h2>
+<p>Brutsaert, Figure 3.12
+<img src="/images/copied_from_nb/hydrology_figures/brutsaert-figure3.12.png" alt=""></p>
+<p>The precipitation for square 17 is</p>
+$$
+P_{17} = 
+\displaystyle\frac
+{\displaystyle\sum_\text{$i$ = all stations}\frac{P_i}{d_{i,17}^2}}
+{\displaystyle\sum_\text{$i$ = all stations}\frac{1}{d_{i,17}^2}}
+$$<p>The average precipitation for the whole watershed is the weighted average of all squares, where the weight is their area:</p>
+$$
+\langle P \rangle = 
+\displaystyle\frac
+{\displaystyle\sum_\text{$j$ = all squares} A_j P_j}
+{\displaystyle\sum_\text{$j$ = all squares} A_j}
+$$<p>Brutsaert, page 93:</p>
+<blockquote>
+<p>Dean and Snyder (1977) found that the exponent (for the distance $d^{-b}$) b = 2 yielded the best results in the Piedmont region of the southeastern United States, whereas Simanton and Osborn (1980) concluded from measurements in Arizona that b can range between 1 and 3 without significantly affecting the results.</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Isohyetal-method">
+<a class="anchor" href="#Isohyetal-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Isohyetal method<a class="anchor-link" href="#Isohyetal-method"> </a>
+</h2>
+<p>Brutsaert, Figure 3.12
+<img src="/images/copied_from_nb/hydrology_figures/brutsaert-figure3.13.png" alt=""></p>
+<p>The same equation of the Thiessen method can be used:</p>
+$$
+\langle P \rangle = \frac{\sum_i A_i P_i}{\sum_i A_i}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-it-is-actually-done">
+<a class="anchor" href="#How-it-is-actually-done" aria-hidden="true"><span class="octicon octicon-link"></span></a>How it is actually done<a class="anchor-link" href="#How-it-is-actually-done"> </a>
+</h2>
+<p>Most often, Geographic Information System (GIS) software is used to analyze spatial data. Two of the most used programs are ArcGIS (proprietary) and QGIS (free).</p>
+<p>A good discussion of the different methods can be found on <a href="https://mgimond.github.io/Spatial/spatial-interpolation.html">Manuel Gimond's website</a>, <em>Intro to GIS and Spatial Analysis</em>.</p>
+<p><strong>Attention</strong>, Don't mix precision with accuracy. There are many ways of interpolating, just because a result seems detailed, it does not imply that it is accurate! See below three interpolation methods.</p>
+<p><img src="https://i.stack.imgur.com/vohvE.jpg" alt=""></p>
+<p>Below you can find a simple Python code that exemplifies some of the methods, producing the following figure:</p>
+<p><img src="/images/copied_from_nb/hydrology_figures/spatial-distribution.png" alt=""></p>
+<div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">griddata</span>
+<span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">Voronoi</span><span class="p">,</span> <span class="n">voronoi_plot_2d</span><span class="p">,</span> <span class="n">ConvexHull</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">left</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">top</span><span class="o">=</span><span class="mf">0.96</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+                    <span class="n">hspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">wspace</span><span class="o">=</span><span class="mf">0.02</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">PI</span> <span class="o">=</span> <span class="s1">'3141592653589793'</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">points</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">points</span><span class="p">,[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">PI</span><span class="p">)])[:(</span><span class="n">N</span><span class="o">+</span><span class="mi">4</span><span class="p">)]</span>
+<span class="c1"># values = np.array([3, 1, 4, 1, 5, 9, 2, 6, 5, 3])</span>
+
+<span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mgrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">100</span><span class="n">j</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">200</span><span class="n">j</span><span class="p">]</span>
+
+<span class="n">grid_z_nearest</span> <span class="o">=</span> <span class="n">griddata</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="p">(</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
+<span class="n">grid_z_cubic</span> <span class="o">=</span> <span class="n">griddata</span><span class="p">(</span><span class="n">points</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="p">(</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">),</span> <span class="n">method</span><span class="o">=</span><span class="s1">'cubic'</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">,</span> <span class="s1">'box'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"the stations"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+    <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="nb">str</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">grid_z_nearest</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">extent</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">origin</span><span class="o">=</span><span class="s1">'lower'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span>
+<span class="n">vor</span> <span class="o">=</span> <span class="n">Voronoi</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+<span class="n">voronoi_plot_2d</span><span class="p">(</span><span class="n">vor</span><span class="p">,</span> <span class="n">show_vertices</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">line_colors</span><span class="o">=</span><span class="s1">'cyan'</span><span class="p">,</span>
+                <span class="n">line_width</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">line_alpha</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Thiessen Method"</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">points</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">points</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="s1">'o'</span><span class="p">,</span> <span class="n">ms</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">markerfacecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">markeredgecolor</span><span class="o">=</span><span class="s2">"red"</span><span class="p">)</span>
+<span class="n">nlines</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="o">-</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">,</span> <span class="n">grid_z_cubic</span><span class="p">,</span> <span class="n">nlines</span><span class="p">)</span>
+<span class="n">cont</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">grid_x</span><span class="p">,</span> <span class="n">grid_y</span><span class="p">,</span> <span class="n">grid_z_cubic</span><span class="p">,</span> <span class="n">nlines</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cont</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">'white'</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">'</span><span class="si">%.0f</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Isohyetal Method"</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">],</span> <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">1.2</span><span class="p">])</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">'off'</span><span class="p">)</span>
+    <span class="n">a</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">'equal'</span><span class="p">,</span> <span class="s1">'box'</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"spatial-distribution.png"</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="mi">500</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/jupyter/2020/02/07/spatial-distribution.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Environmental Modeling<br>
+           The Hebrew University of Jerusalem</p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>

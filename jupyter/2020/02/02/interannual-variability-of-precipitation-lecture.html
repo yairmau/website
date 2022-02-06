@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Interannual variability of precipitation | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Interannual variability of precipitation" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="every year something new" />
+<meta property="og:description" content="every year something new" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-02T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Interannual variability of precipitation" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html"},"url":"https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html","@type":"BlogPosting","headline":"Interannual variability of precipitation","dateModified":"2020-02-02T00:00:00-06:00","datePublished":"2020-02-02T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"every year something new","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Interannual variability of precipitation | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Interannual variability of precipitation" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="every year something new" />
+<meta property="og:description" content="every year something new" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-02T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Interannual variability of precipitation" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html"},"url":"https://yairmau.github.io/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html","@type":"BlogPosting","headline":"Interannual variability of precipitation","dateModified":"2020-02-02T00:00:00-06:00","datePublished":"2020-02-02T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"every year something new","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/" style="text-decoration:none">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/research/">Research</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/group/">Group</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Interannual variability of precipitation</h1><p class="page-description">every year something new</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-02T00:00:00-06:00" itemprop="datePublished">
+        Feb 2, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-02-02-interannual-variability-of-precipitation-lecture.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-02-02-interannual-variability-of-precipitation-lecture.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-02-02-interannual-variability-of-precipitation-lecture.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#hydrological-year">hydrological year </a></li>
+<li class="toc-entry toc-h2"><a href="#coefficient-of-variation">coefficient of variation </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-02-02-interannual-variability-of-precipitation-lecture.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/images/copied_from_nb/hydrology_figures/monthly_tel_aviv_1940-1999.png" alt=""></p>
+<h2 id="hydrological-year">
+<a class="anchor" href="#hydrological-year" aria-hidden="true"><span class="octicon octicon-link"></span></a>hydrological year<a class="anchor-link" href="#hydrological-year"> </a>
+</h2>
+<p>A time period of 12 months for which precipitation totals are measured. The hydrological year is designated by the calendar year in which it <strong>ends</strong>.<br>
+Let's define the hydrological year for Tel Aviv from 1 October to 30 September.</p>
+<p>האם אקלים הגשם שלנו משתנה
+
+</p>
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/v0uNpj03Rk4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<img src="/images/copied_from_nb/hydrology_figures/annual_tel_aviv_with_mean.png" alt="">
+<p><img src="/images/copied_from_nb/hydrology_figures/histogram_tel_aviv_with_mean_and_std.png" alt=""></p>
+<h2 id="coefficient-of-variation">
+<a class="anchor" href="#coefficient-of-variation" aria-hidden="true"><span class="octicon octicon-link"></span></a>coefficient of variation<a class="anchor-link" href="#coefficient-of-variation"> </a>
+</h2>
+<p>$\langle{P}\rangle=$ average precipitation<br>
+$\sigma=$ standard deviation</p>
+<p>
+$$CV = \frac{\sigma}{\langle{P}\rangle}$$
+</p>
+<p>Assuming that the inter-annual distribution is a gaussian: 67% of the time, rainfall will vary +/- 30% from its long term average in Tel Aviv.</p>
+<p>Precipitation averages are <a href="https://www.ncdc.noaa.gov/news/defining-climate-normals-new-ways">usually calculated for time intervals of 30 years</a>.</p>
+<p><img src="/images/copied_from_nb/hydrology_figures/mean_tel_aviv_2_windows.png" alt=""></p>
+<p><img src="/images/copied_from_nb/hydrology_figures/mean_tel_aviv_4_windows.png" alt=""></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#collapse-hide</span>
+
+<span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"TEL AVIV READING_monthly.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">","</span><span class="p">)</span>
+<span class="c1"># make 'DATE' the dataframe index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'DATE'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'DATE'</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'DATE'</span><span class="p">)</span>
+
+<span class="n">df_year_all</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'PRCP'</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="s1">'A-SEP'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>  <span class="c1"># annual frequency, anchored end of September</span>
+<span class="n">df_year_all</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rain (mm)'</span><span class="p">]</span> <span class="c1"># rename 'PRCP' column to 'rain (mm)'</span>
+<span class="n">df_year</span> <span class="o">=</span> <span class="n">df_year_all</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># exclude last row</span>
+
+<span class="c1"># Altair only recognizes column data; it ignores index values.</span>
+<span class="c1"># You can plot the index data by first resetting the index</span>
+<span class="c1"># I know that I've just made 'DATE' the index, but I want to have this here nonetheless so I can refer to this in the future</span>
+<span class="n">source</span> <span class="o">=</span> <span class="n">df_year</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">brush</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">selection</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="s1">'interval'</span><span class="p">,</span> <span class="n">encodings</span><span class="o">=</span><span class="p">[</span><span class="s1">'x'</span><span class="p">])</span>
+
+<span class="c1"># T: temporal, a time or date value</span>
+<span class="c1"># Q: quantitative, a continuous real-valued quantity</span>
+<span class="c1"># https://altair-viz.github.io/user_guide/encoding.html#encoding-data-types</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">()</span><span class="o">.</span><span class="n">mark_bar</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">X</span><span class="p">(</span><span class="s1">'DATE:T'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'date'</span><span class="p">)),</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Y</span><span class="p">(</span><span class="s1">'rain (mm):Q'</span><span class="p">,</span>  <span class="n">axis</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">Axis</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">'annual precipitation (mm) and average'</span><span class="p">)),</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">condition</span><span class="p">(</span><span class="n">brush</span><span class="p">,</span> <span class="n">alt</span><span class="o">.</span><span class="n">OpacityValue</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">alt</span><span class="o">.</span><span class="n">OpacityValue</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)),</span>
+<span class="p">)</span><span class="o">.</span><span class="n">add_selection</span><span class="p">(</span>
+    <span class="n">brush</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">'Select year range and drag for rolling average of annual precipitation in Tel Aviv'</span>
+<span class="p">)</span><span class="o">.</span><span class="n">properties</span><span class="p">(</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">400</span>
+<span class="p">)</span>
+
+<span class="n">line</span> <span class="o">=</span> <span class="n">alt</span><span class="o">.</span><span class="n">Chart</span><span class="p">()</span><span class="o">.</span><span class="n">mark_rule</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">'orange'</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">'mean(rain (mm)):Q'</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="n">alt</span><span class="o">.</span><span class="n">SizeValue</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="p">)</span><span class="o">.</span><span class="n">transform_filter</span><span class="p">(</span>
+    <span class="n">brush</span>
+<span class="p">)</span>
+
+<span class="n">alt</span><span class="o">.</span><span class="n">layer</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">source</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+<div id="altair-viz-5ed3107b01224c8085e175327b2a91d9"></div>
+<script type="text/javascript">
+  (function(spec, embedOpt){
+    let outputDiv = document.currentScript.previousElementSibling;
+    if (outputDiv.id !== "altair-viz-5ed3107b01224c8085e175327b2a91d9") {
+      outputDiv = document.getElementById("altair-viz-5ed3107b01224c8085e175327b2a91d9");
+    }
+    const paths = {
+      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
+      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
+    };
+
+    function loadScript(lib) {
+      return new Promise(function(resolve, reject) {
+        var s = document.createElement('script');
+        s.src = paths[lib];
+        s.async = true;
+        s.onload = () => resolve(paths[lib]);
+        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+        document.getElementsByTagName("head")[0].appendChild(s);
+      });
+    }
+
+    function showError(err) {
+      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
+      throw err;
+    }
+
+    function displayChart(vegaEmbed) {
+      vegaEmbed(outputDiv, spec, embedOpt)
+        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
+    }
+
+    if(typeof define === "function" && define.amd) {
+      requirejs.config({paths});
+      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
+    } else if (typeof vegaEmbed === "function") {
+      displayChart(vegaEmbed);
+    } else {
+      loadScript("vega")
+        .then(() => loadScript("vega-lite"))
+        .then(() => loadScript("vega-embed"))
+        .catch(showError)
+        .then(() => displayChart(vegaEmbed));
+    }
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "bar", "encoding": {"opacity": {"condition": {"value": 1, "selection": "selector001"}, "value": 0.2}, "x": {"type": "temporal", "axis": {"title": "date"}, "field": "DATE"}, "y": {"type": "quantitative", "axis": {"title": "annual precipitation (mm) and average"}, "field": "rain (mm)"}}, "height": 400, "selection": {"selector001": {"type": "interval", "encodings": ["x"]}}, "title": "Select year range and drag for rolling average of annual precipitation in Tel Aviv", "width": 600}, {"mark": {"type": "rule", "color": "orange"}, "encoding": {"size": {"value": 3}, "y": {"type": "quantitative", "aggregate": "mean", "field": "rain (mm)"}}, "transform": [{"filter": {"selection": "selector001"}}]}], "data": {"name": "data-2d96d987e1227deba5d77799c3c22c8b"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-2d96d987e1227deba5d77799c3c22c8b": [{"DATE": "1940-09-30T00:00:00", "rain (mm)": 474.9}, {"DATE": "1941-09-30T00:00:00", "rain (mm)": 447.8}, {"DATE": "1942-09-30T00:00:00", "rain (mm)": 372.90000000000003}, {"DATE": "1943-09-30T00:00:00", "rain (mm)": 618.2}, {"DATE": "1944-09-30T00:00:00", "rain (mm)": 440.49999999999994}, {"DATE": "1945-09-30T00:00:00", "rain (mm)": 810.6}, {"DATE": "1946-09-30T00:00:00", "rain (mm)": 577.3}, {"DATE": "1947-09-30T00:00:00", "rain (mm)": 327.8}, {"DATE": "1948-09-30T00:00:00", "rain (mm)": 484.5}, {"DATE": "1949-09-30T00:00:00", "rain (mm)": 566.0999999999999}, {"DATE": "1950-09-30T00:00:00", "rain (mm)": 844.1000000000001}, {"DATE": "1951-09-30T00:00:00", "rain (mm)": 343.79999999999995}, {"DATE": "1952-09-30T00:00:00", "rain (mm)": 668.9000000000001}, {"DATE": "1953-09-30T00:00:00", "rain (mm)": 564.5}, {"DATE": "1954-09-30T00:00:00", "rain (mm)": 636.8000000000001}, {"DATE": "1955-09-30T00:00:00", "rain (mm)": 524.4000000000001}, {"DATE": "1956-09-30T00:00:00", "rain (mm)": 814.8}, {"DATE": "1957-09-30T00:00:00", "rain (mm)": 568.4}, {"DATE": "1958-09-30T00:00:00", "rain (mm)": 459.80000000000007}, {"DATE": "1959-09-30T00:00:00", "rain (mm)": 378.4}, {"DATE": "1960-09-30T00:00:00", "rain (mm)": 301.7}, {"DATE": "1961-09-30T00:00:00", "rain (mm)": 578.9}, {"DATE": "1962-09-30T00:00:00", "rain (mm)": 658.7}, {"DATE": "1963-09-30T00:00:00", "rain (mm)": 392.1000000000001}, {"DATE": "1964-09-30T00:00:00", "rain (mm)": 622.7}, {"DATE": "1965-09-30T00:00:00", "rain (mm)": 755.5}, {"DATE": "1966-09-30T00:00:00", "rain (mm)": 331.0}, {"DATE": "1967-09-30T00:00:00", "rain (mm)": 663.6}, {"DATE": "1968-09-30T00:00:00", "rain (mm)": 412.4}, {"DATE": "1969-09-30T00:00:00", "rain (mm)": 669.4}, {"DATE": "1970-09-30T00:00:00", "rain (mm)": 415.1}, {"DATE": "1971-09-30T00:00:00", "rain (mm)": 382.0}, {"DATE": "1972-09-30T00:00:00", "rain (mm)": 620.3999999999999}, {"DATE": "1973-09-30T00:00:00", "rain (mm)": 440.49999999999994}, {"DATE": "1974-09-30T00:00:00", "rain (mm)": 697.5}, {"DATE": "1975-09-30T00:00:00", "rain (mm)": 581.7}, {"DATE": "1976-09-30T00:00:00", "rain (mm)": 389.8}, {"DATE": "1977-09-30T00:00:00", "rain (mm)": 606.8}, {"DATE": "1978-09-30T00:00:00", "rain (mm)": 484.3}, {"DATE": "1979-09-30T00:00:00", "rain (mm)": 324.69999999999993}, {"DATE": "1980-09-30T00:00:00", "rain (mm)": 617.6000000000001}, {"DATE": "1981-09-30T00:00:00", "rain (mm)": 490.4}, {"DATE": "1982-09-30T00:00:00", "rain (mm)": 446.0}, {"DATE": "1983-09-30T00:00:00", "rain (mm)": 602.4}, {"DATE": "1984-09-30T00:00:00", "rain (mm)": 270.29999999999995}, {"DATE": "1985-09-30T00:00:00", "rain (mm)": 343.2}, {"DATE": "1986-09-30T00:00:00", "rain (mm)": 360.20000000000005}, {"DATE": "1987-09-30T00:00:00", "rain (mm)": 573.6}, {"DATE": "1988-09-30T00:00:00", "rain (mm)": 659.6}, {"DATE": "1989-09-30T00:00:00", "rain (mm)": 488.90000000000003}, {"DATE": "1990-09-30T00:00:00", "rain (mm)": 648.5}, {"DATE": "1991-09-30T00:00:00", "rain (mm)": 468.9}, {"DATE": "1992-09-30T00:00:00", "rain (mm)": 1064.4}, {"DATE": "1993-09-30T00:00:00", "rain (mm)": 577.9}, {"DATE": "1994-09-30T00:00:00", "rain (mm)": 350.9}, {"DATE": "1995-09-30T00:00:00", "rain (mm)": 804.6999999999999}, {"DATE": "1996-09-30T00:00:00", "rain (mm)": 488.20000000000005}, {"DATE": "1997-09-30T00:00:00", "rain (mm)": 619.1}, {"DATE": "1998-09-30T00:00:00", "rain (mm)": 489.6}, {"DATE": "1999-09-30T00:00:00", "rain (mm)": 226.50000000000003}]}}, {"mode": "vega-lite"});
+</script>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/images/copied_from_nb/hydrology_figures/rolling_average_tel_aviv.png" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/jupyter/2020/02/02/interannual-variability-of-precipitation-lecture.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Environmental Modeling<br>
+           The Hebrew University of Jerusalem</p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>

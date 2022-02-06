@@ -1,1 +1,349 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://yairmau.github.io/website/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yairmau.github.io/website/" rel="alternate" type="text/html" /><updated>2022-02-06T09:06:03-06:00</updated><id>https://yairmau.github.io/website/feed.xml</id><title type="html">Yair Mau extra</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://yairmau.github.io/website/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://yairmau.github.io/website/jupyter/2020/02/20/test</id><author><name></name></author><category term="jupyter" /><summary type="html"><![CDATA[A tutorial of fastpages for Jupyter notebooks.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://yairmau.github.io/website/images/chart-preview.png" /><media:content medium="image" url="https://yairmau.github.io/website/images/chart-preview.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">An Example Markdown Post</title><link href="https://yairmau.github.io/website/markdown/2020/01/14/test-markdown-post.html" rel="alternate" type="text/html" title="An Example Markdown Post" /><published>2020-01-14T00:00:00-06:00</published><updated>2020-01-14T00:00:00-06:00</updated><id>https://yairmau.github.io/website/markdown/2020/01/14/test-markdown-post</id><author><name></name></author><category term="markdown" /><summary type="html"><![CDATA[A minimal example of using markdown with fastpages.]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://yairmau.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://yairmau.github.io/" rel="alternate" type="text/html" /><updated>2022-02-06T09:23:21-06:00</updated><id>https://yairmau.github.io/feed.xml</id><title type="html">Yair Mau</title><subtitle>Environmental Modeling</subtitle><author><name>Yair Mau</name></author><entry><title type="html">Doubling Time</title><link href="https://yairmau.github.io/markdown/2021/11/16/doubling-time.html" rel="alternate" type="text/html" title="Doubling Time" /><published>2021-11-16T00:00:00-06:00</published><updated>2021-11-16T00:00:00-06:00</updated><id>https://yairmau.github.io/markdown/2021/11/16/doubling-time</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/16/doubling-time.html"><![CDATA[<p>Suppose you have a process that can be described by exponential growth.
+It could be anything: interests on an investment, the early phases of infection in a pandemic, whatever.</p>
+
+<p>It is often convenient to have an idea how fast is the growth by answering the question:</p>
+
+<blockquote>
+  <p>How long will it take for $x$ to double in size, given a growth of $n$% per year?</p>
+</blockquote>
+
+<p>The rule of thumb I learned a while back is the following:</p>
+
+<blockquote>
+  <p>Doubling time = $\displaystyle\frac{70}{n}$ (in years)</p>
+</blockquote>
+
+<p>Of course, the time unit could be anything you like, I’ll deal here with years for simplicity’s sake.
+Specifically, let’s answer the question:</p>
+
+<blockquote>
+  <p>Israel has currently (2021) a population of 9.2 million, and a growth rate of 1.8% per year. How long will it take for the population to double, assuming a fixed growth rate?</p>
+</blockquote>
+
+<p>The answer is about 39 years (70 divided by 1.8), but why?!</p>
+
+<p>Let’s call $x_0$ the population size now, and the growth rate $n$%.
+After one year, the population will be</p>
+
+<p style="text-align:center">
+$
+\displaystyle x_1 = x_0 * \left( 1 + \frac{n}{100} \right)
+$
+</p>
+
+<p>Assume that after $k$ years the population will be double, i.e.:</p>
+
+<p style="text-align:center">
+$
+\displaystyle x_k = x_0 * \left( 1 + \frac{n}{100} \right)^k = 2x_0.
+$
+</p>
+
+<p>Cancelling $x_0$ we get</p>
+
+<p style="text-align:center">
+$
+\displaystyle\left( 1 + \frac{n}{100} \right)^k = 2.
+$
+</p>
+
+<p>We now take the natural logarith of both sides:</p>
+
+<p style="text-align:center">
+$
+\displaystyle k\ln\left( 1 + \frac{n}{100} \right) = \ln(2).
+$
+</p>
+
+<p>Note that we took $k$ out of the exponent and it now multiplies the logarithm on the left-hand side.
+Multiplying both sides by 100 yields</p>
+
+<p style="text-align:center">
+$
+\displaystyle100k\ln\left( 1 + \frac{n}{100} \right) = 100\ln(2) \simeq 69.3.
+$
+</p>
+
+<p>That surely explains the number 70 in the rule of thumb!
+Because of the properties of logarithms, we put the number 100 as the exponent of the parenthesis:</p>
+
+<p style="text-align:center">
+$
+\displaystyle k\ln\left( 1 + \frac{n}{100} \right)^{100} = 100\ln(2).
+$
+</p>
+
+<p>We are very close to the end!
+We now remind ourselves that we learned in Calculus the definition of the exponential function:</p>
+
+<p style="text-align:center">
+$
+\exp(x) = \displaystyle\lim_{m\rightarrow \infty} \left( 1 + \frac{x}{m} \right)^{m}.
+$
+</p>
+
+<p>Because the number 100 is “quite big”, we will approximate the parenthesis inside the logarithm with the exponential function, thus</p>
+
+<p style="text-align:center">
+$
+k\ln\exp(n) = 100\ln(2).
+$
+</p>
+
+<p>The logarithm is the inverse function of the exponential, therefore</p>
+
+<p style="text-align:center">
+$
+kn = \displaystyle100\ln(2).
+$
+</p>
+
+<p>Finally, solving for $k$, we have</p>
+
+<p style="text-align:center">
+$
+k = \displaystyle\frac{100\ln(2)}{n} \simeq \frac{70}{n}.
+$
+</p>
+
+<p>We have thus shown that the number of years $k$ it will take for Israel to double it’s population is about $70/n = 70/1.8 = 38.88$ years!!</p>
+
+<p>The exact number, without any approximations, would be</p>
+
+<p style="text-align:center">
+$
+k = \displaystyle\frac{\ln(2)}{\ln(1+n/100)}\simeq 38.85.
+$
+</p>
+
+<div class="flash flash-note">
+    <!-- <svg class="octicon octicon-zap" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10.561 1.5a.016.016 0 00-.01.004L3.286 8.571A.25.25 0 003.462 9H6.75a.75.75 0 01.694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0012.538 7H9.25a.75.75 0 01-.683-1.06l2.008-4.418.003-.006a.02.02 0 00-.004-.009.02.02 0 00-.006-.006L10.56 1.5zM9.504.43a1.516 1.516 0 012.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.25 1.25 0 01-.871.354h-.302a1.25 1.25 0 01-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429z"></path></svg> -->
+    <i class="fas fa-exclamation-triangle fa-fw fa-lg svv" aria-hidden="true"></i>
+    <strong>Conclusion: </strong><p>👍 Very impressive rule of thumb 👍</p>
+
+</div>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="science" /><summary type="html"><![CDATA[One rule of thumb to rule them all]]></summary></entry><entry><title type="html">Parabolic Hyperboloid</title><link href="https://yairmau.github.io/markdown/2021/11/13/parabolic-hyperboloid.html" rel="alternate" type="text/html" title="Parabolic Hyperboloid" /><published>2021-11-13T00:00:00-06:00</published><updated>2021-11-13T00:00:00-06:00</updated><id>https://yairmau.github.io/markdown/2021/11/13/parabolic-hyperboloid</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/13/parabolic-hyperboloid.html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/G0kNd1cyDL5HT62fqh76h1Kt5kA0p1axYcwuaw8LHylYONFOyLgS_W9M7ZwDm0Xv-AgwjHdDM2HpjGz2akgwOev96So-j5AOS7aDdmUEdguBWhgWsCBkOtUD8rZe9dptkqzgmm5qLsk=w2400" alt="" /></p>
+
+<p>Just like the <a href="https://yairmau.com/markdown/2021/11/12/skewer-hyperboloid.html">hyperboloid of one sheet</a>, the Parabolic Hyperboloid is a ruled surface.
+This means that it can be imagined as the surface one gets by swiping a straight line through space.
+In the image below, we see that each of the skewers is exactly straight, but together thay make this beautiful curved shape.</p>
+
+<p><img src="https://lh3.googleusercontent.com/hQyh_S4xMg0Fapq_g8cTvVGYilSjwoQC2MwhGOQ1aIhFtq_UUdNt1AvwWhLNfmJT0XRLsWeBXGdOpqm4iVhVgyiRsHx6u7GtS38UOcUJYZC7aPu2gANMZvqbO15nEVbQ0v4_BcTqPug=w2400" alt="" /></p>
+
+<p>This project is quite easy to make with skewers, see <a href="https://mathcraft.wonderhowto.com/how-to/make-hyperbolic-paraboloid-using-skewers-0131751/">its instructions here</a>.</p>
+
+<p>The equation that defines the surface of the parabolic hyperboloid is</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>z</mi><mo>=</mo><mi>A</mi><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mi>B</mi><msup><mi>y</mi><mn>2</mn></msup><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">z = Ax^2 - By^2,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9474379999999999em;vertical-align:-0.08333em;"></span><span class="mord mathnormal">A</span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.0585479999999998em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">,</span></span></span></span></span>
+
+<p>where both $A$ and $B$ are positive numbers.
+<a href="https://nmd.pages.math.illinois.edu/quadrics/hypparab.html">This website</a> allows us to play with the parameters and see how the surface responds.</p>
+
+<p>In my opinion, a static image can’t convey the beauty of this shape, so I made this gif:</p>
+<iframe src="https://giphy.com/embed/bbhNzeQZcSu4sQjyE2" width="480" height="270" frameborder="0" class="giphy-embed" allowfullscreen=""></iframe>
+
+<p>In 2020, Dillon Berger noted on Twitter that the shape of Pringles is a parabolic hyperboloid:</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">The reason Pringles fit so nicely in a cylindrical tube is because they&#39;re hyperbolic paraboloids plotted over a circular domain <a href="https://t.co/BUzjPw7e17">pic.twitter.com/BUzjPw7e17</a></p>&mdash; 〈 Berger | Dillon 〉 (@InertialObservr) <a href="https://twitter.com/InertialObservr/status/1229877251258245120?ref_src=twsrc%5Etfw">February 18, 2020</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<p>The company took notice of this (mildly) viral tweet, and sent Dillon a box full of parabolic hyperboloids 😁.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thanks <a href="https://twitter.com/Pringles?ref_src=twsrc%5Etfw">@Pringles</a>, for sending me some of these delicious Hyperbolic Paraboloids! <a href="https://t.co/L3WMgqObPM">pic.twitter.com/L3WMgqObPM</a></p>&mdash; 〈 Berger | Dillon 〉 (@InertialObservr) <a href="https://twitter.com/InertialObservr/status/1234550346292199424?ref_src=twsrc%5Etfw">March 2, 2020</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<p>The lesson here is that it’s good to know your math 😜.</p>
+
+<p><img src="https://lh3.googleusercontent.com/qykd4fNdeqj9NnHqV_V_JTCRXFIHWeS5LNw2IdpqMlChzdZHzGTkf0vk3D7ol8nq6X3-3gct081UNV7W5N9s0WEUbL0CozjsznenQyPRY_3N4D-BZYC3d0i69LWy-K-50wwXDK9QaQ0=w2400" alt="" /></p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><category term="geek" /><summary type="html"><![CDATA[I made something shaped as Pringles]]></summary></entry><entry><title type="html">Skewer Hyperboloid</title><link href="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html" rel="alternate" type="text/html" title="Skewer Hyperboloid" /><published>2021-11-12T00:00:00-06:00</published><updated>2021-11-12T00:00:00-06:00</updated><id>https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/bSIT1Wx9m6EHOE1rEXAfqcg_w7RWkpusE7rFfIxnPCQrziwVkGV51cWHwdvFxaOPh62CP-1bDEqzi0A4rn85lVngaKIgtMp2Oi-TNKDj-fjFggYSwS3VYxR1bpT9NR1sOqYXRBEd3K8=w2400" alt="" /></p>
+
+<p>George Hart is again the hero of this project.
+Go check out his <a href="https://www.georgehart.com/skewers/skewer-hyperboloid.html">webpage</a> to see how to build this beautiful shape.
+All you need to make the skewer hyperboloid is a bunch of skewers and thin elastic bands.</p>
+
+<p>This is an easy project, and the end result is so fun to play with!
+It is surprising how smoothly this shape morphes when you pull and push the skewers to change the angle, it’s hard to explain, so you should definitely try it yourself 😁.
+See <a href="https://arbitrarilyclose.com/2020/05/11/mathartchallenge-day-55-hyperboloid-george-hart/">Annie Perkins’s video</a> to get a better idea:</p>
+
+<iframe width="560" height="315" src="https://videopress.com/embed/1GgXbg78" frameborder="0" allowfullscreen=""></iframe>
+<script src="https://videopress.com/videopress-iframe.js"></script>
+
+<p>The one thing I can add to George Hart’s page is that after many weeks and months the elastic bands will dry out and break!
+I gave a skewer hyperboloid to a friend, and one day he arrived at his office and found out that the whole thing had disintegrated overnight, and the skewers were all over the place.
+I’m still looking for a suitable substitute to the elastic bands. It must be something flexible that enables us to play with the construction, and at the same time something durable…
+I have not found yet the perfect material, if you have a suggestion please write to me.</p>
+
+<p>I wanted my hyperboloid to last for a long time, so after the construction was done, I used super glue to fix the skewers in a particular angle.
+Now I can’t play with it, but at least it will not disintegrate overnight in a few months time (hopefully!).</p>
+
+<p><img src="https://lh3.googleusercontent.com/JOawpE_90tFO1wExDW7ntL5zuQjUc1MIF18RN-uX9Ll_CtS9Q0j8e0-_fX_tHwULwuRxScTcLljivn_jc-Lyycq9SJftYeEi1_flGS1AOlzu6CbKZJsAFsx0Cvd7oM3_piY26i9vtoY=w2400" alt="" /></p>
+
+<p>The mathematical name of this shape is “hyperboloid of one sheet”, and its equation is</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.1600em" columnspacing="1em"><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mi>A</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><msup><mi>B</mi><mn>2</mn></msup></mfrac><mo>−</mo><mfrac><msup><mi>z</mi><mn>2</mn></msup><msup><mi>C</mi><mn>2</mn></msup></mfrac><mo>=</mo><mn>0.</mn></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{equation}
+\frac{x^2}{A^2} + \frac{y^2}{B^2} - \frac{z^2}{C^2} = 0.
+\end{equation}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.8385540000000001em;"></span><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3385539999999998em;"><span style="top:-3.338554em;"><span class="pstrut" style="height:3.491108em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8385540000000001em;"><span></span></span></span></span></span></span></span><span class="tag"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3385539999999998em;"><span style="top:-3.338554em;"><span class="pstrut" style="height:3.491108em;"></span><span class="eqn-num"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8385540000000001em;"><span></span></span></span></span></span></span></span></span>
+
+<p>When $A=B$ the horizontal cross-sections are circles, just like in our construction.
+The elastic bands effectively allow us to play with the parameter $C$, which controls how fast the hyperboloid grows sideways.
+There is a wonderful widget in the <a href="https://nmd.pages.math.illinois.edu/quadrics/hyper1.html">Interactive Gallery of Quadric Surfaces</a>, its quite fun to play with.</p>
+
+<p>To see how this curved surface can be made entirely out of straight lines, one can define the surface as the set of all <a href="https://mathcurve.com/surfaces.gb/hyperboloid/hyperboloid1.shtml">parametric curves</a> of the kind</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.2500em" columnalign="right left" columnspacing="0em"><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>A</mi><mo stretchy="false">(</mo><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo>−</mo><mi>v</mi><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>y</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>B</mi><mo stretchy="false">(</mo><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>+</mo><mi>v</mi><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>z</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>C</mi><mi>ε</mi><mi>v</mi><mi mathvariant="normal">.</mi></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align}
+x &amp;= A (\cos \theta - v \sin \theta)\\
+y &amp;= B (\sin \theta + v \cos \theta)\\
+z &amp;= C \varepsilon v.
+\end{align}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.500000000000002em;vertical-align:-2.000000000000001em;"></span><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mop">sin</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">Cε</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord">.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span></span></span><span class="tag"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span><span style="top:-1.4999999999999991em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span></span></span></span>
+
+<p>Substitute the parametric equations above into the equation of the paraboloid and see that they satisfy it.</p>
+
+<p>There are actually two families of curves, for $\epsilon=\pm 1$.
+I made a Mathematica plot of the two families of lines, in red ($\varepsilon=1$) and in blue ($\varepsilon=-1$), for ten $\theta$ values between 0 and $2\pi$.
+It’s easy to see that each family of lines swirls in a different direction.</p>
+
+<p><img src="/archive/blog/one-sheet-hyperboloid.png" alt="" /></p>
+
+<p>The Mathematica code I wrote is</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">ContourPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">hyperboloid</span><span class="o">*</span><span class="p">)</span>   
+   <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">z</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> 
+    <span class="n">h</span><span class="p">},</span>
+   <span class="n">Mesh</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">,</span> <span class="n">ContourStyle</span> <span class="o">-&gt;</span> <span class="n">Opacity</span><span class="p">[</span><span class="mf">0.4</span><span class="p">],</span> <span class="n">AxesLabel</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">},</span>
+    <span class="n">LabelStyle</span> <span class="o">-&gt;</span> <span class="n">Large</span>
+   <span class="p">];</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">red</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Red</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">blue</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="o">-</span> <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Blue</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">Show</span><span class="p">[{</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">}]</span>
+</code></pre></div></div>
+
+<p><img src="https://lh3.googleusercontent.com/AUr9JxSqmlUh-5msmjWsPWkhDfaEu4Bs_sBySuug0RbnIXe0s_pQMQIU8VvTqCnVm28oB1gjxBvMRbn6vRP-Xjj44utw9QyU0Jl9iy1a--cOpYwX_nkCSyCAZhEeXtyQ_VS-Rw_gvjQ=w2400" alt="" /></p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><category term="geek" /><category term="frontpage" /><summary type="html"><![CDATA[When straight lines make a surprisingly pleasant curved surface]]></summary></entry><entry><title type="html">George Hart’s Card Constructions</title><link href="https://yairmau.github.io/markdown/2021/11/08/george-hart-card-constructions.html" rel="alternate" type="text/html" title="George Hart’s Card Constructions" /><published>2021-11-08T00:00:00-06:00</published><updated>2021-11-08T00:00:00-06:00</updated><id>https://yairmau.github.io/markdown/2021/11/08/george-hart-card-constructions</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/08/george-hart-card-constructions.html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/WDLe3RjqK_JlMLJC6GN2n3C_XyWaxZBNj1_O1WBLlUKjV8CjKsi8Bj_YcVon2FYO3P6Zfd2P6F7qPxEk0sd3WCypLVQRyW8EC_Hga7_V33fRXwlZxMl5o-6SdhpvbdLvbnRxEb8A_ww=w2400" alt="" /></p>
+
+<p>George Hart is a sculptor and geometer, and his webpage has the best projects for the artistically-minded nerd!</p>
+
+<p>The image above shows the 30-cards construction, but it is not identical to what George Hart shows on his <a href="http://www.georgehart.com/cards/cards.html">card constructions page</a>.
+I actually used <a href="http://www.flickr.com/photos/fdecomite/3611388781/in/pool-make">Francesco De Comité’s version</a>, also credited by Hart.
+The idea is that you strategically cut the cards in <strong>very</strong> specific places, so that they can be slided together.</p>
+
+<p>Figuring out how to cut the cards was quite hard to me, I had to experiment a lot!
+George Hart provides printable templates, but their dimensions are different from the cards I used.
+Finally besides cutting the cards, the task of putting everything together was a nightmare.
+It’s been a while since I built this, but I think that I used clothes pegs to hold the cards together before the whole thing is ready.
+Once you finish building the structure, it should be much more stable (but not enough to throw it in the air!!).</p>
+
+<p>Because there is a 5-fold symmetry, naturally the golden ratio</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>φ</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>+</mo><msqrt><mn>5</mn></msqrt></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\varphi = \frac{1+\sqrt{5}}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.27022em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5842200000000002em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.90722em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord">5</span></span></span><span style="top:-2.86722em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.13278em;"><span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span>
+
+<p>figures quite prominently in there.
+Francesco De Comité provides in his <a href="http://www.flickr.com/photos/fdecomite/3616078966/">Flickr page</a> a plan for how to cut the cards:</p>
+
+<p><img src="https://live.staticflickr.com/2434/3616078966_421efeaea8_c.jpg" alt="" /></p>
+
+<p>I put the plan above for the future me to understand what it means, because I myself didn’t use this…
+I found in one of my “projects” folders my own calculations of how to cut the cards. It shows only the cuts on the top side. One should rotate the card 180 degrees and do the same cuts on the other side.
+For a card of height H and length L, my cutting plan is the following.</p>
+
+<p><img src="/archive/blog/card-construction1.png" alt="" /></p>
+
+<p>The cuts are the thick blue lines, and the red arrows show the length $L/\varphi$ of one of the cuts and of the uncut (dashed) part.
+From this I hope you can imagine that when the cards are slided together, the two cuts amount to the length of the whole “diagonal”, such that the two card ends are flush.
+I wish I could explain why the plan is what it is, but some time has passed and I have no idea any more 🤷‍♂️…</p>
+
+<p><img src="https://lh3.googleusercontent.com/c9pgh08m7rRBs5X8SyxKD1qe6tJl7nZU8pc11ejx9m7oJMax2SE8ZDeLd3fy4lG8pgIXvtXtsRrdvoB944HUqXsnc12goP5YgoZEN_2f0AGcWJHuYA3TyaSaUPtz2Ny54qe3cHGqz_Y=w2400" alt="" /></p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><summary type="html"><![CDATA[Beware, it boggles the mind!]]></summary></entry><entry><title type="html">Tomoko Fuse Unit Origami</title><link href="https://yairmau.github.io/markdown/2021/11/08/tomoko-fuse.html" rel="alternate" type="text/html" title="Tomoko Fuse Unit Origami" /><published>2021-11-08T00:00:00-06:00</published><updated>2021-11-08T00:00:00-06:00</updated><id>https://yairmau.github.io/markdown/2021/11/08/tomoko-fuse</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/08/tomoko-fuse.html"><![CDATA[<p><img src="https://lh3.googleusercontent.com/hX90VJl-QZ2gY9UhQM_TnK8t_5H2Pc3RHCSQtPgedtd0rGnwmfPBkaPllC7632-Lqv6eFWlRbtAp8vPinaphzhuZlvcWAuJXH_XxAb5Dt3ehu1iWA6CYUglFAxph5nzYVqKg3OamNf0=w2400" alt="" /></p>
+
+<p>This structure has the general shape of a dodecahedron, with 12 beautiful pentagonal stars embeded in it.
+I found a while back a scan of the book <a href="https://archive.org/details/TomokoFuseUnitOrigamiFantasyv2japanese/page/n73/mode/2up">Tomoko Fuse Unit Origami Fantasy</a>.
+The book is all written in japanese, but I could make sense of the diagrams.</p>
+
+<p>Tomoko Fuse is a master of modular origami, just google her name and you’ll find tons of fun projects.</p>
+
+<p>I used craft paper to give the structure a muted tones and a rustic feel.
+I think it turned out pretty good 😊.</p>
+
+<p><img src="https://lh3.googleusercontent.com/oMuSEqdDrAjAWPJh7wc_aNVtzksKwDjKy2uON-voBIHB1bAUPWALYmZaMNQGgakY5ZCPApgDXHyyCjjlQsLn2igWpL4udKOyQn_aOxShly1uulwfqledf-RHZ_dUG3rwLLOUYdzyU30=w2400" alt="" /></p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><category term="frontpage" /><summary type="html"><![CDATA[Endless fun]]></summary></entry><entry><title type="html">The Sonobe Module</title><link href="https://yairmau.github.io/markdown/2021/11/03/sonobe.html" rel="alternate" type="text/html" title="The Sonobe Module" /><published>2021-11-03T00:00:00-05:00</published><updated>2021-11-03T00:00:00-05:00</updated><id>https://yairmau.github.io/markdown/2021/11/03/sonobe</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/11/03/sonobe.html"><![CDATA[<p>All these modular origami constructions are made of a single basic module, the Sonobe unit.
+<img src="https://lh3.googleusercontent.com/FChSm4oAKAaVfa7dRJ52ZVraVmtDSSUUuY7arZLMosio_kxzxuLSb698PLfqVjHM1yDA7p1i8m77VL1k5Tr8CAIt5MvbV_6fYdVoVgkOPX6xrR1kjvC95T7OvjAfxdfuWfzDazwJKSQ=w2400" alt="" /></p>
+
+<p>The basic unit has <a href="https://www.thesprucecrafts.com/geometric-sonobe-unit-origami-art-4138606">flaps and pockets</a>.
+<img src="https://www.thesprucecrafts.com/thmb/aTopgqm8X4BwL9Ad7Hm7ZMi7Hn0=/1600x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/units-05-5922aab25f9b58f4c086c0ea.png" /></p>
+
+<p>The actual folding of the Sonobe module is quite easy, see the instructions below, taken from <a href="https://www.amherst.edu/media/view/290032/original/oragami.pdf">Michael Naughton’s excellent diagram</a>.</p>
+
+<p><img src="/archive/blog/sonobe1.png" alt="" /></p>
+
+<p>This is an incredibly flexible unit, allowing us to combine it in many ways.
+<a href="http://www.origamee.net/diagrams/sonoassm.pdf">This pdf</a> shows how to combine different numbers of Sonobe modules to produce the shapes above, and many others.
+If all meeting points of the basic unit contain 3 modules, one gets a cube.
+If all meeting points contain 4 modules, then we produce a octahedron (with pyramids on each of its faces).</p>
+
+<p><img src="https://lh3.googleusercontent.com/KYNbWMpwusujKGq7eRlLUwkQO11wgXYOaQJHCzN8gAf5L_7OEl1ydo0iMb1ZsSIALePn61oy_Nr9q3V_cxLx0U5uCudwzhBeapqP090qWsKagG_AGlivdbAY3dAFDNLuBS7WJPseKDM=w2400" alt="" /></p>
+
+<p>The results can be very impressive! Above is a Truncated Icosahedron, made of pentagons surrounded by hexagons (like a soccer ball).
+This one is made of 90 Sonobe units, see <a href="https://mathcraft.wonderhowto.com/how-to/modular-origami-make-truncated-icosahedron-pentakis-dodecahedron-more-0131528/">detailed instructions</a>.</p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><summary type="html"><![CDATA[The best way to start doing modular origami]]></summary></entry><entry><title type="html">Pythagorean theorem</title><link href="https://yairmau.github.io/markdown/2021/10/28/pythagoras.html" rel="alternate" type="text/html" title="Pythagorean theorem" /><published>2021-10-28T00:00:00-05:00</published><updated>2021-10-28T00:00:00-05:00</updated><id>https://yairmau.github.io/markdown/2021/10/28/pythagoras</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/10/28/pythagoras.html"><![CDATA[<p>I’ve been interested lately in the Pythagorean theorem, and the myriad of ways one can prove it.</p>
+
+<p><img src="https://miro.medium.com/max/700/1*SsN2DG__Z5DyOI0uf7hbwQ.png" alt="" /></p>
+
+<p>An excellent resource is the website <a href="https://www.cut-the-knot.org/pythagoras/">Cut The Knot</a>.</p>
+
+<p>Another great source is John C. Sparks’  <a href="http://wpafbstem.com/media/math_resources/pythagorean_theorem.pdf">The Pythagorean Theorem: Crown Jewel of Mathematics</a>.</p>
+
+<p>I used my tablet to write down my own version of some of the nicest proofs, see below.</p>
+
+<object data="/archive/blog/pythagoras.pdf" width="800" height="800" type="application/pdf"></object>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="geek" /><category term="frontpage" /><summary type="html"><![CDATA[One of the oldest theorems, always fresh :)]]></summary></entry><entry><title type="html">Hexastix</title><link href="https://yairmau.github.io/markdown/2021/10/28/hexastix.html" rel="alternate" type="text/html" title="Hexastix" /><published>2021-10-28T00:00:00-05:00</published><updated>2021-10-28T00:00:00-05:00</updated><id>https://yairmau.github.io/markdown/2021/10/28/hexastix</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/10/28/hexastix.html"><![CDATA[<p>I’m very proud of this construction I made about 4 years ago.</p>
+
+<p><img src="https://lh3.googleusercontent.com/BHOrTTV8b6A0XlTAy6Wo32zIH9UcjYDuZl_E0qWLBh2uX2U4OnuA0YjZKSwZMTz6LZJmqyJeMhSmNsu4tqA672pxy7iKBjpWYmVW8AmR-7yotP0GGCrYhNRktnspRfxpSYRR7n2oZkw=w2400" alt="" /></p>
+
+<p>It sits prominently on my office shelf, it has never failed to impress the occasional visitor :)
+Although it looks complicated, this 72-pencil construction is not very hard to build!
+I followed Matt Parker’s youtube tutorial, it took me about 1.5 hours to make it, and another hour or so to glue it.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DelH1S32dOg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Materials:</p>
+<ul>
+  <li>72 pencils</li>
+  <li>a few elastic bands</li>
+  <li>super glue</li>
+</ul>
+
+<p>Here in Israel, I couldn’t find non-sharpened pencils. There is some risk of (small) injury if you don’t take care 😬.</p>
+
+<p>Without the elastic bands, this construction would not be stable.
+The problem is that with time the elastic bands get dry and disintegrate, so if you want to have this construction standing for a long time, you have to glue it.
+I put tiny drops of super glue in most of the touching points between the pencils, and it worked great!</p>
+
+<p>Enjoy making your own!</p>
+
+<p><img src="https://lh3.googleusercontent.com/fGONX8L-8ZOBix5F4tp8qYd46dTl5MDhbp4C_VOiIA56iqEB6f__vgztLsAu1tldAuF-0cq9ZC8suBh2-LwC1m8hKlp5vQ-lOAj7LEZYljCs9sY6KTr5cMUoWZYQnyMzE28V2Yvs854=w2400" alt="" /></p>
+
+<p>PS: I’m in my office at the university writing these words, and exactly now a student passed in the corridor and asked me about the Hexastix 😄</p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="art" /><category term="frontpage" /><summary type="html"><![CDATA[Crazy construction made of 72 pencils]]></summary></entry><entry><title type="html">First blog post</title><link href="https://yairmau.github.io/markdown/2021/10/28/first-post.html" rel="alternate" type="text/html" title="First blog post" /><published>2021-10-28T00:00:00-05:00</published><updated>2021-10-28T00:00:00-05:00</updated><id>https://yairmau.github.io/markdown/2021/10/28/first-post</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/10/28/first-post.html"><![CDATA[<p>This is my first blog post on this website 🥳</p>
+
+<p>Every now and then I’ll write about what’s going on with my research group, and also about random stuff that interest me.</p>
+
+<p>See you around!</p>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><category term="news" /><summary type="html"><![CDATA[This is my first blog post on this website 🥳]]></summary></entry><entry><title type="html">The can problem</title><link href="https://yairmau.github.io/markdown/2021/10/27/can-problem.html" rel="alternate" type="text/html" title="The can problem" /><published>2021-10-27T00:00:00-05:00</published><updated>2021-10-27T00:00:00-05:00</updated><id>https://yairmau.github.io/markdown/2021/10/27/can-problem</id><content type="html" xml:base="https://yairmau.github.io/markdown/2021/10/27/can-problem.html"><![CDATA[<h2 id="watch-this-space">watch this space</h2>]]></content><author><name>Yair Mau</name></author><category term="markdown" /><summary type="html"><![CDATA[What happens to the center of mass of a can of coke as you slowly drink from it?]]></summary></entry></feed>

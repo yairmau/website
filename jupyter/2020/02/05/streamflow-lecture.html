@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Streamflow - lecture | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Streamflow - lecture" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Environmental Modeling" />
+<meta property="og:description" content="Environmental Modeling" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Streamflow - lecture" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html"},"url":"https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html","@type":"BlogPosting","headline":"Streamflow - lecture","dateModified":"2020-02-05T00:00:00-06:00","datePublished":"2020-02-05T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"Environmental Modeling","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Streamflow - lecture | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Streamflow - lecture" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Environmental Modeling" />
+<meta property="og:description" content="Environmental Modeling" />
+<link rel="canonical" href="https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html" />
+<meta property="og:url" content="https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-05T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Streamflow - lecture" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html"},"url":"https://yairmau.github.io/jupyter/2020/02/05/streamflow-lecture.html","@type":"BlogPosting","headline":"Streamflow - lecture","dateModified":"2020-02-05T00:00:00-06:00","datePublished":"2020-02-05T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"Environmental Modeling","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/" style="text-decoration:none">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/research/">Research</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/group/">Group</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Streamflow - lecture</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-05T00:00:00-06:00" itemprop="datePublished">
+        Feb 5, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-02-05-streamflow-lecture.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-02-05-streamflow-lecture.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-02-05-streamflow-lecture.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Watershed---אגן-היקוות">Watershed - אגן היקוות </a></li>
+<li class="toc-entry toc-h2"><a href="#base-flow-separation">base flow separation </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Base-flow">Base flow </a></li>
+<li class="toc-entry toc-h3"><a href="#Event-flow">Event flow </a></li>
+<li class="toc-entry toc-h3"><a href="#Total-flow">Total flow </a></li>
+<li class="toc-entry toc-h3"><a href="#Attention!">Attention! </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Urbana,-IL">Urbana, IL </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#hyetograph,-hydrograph">hyetograph, hydrograph </a></li>
+<li class="toc-entry toc-h3"><a href="#notation">notation </a></li>
+<li class="toc-entry toc-h3"><a href="#base-flow-separation">base flow separation </a></li>
+<li class="toc-entry toc-h3"><a href="#effective-precipitation-=-effective-discharge">effective precipitation = effective discharge </a></li>
+<li class="toc-entry toc-h3"><a href="#time-lags">time lags </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-02-05-streamflow-lecture.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Watershed---אגן-היקוות">
+<a class="anchor" href="#Watershed---%D7%90%D7%92%D7%9F-%D7%94%D7%99%D7%A7%D7%95%D7%95%D7%AA" aria-hidden="true"><span class="octicon octicon-link"></span></a>Watershed - אגן היקוות<a class="anchor-link" href="#Watershed---%D7%90%D7%92%D7%9F-%D7%94%D7%99%D7%A7%D7%95%D7%95%D7%AA"> </a>
+</h2>
+<p><img src="/images/copied_from_nb/hydrology_figures/dingman-figure10.3.png" alt="">
+<img src="/images/copied_from_nb/hydrology_figures/watershed-boundaries.jpg" alt="">
+<img src="/images/copied_from_nb/hydrology_figures/dingman-figure10.5.png" alt=""></p>
+<p>Watershed response:</p>
+<ul>
+<li>The volume of water appearing in the appar- ent response hydrograph for a given event is usually only a fraction (often a very small frac- tion) of the total input. The remainder of the water input ultimately leaves the watershed as: (1) evapotranspiration; (2) streamflow that oc- curs so long after the event that it cannot be associated with that event; or (3) ground-water outflow from the watershed.</li>
+<li>The water identified as the response to a given event may originate on only a fraction of the watershed; this fraction is called the contrib- uting area.</li>
+<li>The extent of the contributing area may vary from event to event and during an event.</li>
+<li>At least some of the water identified as the re- sponse to a given event may be “old water” that entered the watershed in a previous event.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="base-flow-separation">
+<a class="anchor" href="#base-flow-separation" aria-hidden="true"><span class="octicon octicon-link"></span></a>base flow separation<a class="anchor-link" href="#base-flow-separation"> </a>
+</h2>
+<p><img src="/images/copied_from_nb/hydrology_figures/ward-figure5.11.png" alt=""></p>
+<h3 id="Base-flow">
+<a class="anchor" href="#Base-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base flow<a class="anchor-link" href="#Base-flow"> </a>
+</h3>
+<p>Base flow is the portion of streamflow that is presumed to have entered the watershed in previous events and to be derived from persistent, slowly varying sources. (Ground water is usually assumed to be the main, if not the only, such source.)</p>
+<h3 id="Event-flow">
+<a class="anchor" href="#Event-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Event flow<a class="anchor-link" href="#Event-flow"> </a>
+</h3>
+<p>Event flow (also called direct runoff, storm runoff, quick flow, or storm flow) is considered to be the direct response to a given water-input event.</p>
+<h3 id="Total-flow">
+<a class="anchor" href="#Total-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Total flow<a class="anchor-link" href="#Total-flow"> </a>
+</h3>
+<p>Total flow rate at any instant $q(t)$ is the sum of event-flow rate $q^*(t)$ and base-flow rate $q_{BF}$(t):</p>
+$$
+q(t) = q^*(t) + q_{BF}(t)
+$$<h3 id="Attention!">
+<a class="anchor" href="#Attention!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Attention!<a class="anchor-link" href="#Attention!"> </a>
+</h3>
+<p>Graphical flow separation techniques are heuristic
+and have no direct scientific basis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Urbana,-IL">
+<a class="anchor" href="#Urbana,-IL" aria-hidden="true"><span class="octicon octicon-link"></span></a>Urbana, IL<a class="anchor-link" href="#Urbana,-IL"> </a>
+</h2>
+<p><img src="/images/copied_from_nb/hydrology_figures/urbana-IL-map.png" alt=""></p>
+<h3 id="hyetograph,-hydrograph">
+<a class="anchor" href="#hyetograph,-hydrograph" aria-hidden="true"><span class="octicon octicon-link"></span></a>hyetograph, hydrograph<a class="anchor-link" href="#hyetograph,-hydrograph"> </a>
+</h3>
+<p><img src="/images/copied_from_nb/hydrology_figures/urbana_pq.png" alt=""></p>
+<h3 id="notation">
+<a class="anchor" href="#notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>notation<a class="anchor-link" href="#notation"> </a>
+</h3>
+<p><img src="/images/copied_from_nb/hydrology_figures/dingman-box10.1.png" alt=""></p>
+<h3 id="base-flow-separation">
+<a class="anchor" href="#base-flow-separation" aria-hidden="true"><span class="octicon octicon-link"></span></a>base flow separation<a class="anchor-link" href="#base-flow-separation"> </a>
+</h3>
+<p><img src="/images/copied_from_nb/hydrology_figures/urbana_q_qstar.png" alt=""></p>
+<h3 id="effective-precipitation-=-effective-discharge">
+<a class="anchor" href="#effective-precipitation-=-effective-discharge" aria-hidden="true"><span class="octicon octicon-link"></span></a>effective precipitation = effective discharge<a class="anchor-link" href="#effective-precipitation-=-effective-discharge"> </a>
+</h3>$$
+P^* = Q^*
+$$<p><img src="/images/copied_from_nb/hydrology_figures/urbana_pstar_qstar.png" alt="">
+<img src="/images/copied_from_nb/hydrology_figures/dingman-figure10.49.png" alt=""></p>
+<h3 id="time-lags">
+<a class="anchor" href="#time-lags" aria-hidden="true"><span class="octicon octicon-link"></span></a>time lags<a class="anchor-link" href="#time-lags"> </a>
+</h3>
+<p><img src="/images/copied_from_nb/hydrology_figures/dingman-figure10.12.png" alt="">
+<img src="/images/copied_from_nb/hydrology_figures/dingman-table10.2.png" alt="">
+<img src="/images/copied_from_nb/hydrology_figures/urbana_lags.png" alt=""></p>
+<p>It is commonly assumed that $T_{LPC} \simeq 0.60 \cdot T_c$, where $T_c$ is the time of concentration, i.e., the time it takes water to travel from the hydraulically most distant part of the contributing area to the outlet.</p>
+<!-- ### response time and centroid lag
+
+Dingman, page 474
+
+Watershed Size: Larger watersheds have larger T*, other things equal. Analyses of large floods by Holtan and Overton (1963) indicated that T* is strongly related to drainage area; however, the re- lationship varies from region to region, presum- ably largely because of differences in watershed geology, soils, and topography.
+Soils and Geology: Water moves fastest toward streams as overland flow and slowest as subsurface flow (as discussed more fully later in this chapter). Thus watersheds with low surface hydraulic con- ductivities (e.g., clay soils), where less infiltration and more overland flow occur, should have smaller T* than those with higher conductivities (e.g., sandy soils). If flow paths are predominantly in the subsurface, watersheds with higher hydrau- lic conductivities will have smaller values of T*.
+Slope: Steeper slopes should be associated with faster surface and subsurface water movement and hence smaller T*.
+Land Use: In general, watersheds with heavy vege- tation, especially forests, have permeable surface soils that allow rapid infiltration and subsurface flow to streams, resulting in larger T*. In contrast, sparsely vegetated watersheds tend to have lower T* because their lower surface permeability makes
+Figure 10.16 Response, q*, of linear watershed with T*=5hrto1unitofinput, P*, in 1 hr. Input rate
+p* = 1 unit/hr.
+overland flow more common. Watersheds with in- tensive urbanization (more impermeable areas and storm sewers) generally have faster water move- ment and smaller T*.
+Watershed Wetness: As seen in section 10.2.3.2, the wetness of the watershed at the time of a rainfall event (antecedent condition) usually has a significant influence on the connectivity of surface and subsur- face flow paths and the extent of the contributing area, so that a given watershed will have a smaller T* when wet than when drier. The physical relations underlying this are discussed in section 10.4.
+In the linear-watershed model the centroid lag, TLC, is equal to T*, regardless of the timing of inputs. Thus if the timing and amounts of effective water in- put and output can be determined, average TLC would appear to be the best estimate of the charac- teristic response time for a given watershed.
+
+-->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The centroid is a weighted-average time, each time instant is multiplied by the amount of flow in that instant.</p>
+<p>Time of precipitation centroid:</p>
+$$
+t_{pc} = \frac{\displaystyle \sum_{i=1}^n p_i^* \cdot t_i}{P^*}
+$$<p>Time of streamflow centroid:</p>
+$$
+t_{qc} = \frac{\displaystyle \sum_{i=1}^n q_i^* \cdot t_i}{Q^*}
+$$
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/jupyter/2020/02/05/streamflow-lecture.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Environmental Modeling<br>
+           The Hebrew University of Jerusalem</p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>

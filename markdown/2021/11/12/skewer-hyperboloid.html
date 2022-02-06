@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Skewer Hyperboloid | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Skewer Hyperboloid" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When straight lines make a surprisingly pleasant curved surface" />
+<meta property="og:description" content="When straight lines make a surprisingly pleasant curved surface" />
+<link rel="canonical" href="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html" />
+<meta property="og:url" content="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Skewer Hyperboloid" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html"},"url":"https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html","@type":"BlogPosting","headline":"Skewer Hyperboloid","dateModified":"2021-11-12T00:00:00-06:00","datePublished":"2021-11-12T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"When straight lines make a surprisingly pleasant curved surface","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Skewer Hyperboloid | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Skewer Hyperboloid" />
+<meta name="author" content="Yair Mau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When straight lines make a surprisingly pleasant curved surface" />
+<meta property="og:description" content="When straight lines make a surprisingly pleasant curved surface" />
+<link rel="canonical" href="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html" />
+<meta property="og:url" content="https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Skewer Hyperboloid" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html"},"url":"https://yairmau.github.io/markdown/2021/11/12/skewer-hyperboloid.html","@type":"BlogPosting","headline":"Skewer Hyperboloid","dateModified":"2021-11-12T00:00:00-06:00","datePublished":"2021-11-12T00:00:00-06:00","author":{"@type":"Person","name":"Yair Mau"},"description":"When straight lines make a surprisingly pleasant curved surface","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/feed.xml" title="Yair Mau" /><!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-78726339-1','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/" style="text-decoration:none">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/research/">Research</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/group/">Group</a><a class="page-link" href="/teaching/">Teaching</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Skewer Hyperboloid</h1><p class="page-description">When straight lines make a surprisingly pleasant curved surface</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-12T00:00:00-06:00" itemprop="datePublished">
+        Nov 12, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="https://lh3.googleusercontent.com/bSIT1Wx9m6EHOE1rEXAfqcg_w7RWkpusE7rFfIxnPCQrziwVkGV51cWHwdvFxaOPh62CP-1bDEqzi0A4rn85lVngaKIgtMp2Oi-TNKDj-fjFggYSwS3VYxR1bpT9NR1sOqYXRBEd3K8=w2400" alt="" /></p>
+
+<p>George Hart is again the hero of this project.
+Go check out his <a href="https://www.georgehart.com/skewers/skewer-hyperboloid.html">webpage</a> to see how to build this beautiful shape.
+All you need to make the skewer hyperboloid is a bunch of skewers and thin elastic bands.</p>
+
+<p>This is an easy project, and the end result is so fun to play with!
+It is surprising how smoothly this shape morphes when you pull and push the skewers to change the angle, it’s hard to explain, so you should definitely try it yourself 😁.
+See <a href="https://arbitrarilyclose.com/2020/05/11/mathartchallenge-day-55-hyperboloid-george-hart/">Annie Perkins’s video</a> to get a better idea:</p>
+
+<iframe width="560" height="315" src="https://videopress.com/embed/1GgXbg78" frameborder="0" allowfullscreen=""></iframe>
+<script src="https://videopress.com/videopress-iframe.js"></script>
+
+<p>The one thing I can add to George Hart’s page is that after many weeks and months the elastic bands will dry out and break!
+I gave a skewer hyperboloid to a friend, and one day he arrived at his office and found out that the whole thing had disintegrated overnight, and the skewers were all over the place.
+I’m still looking for a suitable substitute to the elastic bands. It must be something flexible that enables us to play with the construction, and at the same time something durable…
+I have not found yet the perfect material, if you have a suggestion please write to me.</p>
+
+<p>I wanted my hyperboloid to last for a long time, so after the construction was done, I used super glue to fix the skewers in a particular angle.
+Now I can’t play with it, but at least it will not disintegrate overnight in a few months time (hopefully!).</p>
+
+<p><img src="https://lh3.googleusercontent.com/JOawpE_90tFO1wExDW7ntL5zuQjUc1MIF18RN-uX9Ll_CtS9Q0j8e0-_fX_tHwULwuRxScTcLljivn_jc-Lyycq9SJftYeEi1_flGS1AOlzu6CbKZJsAFsx0Cvd7oM3_piY26i9vtoY=w2400" alt="" /></p>
+
+<p>The mathematical name of this shape is “hyperboloid of one sheet”, and its equation is</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.1600em" columnspacing="1em"><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mfrac><msup><mi>x</mi><mn>2</mn></msup><msup><mi>A</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msup><mi>y</mi><mn>2</mn></msup><msup><mi>B</mi><mn>2</mn></msup></mfrac><mo>−</mo><mfrac><msup><mi>z</mi><mn>2</mn></msup><msup><mi>C</mi><mn>2</mn></msup></mfrac><mo>=</mo><mn>0.</mn></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{equation}
+\frac{x^2}{A^2} + \frac{y^2}{B^2} - \frac{z^2}{C^2} = 0.
+\end{equation}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.177108em;vertical-align:-0.8385540000000001em;"></span><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3385539999999998em;"><span style="top:-3.338554em;"><span class="pstrut" style="height:3.491108em;"></span><span class="mord"><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">A</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.491108em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8385540000000001em;"><span></span></span></span></span></span></span></span><span class="tag"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3385539999999998em;"><span style="top:-3.338554em;"><span class="pstrut" style="height:3.491108em;"></span><span class="eqn-num"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8385540000000001em;"><span></span></span></span></span></span></span></span></span>
+
+<p>When $A=B$ the horizontal cross-sections are circles, just like in our construction.
+The elastic bands effectively allow us to play with the parameter $C$, which controls how fast the hyperboloid grows sideways.
+There is a wonderful widget in the <a href="https://nmd.pages.math.illinois.edu/quadrics/hyper1.html">Interactive Gallery of Quadric Surfaces</a>, its quite fun to play with.</p>
+
+<p>To see how this curved surface can be made entirely out of straight lines, one can define the surface as the set of all <a href="https://mathcurve.com/surfaces.gb/hyperboloid/hyperboloid1.shtml">parametric curves</a> of the kind</p>
+
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.2500em" columnalign="right left" columnspacing="0em"><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>x</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>A</mi><mo stretchy="false">(</mo><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo>−</mo><mi>v</mi><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>y</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>B</mi><mo stretchy="false">(</mo><mi>sin</mi><mo>⁡</mo><mi>θ</mi><mo>+</mo><mi>v</mi><mi>cos</mi><mo>⁡</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr><mtr><mtd class ="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mi>z</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mi>C</mi><mi>ε</mi><mi>v</mi><mi mathvariant="normal">.</mi></mrow></mstyle></mtd><mtd class ="mtr-glue"></mtd><mtd class ="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align}
+x &amp;= A (\cos \theta - v \sin \theta)\\
+y &amp;= B (\sin \theta + v \cos \theta)\\
+z &amp;= C \varepsilon v.
+\end{align}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:4.500000000000002em;vertical-align:-2.000000000000001em;"></span><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.66em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">sin</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mop">sin</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">θ</span><span class="mclose">)</span></span></span><span style="top:-1.6599999999999993em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal">Cε</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord">.</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span></span></span><span class="tag"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.5000000000000004em;"><span style="top:-4.5em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span><span style="top:-1.4999999999999991em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.000000000000001em;"><span></span></span></span></span></span></span></span></span>
+
+<p>Substitute the parametric equations above into the equation of the paraboloid and see that they satisfy it.</p>
+
+<p>There are actually two families of curves, for $\epsilon=\pm 1$.
+I made a Mathematica plot of the two families of lines, in red ($\varepsilon=1$) and in blue ($\varepsilon=-1$), for ten $\theta$ values between 0 and $2\pi$.
+It’s easy to see that each family of lines swirls in a different direction.</p>
+
+<p><img src="/archive/blog/one-sheet-hyperboloid.png" alt="" /></p>
+
+<p>The Mathematica code I wrote is</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">ContourPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">hyperboloid</span><span class="o">*</span><span class="p">)</span>   
+   <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">z</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> 
+    <span class="n">h</span><span class="p">},</span>
+   <span class="n">Mesh</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">,</span> <span class="n">ContourStyle</span> <span class="o">-&gt;</span> <span class="n">Opacity</span><span class="p">[</span><span class="mf">0.4</span><span class="p">],</span> <span class="n">AxesLabel</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">},</span>
+    <span class="n">LabelStyle</span> <span class="o">-&gt;</span> <span class="n">Large</span>
+   <span class="p">];</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">red</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Red</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">blue</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="o">-</span> <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Blue</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">Show</span><span class="p">[{</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">}]</span>
+</code></pre></div></div>
+
+<p><img src="https://lh3.googleusercontent.com/AUr9JxSqmlUh-5msmjWsPWkhDfaEu4Bs_sBySuug0RbnIXe0s_pQMQIU8VvTqCnVm28oB1gjxBvMRbn6vRP-Xjj44utw9QyU0Jl9iy1a--cOpYwX_nkCSyCAZhEeXtyQ_VS-Rw_gvjQ=w2400" alt="" /></p>
+
+
+  </div><a class="u-url" href="/markdown/2021/11/12/skewer-hyperboloid.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Environmental Modeling<br>
+           The Hebrew University of Jerusalem</p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>
