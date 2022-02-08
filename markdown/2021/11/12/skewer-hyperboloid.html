@@ -179,30 +179,30 @@ It’s easy to see that each family of lines swirls in a different direction.</p
 
 <p>The Mathematica code I wrote is</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>a = 1; b = 1; c = 1; h = 4; n = 10;
-p1 = ContourPlot3D[ (*hyperboloid*)   
-   x^2/a^2 + y^2/b^2 - z^2/c^2 == 1, {x, -h, h}, {y, -h, h}, {z, -h, 
-    h},
-   Mesh -&gt; None, ContourStyle -&gt; Opacity[0.4], AxesLabel -&gt; {x, y, z},
-    LabelStyle -&gt; Large
-   ];
-p2 = ParametricPlot3D[ (*red lines*)
-   Table[{
-     a (Cos[theta] - v Sin[theta]),
-     b (Sin[theta] + v Cos[theta]),
-     c v
-     }, {theta, 0, 2 Pi, 2 Pi/n}],
-   {v, -20, 20}, PlotStyle -&gt; {Red}
-   ];
-p3 = ParametricPlot3D[ (*blue lines*)
-   Table[{
-     a (Cos[theta] - v Sin[theta]),
-     b (Sin[theta] + v Cos[theta]),
-     - c v
-     }, {theta, 0, 2 Pi, 2 Pi/n}],
-   {v, -20, 20}, PlotStyle -&gt; {Blue}
-   ];
-Show[{p1, p2, p3}]
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">ContourPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">hyperboloid</span><span class="o">*</span><span class="p">)</span>   
+   <span class="n">x</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">a</span><span class="o">^</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span> <span class="o">-</span> <span class="n">z</span><span class="o">^</span><span class="mi">2</span><span class="o">/</span><span class="n">c</span><span class="o">^</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">y</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="n">h</span><span class="p">},</span> <span class="p">{</span><span class="n">z</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span><span class="p">,</span> 
+    <span class="n">h</span><span class="p">},</span>
+   <span class="n">Mesh</span> <span class="o">-&gt;</span> <span class="bp">None</span><span class="p">,</span> <span class="n">ContourStyle</span> <span class="o">-&gt;</span> <span class="n">Opacity</span><span class="p">[</span><span class="mf">0.4</span><span class="p">],</span> <span class="n">AxesLabel</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">},</span>
+    <span class="n">LabelStyle</span> <span class="o">-&gt;</span> <span class="n">Large</span>
+   <span class="p">];</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">red</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Red</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">ParametricPlot3D</span><span class="p">[</span> <span class="p">(</span><span class="o">*</span><span class="n">blue</span> <span class="n">lines</span><span class="o">*</span><span class="p">)</span>
+   <span class="n">Table</span><span class="p">[{</span>
+     <span class="n">a</span> <span class="p">(</span><span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">-</span> <span class="n">v</span> <span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="n">b</span> <span class="p">(</span><span class="n">Sin</span><span class="p">[</span><span class="n">theta</span><span class="p">]</span> <span class="o">+</span> <span class="n">v</span> <span class="n">Cos</span><span class="p">[</span><span class="n">theta</span><span class="p">]),</span>
+     <span class="o">-</span> <span class="n">c</span> <span class="n">v</span>
+     <span class="p">},</span> <span class="p">{</span><span class="n">theta</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="p">,</span> <span class="mi">2</span> <span class="n">Pi</span><span class="o">/</span><span class="n">n</span><span class="p">}],</span>
+   <span class="p">{</span><span class="n">v</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="n">PlotStyle</span> <span class="o">-&gt;</span> <span class="p">{</span><span class="n">Blue</span><span class="p">}</span>
+   <span class="p">];</span>
+<span class="n">Show</span><span class="p">[{</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">p3</span><span class="p">}]</span>
 </code></pre></div></div>
 
 <p><img src="https://lh3.googleusercontent.com/AUr9JxSqmlUh-5msmjWsPWkhDfaEu4Bs_sBySuug0RbnIXe0s_pQMQIU8VvTqCnVm28oB1gjxBvMRbn6vRP-Xjj44utw9QyU0Jl9iy1a--cOpYwX_nkCSyCAZhEeXtyQ_VS-Rw_gvjQ=w2400" alt="" /></p>

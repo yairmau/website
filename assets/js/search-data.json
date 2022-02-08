@@ -589,10 +589,10 @@
 
   
       ,"page4": {
-          "title": "Science Communication",
-          "content": "Talks . A scientific talk is not a scientific paper, it is a completely different medium! Here are a few tips that I find useful. . ![](/images/phd-comics-presentation.jpg) Cartoon by Jorge Cham How To Give a Talk . [How To Give a Talk, by David L Stern.] . Excerpt: . Principle 1 - Don’t Put Words On Slides It may not seem intuitive, but including words on slides has a bigger detrimental effect on the quality of a talk than any other issue I will address. . The slides in most science talks contain many words. This simple fact has many consequences, none positive. Most obviously, words on slides impel listeners to read the words on the slide. If you are talking while they are reading, then you generate cognitive dissonance that makes it difficult for the audience to understand either your spoken words or your written words. So, if you want your audience to read the words on a slide, then, presumably, you should shut up. But, I don’t recommend that. Instead, just cut all the words form your slides. . The David Attenborough Style of Scientific Presentation . [The David Attenborough Style of Scientific Presentation.] . Excerpt: . Get into this mindset: your main job is to be an entertainer, not a scientist. Most scientists don’t do this, which is why most scientific talks are bad. The fact of the matter is that if the audience doesn’t understand and enjoy your talk, they won’t care if your science is good. . A LaTeX template . Check out a nice LaTeX template for presentations [here]. . . Visualizations . Visualizations can take a message very, very far. I put a lot of thinking into how to best express an idea. I believe that great graphs greatly improve a scientific paper, and a thoughful graph/animation surely brings home the main point of a talk. Here are a few thoughts on visualizations. . Inspiration . Hans Rosling, Gapminder | Max Roser, Our World in Data | Stephen Malinowski, Music Animation Machine | The Economist, Daily Chart | . Colors . Don’t use the rainbow color map. Why? [Read this], by Robert Kosara. . So how should you choose the colors for a graph? . Visit colorbrewer. It gives sequential, diverging and qualitative colormaps that can be chosen to be “colorblind safe”, “print safe”, or “photocopy safe”. Usually, it is the first and only tool I use. It’s just great! | Visit Adobe Color CC. It gives you much more freedom to play with the colors than colorbrewer. Use it wisely! | . More on color: read Subtleties of Color, by Robert Simmon. . Browse for ideas . The Data Visualisation Catalogue | .",
-          "url": "https://yairmau.github.io/website/more/communication/",
-          "relUrl": "/more/communication/",
+          "title": "Books",
+          "content": "&lt;style type=&quot;text/css&quot; media=&quot;screen&quot;&gt; .gr_grid_container { /* customize grid container div here. eg: width: 500px; */ } .gr_grid_book_container { /* customize book cover container div here */ float: left; width: 39px; height: 60px; padding: 0px 0px; overflow: hidden; } &lt;/style&gt; &lt;div id=&quot;gr_grid_widget_1644329981&quot;&gt; &lt;!-- Show static html as a placeholder in case js is not enabled - javascript include will override this if things work --&gt; &lt;h2&gt; &lt;a style=&quot;text-decoration: none;&quot; rel=&quot;nofollow&quot; href=&quot;https://www.goodreads.com/review/list/52721996-yair-mau?shelf=read&amp;utm_medium=api&amp;utm_source=grid_widget&quot;&gt;Yair&#39;s bookshelf: read&lt;/a&gt; &lt;/h2&gt; . Yair Mau&#39;s favorite books » Share book reviews and ratings with Yair, and even join a book club on Goodreads. &lt;/div&gt; &lt;script src=&quot;https://www.goodreads.com/review/grid_widget/52721996.Yair&#39;s%20bookshelf:%20read?cover_size=small&amp;hide_link=&amp;hide_title=&amp;num_books=20&amp;order=d&amp;shelf=read&amp;sort=date_added&amp;widget_id=1644329981&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; .",
+          "url": "https://yairmau.github.io/website/more/books/",
+          "relUrl": "/more/books/",
           "date": ""
       }
       
@@ -601,7 +601,7 @@
   
       ,"page5": {
           "title": "More",
-          "content": "Tutorials . Tools I recommend . Quotes . Science Communication . Five-star Content .",
+          "content": "Books . Tools I recommend . Quotes . Science Communication . Five-star Content .",
           "url": "https://yairmau.github.io/website/more/",
           "relUrl": "/more/",
           "date": ""
@@ -644,39 +644,6 @@
 
   
       ,"page9": {
-          "title": "Five-Star Content I Recommend",
-          "content": "Books . [Check out my Goodreads profile]. . Superintelligence: Paths, Dangers, Strategies, by Nick Bostrom. | The Unfolding of Language: An Evolutionary Tour of Mankind’s Greatest Invention, by Guy Deutscher. | . Blogs . Wait but why, by Tim Urban. | Fuck Yeah Fluid Dynamics, by Nicole Sharp. | . Short stories . They’re made out of meat, by Terry Bisson. | The Sentinel, by Arthur C. Clarke. | On Exactitude in Science, by Jorge Luis Borges. | The Feeling Of Power , by Isaac Asimov. | . Technical stuff . Linux Shell Scripting Tutorial | Pythonic Perambulations, by Jake VanderPlas. | . YouTube channels . 3Blue1Brown, minute physics, Veritasium, Smarter Every Day, CGP Grey, Kurzgesagt, Primitive Technology, Vsauce, Nerdwriter, Mathologer, Sciencium, Steve Mould . Podcasts . Hardcore History with Dan Carlin, especially the series “Blueprint for Armageddon” and “Wrath of the Khans”. | 99% Invisible | Revisionist History | Lexicon Valley | Making Sense, with Sam Harris | .",
-          "url": "https://yairmau.github.io/website/more/five-stars/",
-          "relUrl": "/more/five-stars/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page10": {
-          "title": "Blog",
-          "content": "News . Some of the latest news in the research group . Science . Science-related posts . Geek thoughts . This is where I write about random geek/math/puzzles stuff . Art . Art, origami, mathematical constructions, music, random projects . . . Selected blogposts . Here are a few blogposts that you might find interesting .",
-          "url": "https://yairmau.github.io/website/blog/",
-          "relUrl": "/blog/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page11": {
-          "title": "Tools",
-          "content": "Programming . Anaconda . “The easiest way to perform Python/R data science and machine learning on Linux, Windows, and Mac OS X.” . Sublime Text . “Sublime Text is a sophisticated text editor for code, markup and prose.” . Jupyter Notebook . “The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.” . CodeCademy . “Learn to code interactively, for free.” . Documents . PDFtk . “Use PDFtk Pro to quickly split, merge, rotate, watermark, stamp and secure PDF pages and documents” Command line version (powerful, see examples); friendly graphical tool for Windows. . Overleaf . “An online LaTeX editor that’s easy to use.” By the way, Overleaf has the best LaTeX tutorials out there. Check it out. Also, see this excellent WikiBook on LaTeX. . BRISS . “A simple cross-platform (Linux, Windows, Mac OSX) application for cropping PDF files” . Data . Figshare . “Figshare is an online digital repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.” . BitBucket . “Bitbucket is a web-based hosting service for projects that use Git revision control systems.” . WebPlotDigitizer . “Extract data from plots, images, and maps.” . $ LaTeX$ . doi2bib . “Give us a DOI and we’ll do our best to get you the BibTeX entry.” . Tables Generator . “Quickly create even complex LaTeX tables online with our generator – cells merging is supported together with borders editing.” .",
-          "url": "https://yairmau.github.io/website/more/tools/",
-          "relUrl": "/more/tools/",
-          "date": ""
-      }
-      
-  
-
-  
-      ,"page12": {
           "title": "Art",
           "content": "",
           "url": "https://yairmau.github.io/website/blog/art/",
@@ -687,6 +654,55 @@
   
 
   
+      ,"page10": {
+          "title": "Five-Star Content I Recommend",
+          "content": "Books . [Check out my Goodreads profile]. . Superintelligence: Paths, Dangers, Strategies, by Nick Bostrom. | The Unfolding of Language: An Evolutionary Tour of Mankind’s Greatest Invention, by Guy Deutscher. | . Blogs . Wait but why, by Tim Urban. | Fuck Yeah Fluid Dynamics, by Nicole Sharp. | . Short stories . They’re made out of meat, by Terry Bisson. | The Sentinel, by Arthur C. Clarke. | On Exactitude in Science, by Jorge Luis Borges. | The Feeling Of Power , by Isaac Asimov. | . Technical stuff . Linux Shell Scripting Tutorial | Pythonic Perambulations, by Jake VanderPlas. | . YouTube channels . 3Blue1Brown, minute physics, Veritasium, Smarter Every Day, CGP Grey, Kurzgesagt, Primitive Technology, Vsauce, Nerdwriter, Mathologer, Sciencium, Steve Mould . Podcasts . Hardcore History with Dan Carlin, especially the series “Blueprint for Armageddon” and “Wrath of the Khans”. | 99% Invisible | Revisionist History | Lexicon Valley | Making Sense, with Sam Harris | .",
+          "url": "https://yairmau.github.io/website/more/five-stars/",
+          "relUrl": "/more/five-stars/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page11": {
+          "title": "Science Communication",
+          "content": "Talks . A scientific talk is not a scientific paper, it is a completely different medium! Here are a few tips that I find useful. . ![](/images/phd-comics-presentation.jpg) Cartoon by Jorge Cham How To Give a Talk . [How To Give a Talk, by David L Stern.] . Excerpt: . Principle 1 - Don’t Put Words On Slides It may not seem intuitive, but including words on slides has a bigger detrimental effect on the quality of a talk than any other issue I will address. . The slides in most science talks contain many words. This simple fact has many consequences, none positive. Most obviously, words on slides impel listeners to read the words on the slide. If you are talking while they are reading, then you generate cognitive dissonance that makes it difficult for the audience to understand either your spoken words or your written words. So, if you want your audience to read the words on a slide, then, presumably, you should shut up. But, I don’t recommend that. Instead, just cut all the words form your slides. . The David Attenborough Style of Scientific Presentation . [The David Attenborough Style of Scientific Presentation.] . Excerpt: . Get into this mindset: your main job is to be an entertainer, not a scientist. Most scientists don’t do this, which is why most scientific talks are bad. The fact of the matter is that if the audience doesn’t understand and enjoy your talk, they won’t care if your science is good. . A LaTeX template . Check out a nice LaTeX template for presentations [here]. . . Visualizations . Visualizations can take a message very, very far. I put a lot of thinking into how to best express an idea. I believe that great graphs greatly improve a scientific paper, and a thoughful graph/animation surely brings home the main point of a talk. Here are a few thoughts on visualizations. . Inspiration . Hans Rosling, Gapminder | Max Roser, Our World in Data | Stephen Malinowski, Music Animation Machine | The Economist, Daily Chart | . Colors . Don’t use the rainbow color map. Why? [Read this], by Robert Kosara. . So how should you choose the colors for a graph? . Visit colorbrewer. It gives sequential, diverging and qualitative colormaps that can be chosen to be “colorblind safe”, “print safe”, or “photocopy safe”. Usually, it is the first and only tool I use. It’s just great! | Visit Adobe Color CC. It gives you much more freedom to play with the colors than colorbrewer. Use it wisely! | . More on color: read Subtleties of Color, by Robert Simmon. . Browse for ideas . The Data Visualisation Catalogue | .",
+          "url": "https://yairmau.github.io/website/more/communication/",
+          "relUrl": "/more/communication/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page12": {
+          "title": "Tools",
+          "content": "Programming . Anaconda . “The easiest way to perform Python/R data science and machine learning on Linux, Windows, and Mac OS X.” . Sublime Text . “Sublime Text is a sophisticated text editor for code, markup and prose.” . Jupyter Notebook . “The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.” . CodeCademy . “Learn to code interactively, for free.” . Documents . PDFtk . “Use PDFtk Pro to quickly split, merge, rotate, watermark, stamp and secure PDF pages and documents” Command line version (powerful, see examples); friendly graphical tool for Windows. . Overleaf . “An online LaTeX editor that’s easy to use.” By the way, Overleaf has the best LaTeX tutorials out there. Check it out. Also, see this excellent WikiBook on LaTeX. . BRISS . “A simple cross-platform (Linux, Windows, Mac OSX) application for cropping PDF files” . Data . Figshare . “Figshare is an online digital repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.” . BitBucket . “Bitbucket is a web-based hosting service for projects that use Git revision control systems.” . WebPlotDigitizer . “Extract data from plots, images, and maps.” . $ LaTeX$ . doi2bib . “Give us a DOI and we’ll do our best to get you the BibTeX entry.” . Tables Generator . “Quickly create even complex LaTeX tables online with our generator – cells merging is supported together with borders editing.” .",
+          "url": "https://yairmau.github.io/website/more/tools/",
+          "relUrl": "/more/tools/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page13": {
+          "title": "Blog",
+          "content": "News . Some of the latest news in the research group . Science . Science-related posts . Geek thoughts . This is where I write about random geek/math/puzzles stuff . Art . Art, origami, mathematical constructions, music, random projects . . . Selected blogposts . Here are a few blogposts that you might find interesting .",
+          "url": "https://yairmau.github.io/website/blog/",
+          "relUrl": "/blog/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+
+  
+  
 
   
 
@@ -699,15 +715,10 @@
   
 
   
-
-  
   
 
   
-  
-
-  
-      ,"page21": {
+      ,"page22": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://yairmau.github.io/website/robots.txt",
