@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Hydrology — introduction | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Hydrology — introduction" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Water cycle, major processes" />
+<meta property="og:description" content="Water cycle, major processes" />
+<link rel="canonical" href="https://yairmau.github.io/website/jupyter/2020/02/01/introduction.html" />
+<meta property="og:url" content="https://yairmau.github.io/website/jupyter/2020/02/01/introduction.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-01T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Hydrology — introduction" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-02-01T00:00:00-06:00","datePublished":"2020-02-01T00:00:00-06:00","description":"Water cycle, major processes","headline":"Hydrology — introduction","mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/website/jupyter/2020/02/01/introduction.html"},"url":"https://yairmau.github.io/website/jupyter/2020/02/01/introduction.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/website/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/website/feed.xml" title="Yair Mau" /><link rel="shortcut icon" type="image/x-icon" href="/website/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/" style="text-decoration:none">
+        <img src="/website/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/website/blog/">Blog</a><a class="page-link" href="/website/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Hydrology --- introduction</h1><p class="page-description">Water cycle, major processes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-01T00:00:00-06:00" itemprop="datePublished">
+        Feb 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      3 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/website/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-02-01-introduction.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/website/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-02-01-introduction.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-02-01-introduction.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fyairmau%2Fwebsite%2Fblob%2Fmaster%2F_notebooks%2F2020-02-01-introduction.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/website/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#How-much-water-is-there?-Where?">How much water is there? Where? </a></li>
+<li class="toc-entry toc-h2"><a href="#The-water-cycle">The water cycle </a></li>
+<li class="toc-entry toc-h2"><a href="#Global-water-distribution">Global water distribution </a></li>
+<li class="toc-entry toc-h2"><a href="#Energy-drives-the-hydrologic-cycle">Energy drives the hydrologic cycle </a></li>
+<li class="toc-entry toc-h2"><a href="#Components-of-the-water-cycle">Components of the water cycle </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Water-storage-in-oceans">Water storage in oceans </a></li>
+<li class="toc-entry toc-h3"><a href="#Evaporation-/-Sublimation">Evaporation / Sublimation </a></li>
+<li class="toc-entry toc-h3"><a href="#Evapotranspiration">Evapotranspiration </a></li>
+<li class="toc-entry toc-h3"><a href="#Water-storage-in-the-atmosphere">Water storage in the atmosphere </a></li>
+<li class="toc-entry toc-h3"><a href="#Condensation">Condensation </a></li>
+<li class="toc-entry toc-h3"><a href="#Precipitation">Precipitation </a></li>
+<li class="toc-entry toc-h3"><a href="#Water-storage-in-ice-and-snow">Water storage in ice and snow </a></li>
+<li class="toc-entry toc-h3"><a href="#Snowmelt-runoff-to-streams">Snowmelt runoff to streams </a></li>
+<li class="toc-entry toc-h3"><a href="#Surface-runoff">Surface runoff </a></li>
+<li class="toc-entry toc-h3"><a href="#Streamflow">Streamflow </a></li>
+<li class="toc-entry toc-h3"><a href="#Lakes-and-rivers">Lakes and rivers </a></li>
+<li class="toc-entry toc-h3"><a href="#Infiltration">Infiltration </a></li>
+<li class="toc-entry toc-h3"><a href="#Groundwater-storage">Groundwater storage </a></li>
+<li class="toc-entry toc-h3"><a href="#Groundwater-flow-and-discharge">Groundwater flow and discharge </a></li>
+<li class="toc-entry toc-h3"><a href="#Spring">Spring </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-02-01-introduction.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-much-water-is-there?-Where?">
+<a class="anchor" href="#How-much-water-is-there?-Where?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How much water is there? Where?<a class="anchor-link" href="#How-much-water-is-there?-Where?"> </a>
+</h2>
+<p>
+</p>
+<center class="youtube-iframe-wrapper">
+    <iframe width="730" height="315" src="https://www.youtube.com/embed/2ObMyytxLz8" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<img src="/website/images/copied_from_nb/hydrology_figures/all-the-worlds-water.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/how-much-water-there-earth">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/website/images/copied_from_nb/hydrology_figures/EarthsWater-BarChart.png" alt="" title="Source: https://www.usgs.gov/media/images/distribution-water-and-above-earth"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-water-cycle">
+<a class="anchor" href="#The-water-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>The water cycle<a class="anchor-link" href="#The-water-cycle"> </a>
+</h2>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/water-cycle.jpg" alt="" title="Source: https://www.usgs.gov/media/images/water-cycle-natural-water-cycle"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Global-water-distribution">
+<a class="anchor" href="#Global-water-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Global water distribution<a class="anchor-link" href="#Global-water-distribution"> </a>
+</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Water source</th>
+<th>Volume (km$^3$)</th>
+<th>% of freshwater</th>
+<th>% of total water</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Oceans, Seas, &amp; Bays</td>
+<td>1,338,000,000</td>
+<td>--</td>
+<td>96.54</td>
+</tr>
+<tr>
+<td style="text-align:left">Ice caps, Glaciers,<br>&amp; Permanent Snow</td>
+<td>24,064,000</td>
+<td>68.7</td>
+<td>1.74</td>
+</tr>
+<tr>
+<td style="text-align:left">Groundwater</td>
+<td>23,400,000</td>
+<td>--</td>
+<td>1.69</td>
+</tr>
+<tr>
+<td style="text-align:left">$\quad$Fresh</td>
+<td>10,530,000</td>
+<td>30.1</td>
+<td>0.76</td>
+</tr>
+<tr>
+<td style="text-align:left">$\quad$Saline</td>
+<td>12,870,000</td>
+<td>--</td>
+<td>0.93</td>
+</tr>
+<tr>
+<td style="text-align:left">Soil Moisture</td>
+<td>16,500</td>
+<td>0.05</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td style="text-align:left">Ground Ice<br>&amp; Permafrost</td>
+<td>300,000</td>
+<td>0.86</td>
+<td>0.022</td>
+</tr>
+<tr>
+<td style="text-align:left">Lakes</td>
+<td>176,400</td>
+<td>--</td>
+<td>0.013</td>
+</tr>
+<tr>
+<td style="text-align:left">$\quad$Fresh</td>
+<td>91,000</td>
+<td>0.26</td>
+<td>0.007</td>
+</tr>
+<tr>
+<td style="text-align:left">$\quad$Saline</td>
+<td>85,400</td>
+<td>--</td>
+<td>0.006</td>
+</tr>
+<tr>
+<td style="text-align:left">Atmosphere</td>
+<td>12,900</td>
+<td>0.04</td>
+<td>0.001</td>
+</tr>
+<tr>
+<td style="text-align:left">Swamp Water</td>
+<td>11,470</td>
+<td>0.03</td>
+<td>0.0008</td>
+</tr>
+<tr>
+<td style="text-align:left">Rivers</td>
+<td>2,120</td>
+<td>0.006</td>
+<td>0.0002</td>
+</tr>
+<tr>
+<td style="text-align:left">Biological Water</td>
+<td>1,120</td>
+<td>0.003</td>
+<td>0.0001</td>
+</tr>
+</tbody>
+</table>
+<p>* (Percents are rounded, so will not add to 100)<br>
+<a href="https://www.usgs.gov/special-topic/water-science-school/science/fundamentals-water-cycle">https://www.usgs.gov/special-topic/water-science-school/science/fundamentals-water-cycle</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Energy-drives-the-hydrologic-cycle">
+<a class="anchor" href="#Energy-drives-the-hydrologic-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Energy drives the hydrologic cycle<a class="anchor-link" href="#Energy-drives-the-hydrologic-cycle"> </a>
+</h2>
+<blockquote>
+<p>A key aspect of the hydrologic cycle is the fact that it is driven by energy inputs (primarily from the sun). At the global scale, the system is essentially closed with respect to water; negligible water is entering or leaving the system. In other words, there is no external forcing in terms of a water flux. Systems with no external forcing will generally eventually come to an equilibrium state. So what makes the hydrologic cycle so dynamic? The solar radiative energy input, which is external to the system, drives the hydrologic cycle. Averaged over the globe, 342 W m$^{-2}$ of solar radiative energy is being continuously input to the system at the top of the atmosphere. This energy input must be dissipated, and this is done, to a large extent, via the hydrologic cycle. Due to this fact, the study of hydrology is not isolated to the study of water storage and movement, but also must often include study of energy storage and movements.</p>
+</blockquote>
+<p>Margulis, 2017, "Introduction to Hydrology"</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Components-of-the-water-cycle">
+<a class="anchor" href="#Components-of-the-water-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Components of the water cycle<a class="anchor-link" href="#Components-of-the-water-cycle"> </a>
+</h2>
+<h3 id="Water-storage-in-oceans">
+<a class="anchor" href="#Water-storage-in-oceans" aria-hidden="true"><span class="octicon octicon-link"></span></a>Water storage in oceans<a class="anchor-link" href="#Water-storage-in-oceans"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Evaporation-/-Sublimation">
+<a class="anchor" href="#Evaporation-/-Sublimation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaporation / Sublimation<a class="anchor-link" href="#Evaporation-/-Sublimation"> </a>
+</h3>
+<p>Evaporation $\longrightarrow$ cooling</p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/evaporation_1.gif" alt="" title="Source: http://www.hk-phy.org/contextual/heat/cha/evapo02_e.html"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/evaporation_2.png" alt="" title="Source: https://courses.lumenlearning.com/cheminter/chapter/evaporation/"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/cooling-tower.png" alt="" title="Source: https://engineeringinsider.org/cooling-tower-types/"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/evaporation_slide0.jpg" alt="" title="Source: https://slideplayer.com/slide/7418126/">
+<img src="/website/images/copied_from_nb/hydrology_figures/evaporation_slide1.jpg" alt="" title="Source: https://slideplayer.com/slide/7418126/">
+<img src="/website/images/copied_from_nb/hydrology_figures/evaporation_slide2.jpg" alt="" title="Source: https://slideplayer.com/slide/7418126/"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Evapotranspiration">
+<a class="anchor" href="#Evapotranspiration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evapotranspiration<a class="anchor-link" href="#Evapotranspiration"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/evapotranspiration1.jpg" alt="" title="Source: http://www.eschooltoday.com/water-cycle/what-is-transpiration-and-evapotranspiration.html"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Water-storage-in-the-atmosphere">
+<a class="anchor" href="#Water-storage-in-the-atmosphere" aria-hidden="true"><span class="octicon octicon-link"></span></a>Water storage in the atmosphere<a class="anchor-link" href="#Water-storage-in-the-atmosphere"> </a>
+</h3>
+<p>Cumulonimbus cloud over Africa
+<img src="/website/images/copied_from_nb/hydrology_figures/cumulonimbus.jpg" alt="" title="Source: https://commons.wikimedia.org/wiki/File:Cumulonimbus_Cloud_over_Africa_%28color%29.jpg"></p>
+<p>Picture of cumulonimbus taken from the International Space Station, over western Africa near the Senegal-Mali border.</p>
+<p>If all of the water in the atmosphere rained down at once, it would only cover the globe to a depth of 2.5 centimeters.
+$$
+\begin{align}
+\text{amount of water in the atmosphere} &amp; \qquad V = 12\, 900\, \text{km}^3 \\
+\text{surface of Earth} &amp; \qquad S = 4 \pi R^2;\quad R=6371\,\text{km}\\
+&amp; \qquad V = S \times h \\
+\text{height} &amp; \qquad h = \frac{V}{S} \simeq 2.5\,\text{cm}
+\end{align}
+$$</p>
+<p>Try to calculate this yourself, and click on the button below to check how to do it.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<details class="description">
+      <summary class="btn btn-sm" data-open="Hide Code" data-close="Show Code"></summary>
+        <p></p>
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># amount of water in the atmosphere</span>
+<span class="n">V</span> <span class="o">=</span> <span class="mi">12900</span> <span class="c1"># km^3</span>
+<span class="c1"># Earth's radius</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mi">6371</span> <span class="c1"># km</span>
+<span class="c1"># surface of Earth = 4 pi Rˆ2</span>
+<span class="n">S</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="mf">3.141592</span> <span class="o">*</span> <span class="n">R</span><span class="o">**</span><span class="mi">2</span>
+<span class="c1"># Volume: V = S * h, therefore</span>
+<span class="c1"># height</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">V</span> <span class="o">/</span> <span class="n">S</span> <span class="c1"># in km</span>
+<span class="n">h_cm</span> <span class="o">=</span> <span class="n">h</span> <span class="o">*</span> <span class="mf">1e5</span> <span class="c1"># in cm</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The height would be ~ </span><span class="si">{</span><span class="n">h_cm</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> cm"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+    </details>
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The height would be ~ 2.5 cm
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Condensation">
+<a class="anchor" href="#Condensation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condensation<a class="anchor-link" href="#Condensation"> </a>
+</h3>
+<h3 id="Precipitation">
+<a class="anchor" href="#Precipitation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Precipitation<a class="anchor-link" href="#Precipitation"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/rain-burst1.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/rain-and-precipitation"></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th>Intensity   (cm/h)</th>
+<th>Median diameter   (mm)</th>
+<th>Velocity of fall   (m/s)</th>
+<th>Drops s$^{-1}$ m$^{-2}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Fog</td>
+<td>0.013</td>
+<td>0.01</td>
+<td>0.003</td>
+<td>67,425,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Mist</td>
+<td>0.005</td>
+<td>0.1</td>
+<td>0.21</td>
+<td>27,000</td>
+</tr>
+<tr>
+<td style="text-align:left">Drizzle</td>
+<td>0.025</td>
+<td>0.96</td>
+<td>4.1</td>
+<td>151</td>
+</tr>
+<tr>
+<td style="text-align:left">Light rain</td>
+<td>0.10</td>
+<td>1.24</td>
+<td>4.8</td>
+<td>280</td>
+</tr>
+<tr>
+<td style="text-align:left">Moderate rain</td>
+<td>0.38</td>
+<td>1.60</td>
+<td>5.7</td>
+<td>495</td>
+</tr>
+<tr>
+<td style="text-align:left">Heavy rain</td>
+<td>1.52</td>
+<td>2.05</td>
+<td>6.7</td>
+<td>495</td>
+</tr>
+<tr>
+<td style="text-align:left">Excessive rain</td>
+<td>4.06</td>
+<td>2.40</td>
+<td>7.3</td>
+<td>818</td>
+</tr>
+<tr>
+<td style="text-align:left">Cloudburst</td>
+<td>10.2</td>
+<td>2.85</td>
+<td>7.9</td>
+<td>1,220</td>
+</tr>
+</tbody>
+</table>
+<p>Source: <a href="https://www.usgs.gov/special-topic/water-science-school/science/precipitation-and-water-cycle">https://www.usgs.gov/special-topic/water-science-school/science/precipitation-and-water-cycle</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Water-storage-in-ice-and-snow">
+<a class="anchor" href="#Water-storage-in-ice-and-snow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Water storage in ice and snow<a class="anchor-link" href="#Water-storage-in-ice-and-snow"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/iceland-summer.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/iceland-winter.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Snowmelt-runoff-to-streams">
+<a class="anchor" href="#Snowmelt-runoff-to-streams" aria-hidden="true"><span class="octicon octicon-link"></span></a>Snowmelt runoff to streams<a class="anchor-link" href="#Snowmelt-runoff-to-streams"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Surface-runoff">
+<a class="anchor" href="#Surface-runoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Surface runoff<a class="anchor-link" href="#Surface-runoff"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/runoff-field.jpg" alt="" title="Source: https://phys.org/news/2016-08-choices-effects-runoff-productivity.html"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/runoff-city.jpg" alt="" title="Source: https://www.melabes.co.il/news/51773"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Streamflow">
+<a class="anchor" href="#Streamflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Streamflow<a class="anchor-link" href="#Streamflow"> </a>
+</h3>
+<p>The Mississippi river basin is very large
+<img src="/website/images/copied_from_nb/hydrology_figures/mississippi-watershed.gif" alt="" title="Source: https://images.app.goo.gl/N9N4MsoNUy39dzCb6"></p>
+<p>The Amazon river basin is <strong>Huge</strong>
+<img src="/website/images/copied_from_nb/hydrology_figures/amazon-basin.jpg" alt="" title="Source: https://amazonwaters.org/basins/"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/amazon-basin-us.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Lakes-and-rivers">
+<a class="anchor" href="#Lakes-and-rivers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lakes and rivers<a class="anchor-link" href="#Lakes-and-rivers"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/rivers-africa.png" alt="" title="Source: https://www.dreamstime.com/world-map-africa-egypt-libya-ethiopia-arabia-mauritania-nigeria-somalia-namibia-tanzania-madagascar-geographic-xxl-chart-image154799901"></p>
+<p>Lake Malawi
+<img src="/website/images/copied_from_nb/hydrology_figures/lake-malawi.jpg" alt="" title="Source: https://images.app.goo.gl/8f4ikUgp4DnLAw1w6"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/lake-malawi2.jpg" alt="" title="Source: https://www.telegraph.co.uk/travel/destinations/africa/malawi/articles/A-family-holiday-in-Lake-Malawi-zen-and-the-art-of-paddleboarding/"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Infiltration">
+<a class="anchor" href="#Infiltration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infiltration<a class="anchor-link" href="#Infiltration"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/infiltration.jpg" alt="" title="Source: http://sumagroulx.com/water-infiltration/"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Groundwater-storage">
+<a class="anchor" href="#Groundwater-storage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Groundwater storage<a class="anchor-link" href="#Groundwater-storage"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/groundwater.jpg" alt="" title="Source: https://www.usgs.gov/media/images/groundwater-area-underground-where-openings-are-full-water"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/ogallala_aquifer_usgs.jpg" alt="" title="Source: https://modernfarmer.com/2015/07/ogallala-aquifer-depletion/"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/ogallala_aquifer_wiki.png" alt="" title="Source: https://commons.wikimedia.org/wiki/File:High_plains_fresh_groundwater_usage_2000.svg"></p>
+<p>Center Pivot irrigation in Nebraska taps the Ogallala Aquifer.
+<img src="/website/images/copied_from_nb/hydrology_figures/groundwater-ogallala-aquifer.jpg" alt="" title="Source: https://nebraskaeducationonlocation.org/natural-attractions/ogallala-aquifer/"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Groundwater-flow-and-discharge">
+<a class="anchor" href="#Groundwater-flow-and-discharge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Groundwater flow and discharge<a class="anchor-link" href="#Groundwater-flow-and-discharge"> </a>
+</h3>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/groundwater-flow-diagram.jpg" alt="" title="Source: https://www.usgs.gov/media/images/conceptual-groundwater-flow-diagram"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/groundwater-discharge.gif" alt="" title="Source: http://wellwater.oregonstate.edu/groundwater-movement"></p>
+<p><img src="/website/images/copied_from_nb/hydrology_figures/groundwater-discharge-submarine.png" alt="" title="Source: https://www.researchgate.net/figure/Principal-pathways-for-submarine-groundwater-discharge-to-the-coastal-ocean-including_fig1_274590439"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Spring">
+<a class="anchor" href="#Spring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spring<a class="anchor-link" href="#Spring"> </a>
+</h3>
+<p>Ein Gedi
+<img src="/website/images/copied_from_nb/hydrology_figures/spring-ein-gedi.png" alt="" title="Source: https://www.haaretz.com/israel-news/travel/seven-cool-natural-springs-of-israel-1.5388627"></p>
+<p>Thousand Springs, Idaho
+<img src="/website/images/copied_from_nb/hydrology_figures/spring-Thousand-Springs-Idaho.png" alt="" title="Source: https://www.usgs.gov/media/images/water-flowing-underground-can-find-openings-back-land-surface"></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/website/jupyter/2020/02/01/introduction.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/website/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/website/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Personal website. Random stuff.<br>
+           </p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>

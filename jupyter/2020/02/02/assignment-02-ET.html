@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Assignment 2 - Evapotranspiration | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Assignment 2 - Evapotranspiration" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal website. Random stuff." />
+<meta property="og:description" content="Personal website. Random stuff." />
+<link rel="canonical" href="https://yairmau.github.io/website/jupyter/2020/02/02/assignment-02-ET.html" />
+<meta property="og:url" content="https://yairmau.github.io/website/jupyter/2020/02/02/assignment-02-ET.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-02T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Assignment 2 - Evapotranspiration" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-02-02T00:00:00-06:00","datePublished":"2020-02-02T00:00:00-06:00","description":"Personal website. Random stuff.","headline":"Assignment 2 - Evapotranspiration","mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/website/jupyter/2020/02/02/assignment-02-ET.html"},"url":"https://yairmau.github.io/website/jupyter/2020/02/02/assignment-02-ET.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/website/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/website/feed.xml" title="Yair Mau" /><link rel="shortcut icon" type="image/x-icon" href="/website/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/" style="text-decoration:none">
+        <img src="/website/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/website/blog/">Blog</a><a class="page-link" href="/website/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Assignment 2 - Evapotranspiration</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-02T00:00:00-06:00" itemprop="datePublished">
+        Feb 2, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/website/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-02-02-assignment-02-ET.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/website/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-02-02-assignment-02-ET.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-02-02-assignment-02-ET.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fyairmau%2Fwebsite%2Fblob%2Fmaster%2F_notebooks%2F2020-02-02-assignment-02-ET.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/website/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-02-02-assignment-02-ET.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="&#128210;-instructions">&#128210; instructions<a class="anchor-link" href="#&#128210;-instructions"> </a></h2><p>This is where learning happens, not during a lecture. You'll learn a ton of things by doing them yourself. Much success! 😄</p>
+<p>Create a Jupyter Notebook called <code>assignment-02-IDNUMBER</code>, where <code>IDNUMBER</code> is your 9-digit ID. This is the file only file we will check.</p>
+<h2 id="&#128204;-locations-and-data">&#128204; locations and data<a class="anchor-link" href="#&#128204;-locations-and-data"> </a></h2><p><strong>Choose two stations with different climates.</strong></p>
+<p>Go to NOAA's <a href="https://www.ncdc.noaa.gov/crn/qcdatasets.html">Climate Reference Network Data</a> website. The sub-hourly (5-min) data contains information on</p>
+<ul>
+<li>air temperature,</li>
+<li>precipitation,</li>
+<li>global solar radiation,</li>
+<li>surface infrared temperature,</li>
+<li>relative humidity,</li>
+<li>soil moisture and temperature,</li>
+<li>wetness, and</li>
+<li>1.5 meter wind speed. 
+There is no data on air pressure, so one needs to use the stations coordinates (lat, lon) to find its height above sea level, and from that infer the air pressure. You can use Google Earth or any other means to find the station's height.</li>
+</ul>
+<p>In the Data Access link, choose a year and a station you would like to analyze. If you are not sure where the stations are, find them using the 2-letter state abbreviation and the station name.</p>
+<p>Download the following files:</p>
+<ol>
+<li>One full year of data for each station. Make sure important data we need to calculate Penman's ET estimation is available.</li>
+<li>The headers file</li>
+<li>The documentation file</li>
+</ol>
+<p>Make sure you understand what are the units provided for each measurement (see documentation).</p>
+<h2 id="&#128736;-tasks">&#128736; tasks<a class="anchor-link" href="#&#128736;-tasks"> </a></h2><p>Produce potential ET estimates using Thornthwaite's equation and Penman's equation.
+Produce plots of ET as a function of time for each station, comparing the two methods you used.
+Also, using Penman's ET estimates, compare the two stations and discuss about their differences/similarities.</p>
+<p>You might find interesting things in the data, such as periods of unusually high/low temperatures, radiation, etc. Discuss how these factors might have affected the ET estimates that you calculated.</p>
+<p>You will have <strong>two weeks</strong> to deliver your assignment. You should <strong>not</strong> hand in a dry document with only figures and code, I'm expecting text before and after each code/graph cell, explaining what you did, why you did it, and how it fits the story you are telling. Don't forget to put labels on your plot axes, title, legend, etc.</p>
+<p>Your Jupyter Notebook should be <strong>fully functional</strong>: if we press <code>Kernel &gt; Restart &amp; Run All</code>, all the code must work without any errors.</p>
+<h2 id="&#127749;-presentation">&#127749; presentation<a class="anchor-link" href="#&#127749;-presentation"> </a></h2><p>All the assignment must be in <strong>one single</strong> Jupyter Notebook. Use markdown cells to discuss the analysis and results, and in code cells show <strong>all the code</strong> you used to produce the figures and data analysis. Leave only the code necessary for your analysis, delete unnecessary lines your wrote while analyzing your data. Don't forget to comment your code, just like we did during exercise sessions.</p>
+<p>You can write in English or in Hebrew, but the text in the figures must be in English. If you choose to write the discussion in Hebrew, be aware that Jupyter Notebooks don't have native right-to-left language support:</p>
+<p>ניתן לכתוב בעברית, למרות שזה לא נראה כ״כ טוב...</p>
+<p>You can use some HTML code to achieve best results in Hebrew. Type the following</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span> <span class="na">dir</span><span class="o">=</span><span class="s">&quot;rtl&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align: right;&quot;</span><span class="p">&gt;</span>
+עכשיו הרבה יותר טוב!
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+<p>to get</p>
+<p dir="rtl" style="text-align: right;">
+עכשיו הרבה יותר טוב!
+</p><p>If you have many paragraphs in hebrew, do the following:</p>
+<p dir="rtl" style="text-align: right;">
+פסקה מספר 1.
+</p><p dir="rtl" style="text-align: right;">
+פסקה מספר 2.
+</p><p dir="rtl" style="text-align: right;">
+אם יש לכם כמה פסקאות, כל אחת מהן תהיה בתוך "dir" משלה
+</p><p>In my opinion it is too complicated to write in Hebrew in Jupyter Notebooks, just write in English, your grade will not be affected by typos nor less-than-perfect English proficiency.</p>
+<h2 id="&#128175;-evaluation">&#128175; evaluation<a class="anchor-link" href="#&#128175;-evaluation"> </a></h2><p>Your assignment will be evaluated according to the following criteria:</p>
+<ul>
+<li>40% Presentation. How the graphs look, labels, general organization, markdown, clean code.</li>
+<li>30% Discussion. This is where you explain what you did, what you found out, etc.</li>
+<li>15% Depth of analysis. You can analyze/explore the data with different levels of complexity, this is where we take that into consideration.</li>
+<li>10% Replicability: Your code runs flawlessly.</li>
+<li>5%: Code commenting. Explain in your code what you are doing, this is good for everyone, especially for yourself!</li>
+</ul>
+<h2 id="&#128666;-importing-the-data">&#128666; importing the data<a class="anchor-link" href="#&#128666;-importing-the-data"> </a></h2><p>Below you can find an example of how to import the data file provided by NOAA's Climate Reference Network Data website. You might have to make some adjustments to it.</p>
+<div class="highlight"><pre><span></span><span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;CRNS0101-05-2020-CO_Boulder_14_W.txt&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span>
+                 <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>                      <span class="c1"># no headers needed, we&#39;ll do that later</span>
+                 <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>            <span class="c1"># blank spaces separate between columns</span>
+                 <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;-99.000&quot;</span><span class="p">,</span> <span class="s2">&quot;-9999.0&quot;</span><span class="p">]</span>  <span class="c1"># substitute these values for missing (NaN) values</span>
+                <span class="p">)</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;HEADERS_sub_hourly.txt&quot;</span><span class="p">,</span>    <span class="c1"># load headers file</span>
+                      <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>                    <span class="c1"># skip the first [0] line</span>
+                      <span class="n">delim_whitespace</span><span class="o">=</span><span class="kc">True</span>
+                     <span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">headers</span><span class="o">.</span><span class="n">columns</span>                       <span class="c1"># rename df columns with headers columns</span>
+<span class="c1"># LST = local standard time</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;LST_TIME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">04d</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;LST_TIME&quot;</span><span class="p">]]</span>  <span class="c1"># time needs padding of zeros, then convert to string</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;LST_DATE&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;LST_DATE&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>            <span class="c1"># convert date into string</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;LST_DATE&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;LST_TIME&#39;</span><span class="p">]</span> <span class="c1"># combine date+time into datetime</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">])</span>        <span class="c1"># interpret datetime</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;datetime&#39;</span><span class="p">)</span>                          <span class="c1"># make datetime the index</span>
+<span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/website/jupyter/2020/02/02/assignment-02-ET.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/website/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/website/images/site-logo.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Personal website. Random stuff.<br>
+           </p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>
