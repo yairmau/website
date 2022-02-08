@@ -607,11 +607,11 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 
 /* Literal.Number.Integer.Long */
 /** Links */
-a:link { color: #437fc7; }
+a:link { color: #8b0000; }
 
-a:visited { color: #437fc7; }
+a:visited { color: #8b0000; }
 
-a:active { color: #437fc7; }
+a:active { color: #8b0000; }
 
 table { font-size: 1rem; }
 
@@ -625,7 +625,7 @@ hr { display: block; height: 1px; border: 0; border-top: 3px solid #ccc; margin:
 
 .page-link { font-size: 1.125rem; vertical-align: middle; }
 
-.navbar-fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 999; background-color: white; border-bottom: 5px solid #437fc7; border-top: 5px solid #437fc7; }
+.navbar-fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 999; background-color: white; border-bottom: 5px solid #8b0000; border-top: 5px solid #8b0000; }
 
 .page, .post, .home, .blog { padding-top: 55.95px; }
 
@@ -643,15 +643,15 @@ hr { display: block; height: 1px; border: 0; border-top: 3px solid #ccc; margin:
   100% { -webkit-transform: rotate(359deg);
     transform: rotate(359deg); } }
 
-.site-footer { border-top: 5px solid #437fc7; }
+.site-footer { border-top: 5px solid #8b0000; }
 
-.my_button { font-size: 1.3rem; background-color: #437fc7; border: none; color: white; padding: 10px 15px; text-align: center; text-decoration: none; display: inline-block; transition: 0.3s; }
+.my_button { font-size: 1.3rem; background-color: #8b0000; border: none; color: white; padding: 10px 15px; text-align: center; text-decoration: none; display: inline-block; transition: 0.3s; }
 
-.my_button:hover { background: #ddd; color: #437fc7; /*border: 1px solid #6e0014;*/ }
+.my_button:hover { background: #ddd; color: #8b0000; /*border: 1px solid #6e0014;*/ }
 
-.my_button_small { font-size: 1rem; background-color: #437fc7; border: none; color: white; padding: 6px 8px; text-align: center; text-decoration: none; display: inline-block; transition: 0.3s; }
+.my_button_small { font-size: 1rem; background-color: #8b0000; border: none; color: white; padding: 6px 8px; text-align: center; text-decoration: none; display: inline-block; transition: 0.3s; }
 
-.my_button_small:hover { background: #ddd; color: #437fc7; /*border: 1px solid #6e0014;*/ }
+.my_button_small:hover { background: #ddd; color: #8b0000; /*border: 1px solid #6e0014;*/ }
 
 .my_hr { border-top: 3px solid #ccc; }
 
