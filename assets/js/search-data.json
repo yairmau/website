@@ -39,6 +39,17 @@
 
   
       ,"page2": {
+          "title": "Science",
+          "content": "",
+          "url": "https://yairmau.github.io/website/blog/science/",
+          "relUrl": "/blog/science/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page3": {
           "title": "",
           "content": "Research Specialist Wanted! . . Important: We&#39;re looking for a part-time research specialist, more details [here](/website/archive/temp/research-specialist-wanted.pdf). Senior Lecturer Institute of Environmental Sciences   The Hebrew University of Jerusalem . About . I’m interested in the interactions between soil, water and vegetation in drylands, in both natural and agricultural ecosystems. Our goal is to understand how the basic processes and feedbacks influence the ecosystem dynamics, and how this knowledge can be used to control those systems. . The common theme between my different research projects is land/ecosystem degradation caused by human activity. . Our research is based on “simple” mathematical models, that strive to capture the essential physical processes, while providing deep insight into the dynamics of the system. Some of the tools we use in the modeling of environmental questions come from dynamical systems, statistical physics and optimal control theory. . [Read more on current research projects…] . I love to write code, and I made available on the Tutorials page some working examples in Python and LaTeX. Check it out! . How to find me .   yair.mau@mail.huji.ac.il   +972 8 948 9386   Rehovot Campus, Lubell building, office 19. Map here . Google Scholar Check out my CV . . Piet Hein Problems worthy   of attack prove their worth   by hitting back. .",
           "url": "https://yairmau.github.io/website/",
@@ -49,26 +60,129 @@
   
 
   
+      ,"page4": {
+          "title": "Science Communication",
+          "content": "Talks . A scientific talk is not a scientific paper, it is a completely different medium! Here are a few tips that I find useful. . ![](/images/phd-comics-presentation.jpg) Cartoon by Jorge Cham How To Give a Talk . [How To Give a Talk, by David L Stern.] . Excerpt: . Principle 1 - Don’t Put Words On Slides It may not seem intuitive, but including words on slides has a bigger detrimental effect on the quality of a talk than any other issue I will address. . The slides in most science talks contain many words. This simple fact has many consequences, none positive. Most obviously, words on slides impel listeners to read the words on the slide. If you are talking while they are reading, then you generate cognitive dissonance that makes it difficult for the audience to understand either your spoken words or your written words. So, if you want your audience to read the words on a slide, then, presumably, you should shut up. But, I don’t recommend that. Instead, just cut all the words form your slides. . The David Attenborough Style of Scientific Presentation . [The David Attenborough Style of Scientific Presentation.] . Excerpt: . Get into this mindset: your main job is to be an entertainer, not a scientist. Most scientists don’t do this, which is why most scientific talks are bad. The fact of the matter is that if the audience doesn’t understand and enjoy your talk, they won’t care if your science is good. . A LaTeX template . Check out a nice LaTeX template for presentations [here]. . . Visualizations . Visualizations can take a message very, very far. I put a lot of thinking into how to best express an idea. I believe that great graphs greatly improve a scientific paper, and a thoughful graph/animation surely brings home the main point of a talk. Here are a few thoughts on visualizations. . Inspiration . Hans Rosling, Gapminder | Max Roser, Our World in Data | Stephen Malinowski, Music Animation Machine | The Economist, Daily Chart | . Colors . Don’t use the rainbow color map. Why? [Read this], by Robert Kosara. . So how should you choose the colors for a graph? . Visit colorbrewer. It gives sequential, diverging and qualitative colormaps that can be chosen to be “colorblind safe”, “print safe”, or “photocopy safe”. Usually, it is the first and only tool I use. It’s just great! | Visit Adobe Color CC. It gives you much more freedom to play with the colors than colorbrewer. Use it wisely! | . More on color: read Subtleties of Color, by Robert Simmon. . Browse for ideas . The Data Visualisation Catalogue | .",
+          "url": "https://yairmau.github.io/website/more/communication/",
+          "relUrl": "/more/communication/",
+          "date": ""
+      }
+      
   
 
   
-
-  
-  
-
-  
-
-  
-  
-
-  
+      ,"page5": {
+          "title": "More",
+          "content": "Tutorials . Tools I recommend . Quotes . Science Communication . Five-star Content .",
+          "url": "https://yairmau.github.io/website/more/",
+          "relUrl": "/more/",
+          "date": ""
+      }
+      
   
 
   
+      ,"page6": {
+          "title": "Quotes",
+          "content": "The scientist is not a person who gives the right answers, he’s one who asks the right questions. Claude Lévi-Strauss . | The most exciting phrase to hear in science, the one that heralds new discoveries, is not ‘Eureka!’ (I found it!) but ‘That’s funny…’ Isaac Asimov . | In theory, there is no difference between theory and practice. But, in practice, there is. Jan L. A. van de Snepscheut . | Contrary to what Asimov says, the most exciting phrase in science, the one that heralds new discoveries, is not ‘Eureka!’ or ‘That’s funny…,’ it’s ‘Your research grant has been approved.’ John Alejandro King . | A theory is something nobody believes, except the person who made it. An experiment is something everybody believes, except the person who made it. Attributed to Albert Einstein . | The purpose of models is not to fit the data but to sharpen the questions. Samuel Karlin . | Research is what I’m doing when I don’t know what I’m doing. Wernher von Braun . | Nothing is more practical than a good theory. Kurt Lewin . | Just as there are odors that dogs can smell and we cannot, as well as sounds that dogs can hear and we cannot, so too there are wavelengths of light we cannot see and flavors we cannot taste. Why then, given our brains wired the way they are, does the remark, “Perhaps there are thoughts we cannot think,” surprise you? Richard Hamming . | An expert is a person who has made all the mistakes that can be made in a very narrow field. Niels Bohr . | An expert is one who knows more and more about less and less until he knows absolutely everything about nothing. Nicholas Butler . | Essentially, all models are wrong, but some are useful. George E. P. Box . | Theory is when you know everything but nothing works. Praxis is when everything works but no one knows why. In our lab, theory and praxis are combined: nothing works and no one know why. Unknown . | The great tragedy of Science — the slaying of a beautiful hypothesis by an ugly fact. Thomas Henry Huxley . | So, in the face of overwhelming odds, I’m left with only one option, I’m gonna have to science the shit out of this. Mark Watney . | The fact that we live at the bottom of a deep gravity well, on the surface of a gas covered planet going around a nuclear fireball 90 million miles away and think this to be normal is obviously some indication of how skewed our perspective tends to be. Douglas Adams, The Salmon of Doubt: Hitchhiking the Galaxy One Last Time . | You’d be amazed how much research you can get done when you have no life whatsoever. Ernest Cline, Ready Player One . | When you have eliminated all which is impossible, then whatever remains, however improbable, must be the truth. Sherlock Holmes . | With four parameters I can fit an elephant, and with five I can make him wiggle his trunk. John von Neumann . | The purpose of computing is insight, not numbers. Richard Hamming . | The most important thing about an equation is all the quantities that don’t appear in it; once we know what the essentials are, figuring out how they depend on each other is often the easier part. Pedro Domingos, The Master Algorithm . | Thermodynamics is easy – I’ve learned it many times. Harvey S. Leff . | Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise. John Tukey, The future of data analysis . | An article about computational result is advertising, not scholarship. The actual scholarship is the full software environment, code and data, that produced the result. Buckheit and Donoho (1995) . | ”Forty-two!” yelled Loonquawl. ”Is that all you’ve got to show for seven and a half million years’ work?” ”I checked it very thoroughly,” said the computer, ”and that quite definitely is the answer. I think the problem, to be quite honest with you, is that you’ve never actually known what the question is.” ”But it was the Great Question! The Ultimate Question of Life, the Universe and Everything!” howled Loonquawl. ”Yes,” said Deep Thought with the air of one who suffers fools gladly, ”but what actually is it?” A slow stupefied silence crept over the men as they stared at the computer and then at each other. ”Well, you know, it’s just Everything … Everything … ” offered Phouchg weakly. ”Exactly!” said Deep Thought. ”So once you do know what the question actually is, you’ll know what the answer means.” Douglas Adams, The Hitchiker’s Guide to the Galaxy . | Computers are useless. They can only give you answers. Pablo Picasso . | The true and only goal of science is to reveal unity rather than mechanism. Henri Poincaré . | One of the principal objects of theoretical research is to find the point of view from which the subject appears in the greatest simplicity. Josiah Willard Gibbs . | The future is already here — it’s just not very evenly distributed. William Gibson . | True science teaches, above all, to doubt and to be ignorant. Miguel de Unamuno . | If you are the smartest person in the room, then you are in the wrong room. Unknown . | Dividing one number by another is mere computation; knowing what to divide by what is mathematics. Jordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking . | I’ve been in this argument a thousand times. Won them all and convinced nobody. Amos Tversky, on the hot hand fallacy . | Mathematics is the extension of common sense by other means. Jordan Ellenberg, How Not to Be Wrong: The Power of Mathematical Thinking . | If I had more time, I would have written a shorter letter. Blaise Pascal . | I am going to give what I will call an elementary demonstration. But elementary does not mean easy to understand. Elementary means that very little is required to know ahead of time in order to understand it, except to have an infinite amount of intelligence. There may be a large number of steps that hard to follow, but to each does not require already knowing the calculus or Fourier transforms. Richard P. Feynman . | In this section a mathematical model of the growing embryo will be described. This model will be a simplification and an idealization, and consequently a falsification. It is to be hoped that the features retained for discussion are those of greatest importance in the present state of knowledge. Alan Turing, The Chemical Basis of Morphogenesis . | Problems worthy of attack prove their worth by hitting back. Piet Hein . | Art is solving problems that cannot be formulated before they have been solved. The shaping of the question is part of the answer. Piet Hein . | Physics is the simplest of all the sciences, and fundamental physics⁠⁠—the study of the basic pieces of reality at the deepest level⁠—is the simplest of all. Not “simple” in the sense that the homework problems are easy, but simple in the sense that Galileo’s trick of ignoring friction and air resistance makes our lives easier. The reason why physics classes seem so hard is not because physics is so hard—it’s because we understand so much of it that there’s a lot to learn, and that’s because it’s fundamentally pretty simple. Sean Carroll, The Big Picture . | Simplicity is a great virtue but it requires hard work to achieve it and education to appreciate it. And to make matters worse: complexity sells better. Edsger W. Dijkstra . | The fundamental role of a teacher is not to deliver information. It is guide the social process of learning. The job of a teacher is to inspire, to challenge, to excite their students to want to learn. Yes, they also do explain and demonstrate and show things, but fundamentally that is beside the point. The most important thing a teacher does is make every student feel like they are important, to make them feel accountable for doing the work of learning. Derek Alexander Muller, youtube . | What is the first business of one who practices philosophy? To get rid of self-conceit. For it is impossible for anyone to begin to learn that which he thinks he already knows. Epictetus . | Confusion is a feeling that precedes learning something. It means you should pay closer attention, not disengage. The Stoic Emperor, twitter . | Let no one ignorant of geometry enter here. Said to be engraved on the door of Plato’s Academy, the oldest recorded entrance requirement of a college . | We don’t use heuristics just because they are fast and efficient. We use them because they are less precise and thus less vulnerable to be misled by noise. A good heuristic is to distrust whoever adds or requires unnecessary precision. Another good heuristic is to distrust whoever thinks that precision always correlates with correctness. Luca Dellanna, twitter . | The comments aren’t there to explain the code to the programmers, the code is there to explain the comments to the computer. Andy Harris, How to begin thinking like a programmer . | .",
+          "url": "https://yairmau.github.io/website/more/quotes/",
+          "relUrl": "/more/quotes/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page7": {
+          "title": "News",
+          "content": "",
+          "url": "https://yairmau.github.io/website/blog/news/",
+          "relUrl": "/blog/news/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page8": {
+          "title": "Geek stuff",
+          "content": "",
+          "url": "https://yairmau.github.io/website/blog/geek/",
+          "relUrl": "/blog/geek/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page9": {
+          "title": "Five-Star Content I Recommend",
+          "content": "Books . [Check out my Goodreads profile]. . Superintelligence: Paths, Dangers, Strategies, by Nick Bostrom. | The Unfolding of Language: An Evolutionary Tour of Mankind’s Greatest Invention, by Guy Deutscher. | . Blogs . Wait but why, by Tim Urban. | Fuck Yeah Fluid Dynamics, by Nicole Sharp. | . Short stories . They’re made out of meat, by Terry Bisson. | The Sentinel, by Arthur C. Clarke. | On Exactitude in Science, by Jorge Luis Borges. | The Feeling Of Power , by Isaac Asimov. | . Technical stuff . Linux Shell Scripting Tutorial | Pythonic Perambulations, by Jake VanderPlas. | . YouTube channels . 3Blue1Brown, minute physics, Veritasium, Smarter Every Day, CGP Grey, Kurzgesagt, Primitive Technology, Vsauce, Nerdwriter, Mathologer, Sciencium, Steve Mould . Podcasts . Hardcore History with Dan Carlin, especially the series “Blueprint for Armageddon” and “Wrath of the Khans”. | 99% Invisible | Revisionist History | Lexicon Valley | Making Sense, with Sam Harris | .",
+          "url": "https://yairmau.github.io/website/more/five-stars/",
+          "relUrl": "/more/five-stars/",
+          "date": ""
+      }
+      
   
 
   
       ,"page10": {
+          "title": "Blog",
+          "content": "News . Some of the latest news in the research group . Science . Science-related posts . Geek thoughts . This is where I write about random geek/math/puzzles stuff . Art . Art, origami, mathematical constructions, music, random projects . . . Selected blogposts . Here are a few blogposts that you might find interesting .",
+          "url": "https://yairmau.github.io/website/blog/",
+          "relUrl": "/blog/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page11": {
+          "title": "Tools",
+          "content": "Programming . Anaconda . “The easiest way to perform Python/R data science and machine learning on Linux, Windows, and Mac OS X.” . Sublime Text . “Sublime Text is a sophisticated text editor for code, markup and prose.” . Jupyter Notebook . “The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text.” . CodeCademy . “Learn to code interactively, for free.” . Documents . PDFtk . “Use PDFtk Pro to quickly split, merge, rotate, watermark, stamp and secure PDF pages and documents” Command line version (powerful, see examples); friendly graphical tool for Windows. . Overleaf . “An online LaTeX editor that’s easy to use.” By the way, Overleaf has the best LaTeX tutorials out there. Check it out. Also, see this excellent WikiBook on LaTeX. . BRISS . “A simple cross-platform (Linux, Windows, Mac OSX) application for cropping PDF files” . Data . Figshare . “Figshare is an online digital repository where researchers can preserve and share their research outputs, including figures, datasets, images, and videos.” . BitBucket . “Bitbucket is a web-based hosting service for projects that use Git revision control systems.” . WebPlotDigitizer . “Extract data from plots, images, and maps.” . $ LaTeX$ . doi2bib . “Give us a DOI and we’ll do our best to get you the BibTeX entry.” . Tables Generator . “Quickly create even complex LaTeX tables online with our generator – cells merging is supported together with borders editing.” .",
+          "url": "https://yairmau.github.io/website/more/tools/",
+          "relUrl": "/more/tools/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page12": {
+          "title": "Art",
+          "content": "",
+          "url": "https://yairmau.github.io/website/blog/art/",
+          "relUrl": "/blog/art/",
+          "date": ""
+      }
+      
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+      ,"page22": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://yairmau.github.io/website/robots.txt",
