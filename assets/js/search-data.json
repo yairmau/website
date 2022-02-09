@@ -656,7 +656,7 @@
   
       ,"page5": {
           "title": "More",
-          "content": "Books . Artigos . Five-star Content .",
+          "content": "Books . Artigos . Five-star Content . With $ LaTeX$ you can write beautiful equations like . Rμν−12gμν R+gμνΛ=8πGc4TμνR_{ mu nu} - {1 over 2}g_{ mu nu} ,R + g_{ mu nu} Lambda = displaystyle{8 pi G over c^4} T_{ mu nu}Rμν​−21​gμν​R+gμν​Λ=c48πG​Tμν​ or ϕ=1+11+11+⋯=1+52 phi = 1 + cfrac{1}{1+ cfrac{1}{1+ dotsb}}= frac{1+ sqrt{5}}{2}ϕ=1+1+1+⋯1​1​=21+5​​ . Learn more here. Inline equation, $a^2+ sqrt{b} neq 0$ .",
           "url": "https://yairmau.github.io/website/more/",
           "relUrl": "/more/",
           "date": ""
