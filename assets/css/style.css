@@ -617,6 +617,10 @@ table { font-size: 1rem; }
 
 code { font-size: 100% !important; background-color: #fbfbfb !important; }
 
+.katex { font-size: 25px !important; color: #515151; }
+
+h2 .katex { font-size: 130% !important; }
+
 pre code { display: block; font-size: 130% !important; }
 
 pre, code { padding: 0px 0px; background-color: #fbfbfb !important; }
