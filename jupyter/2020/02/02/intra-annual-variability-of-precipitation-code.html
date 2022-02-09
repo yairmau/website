@@ -80,7 +80,28 @@ window.onload = wrap_img;
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+    },
+    tex2jax: {
+      inlineMath: [['$','$'],["\\(","\\)"]]},
+      displayMath: [ ['$$','$$'], ['\[','\]'] ],
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    showProcessingMessages: false,
+    messageStyle: "none",
+    imageFont: null,
+    "AssistiveMML": { disabled: true }
+  });
+</script>
 
 </head><body>
 <header class="site-header navbar-fixed-top">
@@ -589,10 +610,10 @@ window.onload = wrap_img;
 
 
 
-<div id="2c75012c-87b0-4da6-bccd-0a8177374d81"></div>
+<div id="94c4c747-429f-4247-8ea4-7b5ced48f478"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#2c75012c-87b0-4da6-bccd-0a8177374d81');
+var element = $('#94c4c747-429f-4247-8ea4-7b5ced48f478');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
@@ -1426,10 +1447,10 @@ if (IPython.notebook.kernel != null) {
 
 
 
-<div id="f13f4068-6da7-4666-b214-4982a81c6be0"></div>
+<div id="64a60032-147c-4a32-b9a6-ddd2976a7c5b"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f13f4068-6da7-4666-b214-4982a81c6be0');
+var element = $('#64a60032-147c-4a32-b9a6-ddd2976a7c5b');
 /* Put everything inside the global mpl namespace */
 /* global mpl */
 window.mpl = {};

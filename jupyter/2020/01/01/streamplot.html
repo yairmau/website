@@ -80,7 +80,28 @@ window.onload = wrap_img;
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+    },
+    tex2jax: {
+      inlineMath: [['$','$'],["\\(","\\)"]]},
+      displayMath: [ ['$$','$$'], ['\[','\]'] ],
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    showProcessingMessages: false,
+    messageStyle: "none",
+    imageFont: null,
+    "AssistiveMML": { disabled: true }
+  });
+</script>
 
 </head><body>
 <header class="site-header navbar-fixed-top">
@@ -506,10 +527,10 @@ Main features: <code>meshgrid, streamplot, contour, legend, LaTeX</code></p>
 
 
 
-<div id="f82d5156-954d-4828-b131-6f72b8266022"></div>
+<div id="e1e697c0-7bc7-42f7-852a-1bd89cb1c4d2"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#f82d5156-954d-4828-b131-6f72b8266022');
+var element = $('#e1e697c0-7bc7-42f7-852a-1bd89cb1c4d2');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 

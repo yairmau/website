@@ -80,7 +80,28 @@ window.onload = wrap_img;
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script> -->
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+    },
+    tex2jax: {
+      inlineMath: [['$','$'],["\\(","\\)"]]},
+      displayMath: [ ['$$','$$'], ['\[','\]'] ],
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    showProcessingMessages: false,
+    messageStyle: "none",
+    imageFont: null,
+    "AssistiveMML": { disabled: true }
+  });
+</script>
 
 </head><body>
 <header class="site-header navbar-fixed-top">
@@ -409,10 +430,10 @@ $$<p>The number 25.4 is a conversion factor from inches to millimeters.</p>
 
 
 
-<div id="1b64c892-fcfd-495b-9d92-5f3be7d49940"></div>
+<div id="14680ed8-509f-43e5-a869-a4ae7a08a55e"></div>
 <div class="output_subarea output_javascript ">
 <script type="text/javascript">
-var element = $('#1b64c892-fcfd-495b-9d92-5f3be7d49940');
+var element = $('#14680ed8-509f-43e5-a869-a4ae7a08a55e');
 /* Put everything inside the global mpl namespace */
 window.mpl = {};
 
