@@ -202,7 +202,9 @@ window.onload = wrap_img;
 
 <p><strong>Sources used</strong>:</p>
 
-<p><a class="citation" href="#USGS2019howmuchwater">(USGS, 2019)</a></p>
+<p><a class="citation" href="#USGS2019howmuchwater">(USGS, 2019)</a>
+<a class="citation" href="#USGS2019waterschool">(USGS, 2019)</a>
+<a class="citation" href="#margulis2019introduction">(Margulis, 2017)</a></p>
 
 <h2 id="how-much-water-is-there-where">
 <a class="anchor" href="#how-much-water-is-there-where" aria-hidden="true"><span class="octicon octicon-link"></span></a>How much water is there? Where?</h2>
@@ -407,7 +409,9 @@ window.onload = wrap_img;
 
 <p>Try to calculate this yourself, and click on the button below to check how to do it.</p>
 
-<p><a href="javascript:void(0);" onclick="toggleDiv('water_in_atmosphere')">Show/Hide Code</a></p>
+<p><a href="javascript:void(0);" onclick="toggle_icon_show_content('water_in_atmosphere',                                      'water_in_atmosphere_icon')">
+   Toggle Code <i class="fas fa-plus-square" id="water_in_atmosphere_icon"></i>
+</a> </p>
 <div id="water_in_atmosphere" style="display:none; font-family:monospace;">
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># amount of water in the atmosphere
@@ -511,9 +515,15 @@ window.onload = wrap_img;
 <h3 id="water-storage-in-ice-and-snow">
 <a class="anchor" href="#water-storage-in-ice-and-snow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Water storage in ice and snow</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/iceland-summer.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/iceland-summer.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle">usgs.gov</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/iceland-winter.jpg" alt="" title="Source: https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/iceland-winter.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.usgs.gov/special-topic/water-science-school/science/ice-snow-and-glaciers-and-water-cycle">usgs.gov</a></figcaption>
+</figure>
 
 <h3 id="snowmelt-runoff-to-streams">
 <a class="anchor" href="#snowmelt-runoff-to-streams" aria-hidden="true"><span class="octicon octicon-link"></span></a>Snowmelt runoff to streams</h3>
@@ -521,56 +531,103 @@ window.onload = wrap_img;
 <h3 id="surface-runoff">
 <a class="anchor" href="#surface-runoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Surface runoff</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/runoff-field.jpg" alt="" title="Source: https://phys.org/news/2016-08-choices-effects-runoff-productivity.html"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/runoff-field.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://phys.org/news/2016-08-choices-effects-runoff-productivity.html">phys.org</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/runoff-city.jpg" alt="" title="Source: https://www.melabes.co.il/news/51773"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/runoff-city.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.melabes.co.il/news/51773">melabes.co.il</a></figcaption>
+</figure>
 
 <h3 id="streamflow">
 <a class="anchor" href="#streamflow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Streamflow</h3>
 
-<p>The Mississippi river basin is very large
-<img src="/website/archive/hydrology/hydrology_figures/mississippi-watershed.gif" alt="" title="Source: https://images.app.goo.gl/N9N4MsoNUy39dzCb6"></p>
+<p>The Mississippi river basin is very large</p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/mississippi-watershed.gif" alt=""></p>
+  <figcaption>Source: <a href="https://images.app.goo.gl/N9N4MsoNUy39dzCb6">images.app.goo.gl</a></figcaption>
+</figure>
 
-<p>The Amazon river basin is <strong>Huge</strong>
-<img src="/website/archive/hydrology/hydrology_figures/amazon-basin.jpg" alt="" title="Source: https://amazonwaters.org/basins/"></p>
+<p>The Amazon river basin is <strong>Huge</strong></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/amazon-basin.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://amazonwaters.org/basins/">amazonwaters.org</a></figcaption>
+</figure>
 
+<figure>
 <p><img src="/website/archive/hydrology/hydrology_figures/amazon-basin-us.png" alt=""></p>
+</figure>
 
 <h3 id="lakes-and-rivers">
 <a class="anchor" href="#lakes-and-rivers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lakes and rivers</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/rivers-africa.png" alt="" title="Source: https://www.dreamstime.com/world-map-africa-egypt-libya-ethiopia-arabia-mauritania-nigeria-somalia-namibia-tanzania-madagascar-geographic-xxl-chart-image154799901"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/rivers-africa.png" alt=""></p>
+  <figcaption>Source: <a href="https://www.dreamstime.com/world-map-africa-egypt-libya-ethiopia-arabia-mauritania-nigeria-somalia-namibia-tanzania-madagascar-geographic-xxl-chart-image154799901">dreamstime.com</a></figcaption>
+</figure>
 
-<p>Lake Malawi
-<img src="/website/archive/hydrology/hydrology_figures/lake-malawi.jpg" alt="" title="Source: https://images.app.goo.gl/8f4ikUgp4DnLAw1w6"></p>
+<p>Lake Malawi</p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/lake-malawi.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://images.app.goo.gl/8f4ikUgp4DnLAw1w6">images.app.goo.gl</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/lake-malawi2.jpg" alt="" title="Source: https://www.telegraph.co.uk/travel/destinations/africa/malawi/articles/A-family-holiday-in-Lake-Malawi-zen-and-the-art-of-paddleboarding/"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/lake-malawi2.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.telegraph.co.uk/travel/destinations/africa/malawi/articles/A-family-holiday-in-Lake-Malawi-zen-and-the-art-of-paddleboarding/">telegraph.co.uk</a></figcaption>
+</figure>
 
 <h3 id="infiltration">
 <a class="anchor" href="#infiltration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Infiltration</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/infiltration.jpg" alt="" title="Source: http://sumagroulx.com/water-infiltration/"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/infiltration.jpg" alt=""></p>
+  <figcaption>Source: <a href="http://sumagroulx.com/water-infiltration/">sumagroulx.com</a></figcaption>
+</figure>
 
 <h3 id="groundwater-storage">
 <a class="anchor" href="#groundwater-storage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Groundwater storage</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/groundwater.jpg" alt="" title="Source: https://www.usgs.gov/media/images/groundwater-area-underground-where-openings-are-full-water"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/groundwater.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.usgs.gov/media/images/groundwater-area-underground-where-openings-are-full-water">usgs.gov</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/ogallala_aquifer_usgs.jpg" alt="" title="Source: https://modernfarmer.com/2015/07/ogallala-aquifer-depletion/"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/ogallala_aquifer_usgs.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://modernfarmer.com/2015/07/ogallala-aquifer-depletion/">modernfarmer.com</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/ogallala_aquifer_wiki.png" alt="" title="Source: https://commons.wikimedia.org/wiki/File:High_plains_fresh_groundwater_usage_2000.svg"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/ogallala_aquifer_wiki.png" alt=""></p>
+  <figcaption>Source: <a href="https://commons.wikimedia.org/wiki/File:High_plains_fresh_groundwater_usage_2000.svg">Wikimedia</a></figcaption>
+</figure>
 
-<p>Center Pivot irrigation in Nebraska taps the Ogallala Aquifer.
-<img src="/website/archive/hydrology/hydrology_figures/groundwater-ogallala-aquifer.jpg" alt="" title="Source: https://nebraskaeducationonlocation.org/natural-attractions/ogallala-aquifer/"></p>
+<p>Center Pivot irrigation in Nebraska taps the Ogallala Aquifer.</p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-ogallala-aquifer.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://nebraskaeducationonlocation.org/natural-attractions/ogallala-aquifer/">nebraskaeducationonlocation.org</a></figcaption>
+</figure>
 
 <h3 id="groundwater-flow-and-discharge">
 <a class="anchor" href="#groundwater-flow-and-discharge" aria-hidden="true"><span class="octicon octicon-link"></span></a>Groundwater flow and discharge</h3>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-flow-diagram.jpg" alt="" title="Source: https://www.usgs.gov/media/images/conceptual-groundwater-flow-diagram"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-flow-diagram.jpg" alt=""></p>
+  <figcaption>Source: <a href="https://www.usgs.gov/media/images/conceptual-groundwater-flow-diagram">usgs.gov</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-discharge.gif" alt="" title="Source: http://wellwater.oregonstate.edu/groundwater-movement"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-discharge.gif" alt=""></p>
+  <figcaption>Source: <a href="http://wellwater.oregonstate.edu/groundwater-movement">wellwater.oregonstate.edu</a></figcaption>
+</figure>
 
-<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-discharge-submarine.png" alt="" title="Source: https://www.researchgate.net/figure/Principal-pathways-for-submarine-groundwater-discharge-to-the-coastal-ocean-including_fig1_274590439"></p>
+<figure>
+<p><img src="/website/archive/hydrology/hydrology_figures/groundwater-discharge-submarine.png" alt=""></p>
+  <figcaption>Source: <a href="https://www.researchgate.net/figure/Principal-pathways-for-submarine-groundwater-discharge-to-the-coastal-ocean-including_fig1_274590439">researchgate.net</a></figcaption>
+</figure>
 
 <h3 id="spring">
 <a class="anchor" href="#spring" aria-hidden="true"><span class="octicon octicon-link"></span></a>Spring</h3>
@@ -589,14 +646,18 @@ window.onload = wrap_img;
 <h2 id="references">
 <a class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h2>
 
-<ol class="bibliography"><li><span id="USGS2019howmuchwater">USGS, 2019. How Much Water is There on Earth?</span></li></ol>
+<ol class="bibliography">
+<li><span id="USGS2019howmuchwater">USGS, 2019. How Much Water is There on Earth?</span></li>
+<li><span id="USGS2019waterschool">USGS, 2019. Water Science School.</span></li>
+<li><span id="margulis2019introduction">Margulis, S., 2017. Introduction to Hydrology. eBook.</span></li>
+</ol>
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script type="text/javascript">
-function toggleDiv(divId) {
-    var clicked = $(this);
-    $("#"+divId).slideToggle('slow');
+function toggle_icon_show_content(Show_Hide_Id,Icon_Id) {
+    $("#"+Icon_Id).toggleClass('fa-plus-square fa-minus-square')
+    $("#"+Show_Hide_Id).slideToggle('slow');
 }
 </script>
 

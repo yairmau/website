@@ -309,60 +309,19 @@ $$CV = \frac{\sigma}{\langle{P}\rangle}$$
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">/var/folders/63/p79vfcwx6lx4t8gnm_gvjyyr0000gn/T/ipykernel_60637/2201021584.py</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg">#collapse-hide</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> 
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> altair <span class="ansi-green-fg">as</span> alt
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
-
-<div id="altair-viz-5ed3107b01224c8085e175327b2a91d9"></div>
-<script type="text/javascript">
-  (function(spec, embedOpt){
-    let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5ed3107b01224c8085e175327b2a91d9") {
-      outputDiv = document.getElementById("altair-viz-5ed3107b01224c8085e175327b2a91d9");
-    }
-    const paths = {
-      "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
-      "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
-      "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
-    };
-
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
-    }
-
-    function showError(err) {
-      outputDiv.innerHTML = `<div class="error" style="color:red;">${err}</div>`;
-      throw err;
-    }
-
-    function displayChart(vegaEmbed) {
-      vegaEmbed(outputDiv, spec, embedOpt)
-        .catch(err => showError(`Javascript Error: ${err.message}<br>This usually means there's a typo in your chart specification. See the javascript console for the full traceback.`));
-    }
-
-    if(typeof define === "function" && define.amd) {
-      requirejs.config({paths});
-      require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
-    } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
-        .catch(showError)
-        .then(() => displayChart(vegaEmbed));
-    }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "bar", "encoding": {"opacity": {"condition": {"value": 1, "selection": "selector001"}, "value": 0.2}, "x": {"type": "temporal", "axis": {"title": "date"}, "field": "DATE"}, "y": {"type": "quantitative", "axis": {"title": "annual precipitation (mm) and average"}, "field": "rain (mm)"}}, "height": 400, "selection": {"selector001": {"type": "interval", "encodings": ["x"]}}, "title": "Select year range and drag for rolling average of annual precipitation in Tel Aviv", "width": 600}, {"mark": {"type": "rule", "color": "orange"}, "encoding": {"size": {"value": 3}, "y": {"type": "quantitative", "aggregate": "mean", "field": "rain (mm)"}}, "transform": [{"filter": {"selection": "selector001"}}]}], "data": {"name": "data-2d96d987e1227deba5d77799c3c22c8b"}, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-2d96d987e1227deba5d77799c3c22c8b": [{"DATE": "1940-09-30T00:00:00", "rain (mm)": 474.9}, {"DATE": "1941-09-30T00:00:00", "rain (mm)": 447.8}, {"DATE": "1942-09-30T00:00:00", "rain (mm)": 372.90000000000003}, {"DATE": "1943-09-30T00:00:00", "rain (mm)": 618.2}, {"DATE": "1944-09-30T00:00:00", "rain (mm)": 440.49999999999994}, {"DATE": "1945-09-30T00:00:00", "rain (mm)": 810.6}, {"DATE": "1946-09-30T00:00:00", "rain (mm)": 577.3}, {"DATE": "1947-09-30T00:00:00", "rain (mm)": 327.8}, {"DATE": "1948-09-30T00:00:00", "rain (mm)": 484.5}, {"DATE": "1949-09-30T00:00:00", "rain (mm)": 566.0999999999999}, {"DATE": "1950-09-30T00:00:00", "rain (mm)": 844.1000000000001}, {"DATE": "1951-09-30T00:00:00", "rain (mm)": 343.79999999999995}, {"DATE": "1952-09-30T00:00:00", "rain (mm)": 668.9000000000001}, {"DATE": "1953-09-30T00:00:00", "rain (mm)": 564.5}, {"DATE": "1954-09-30T00:00:00", "rain (mm)": 636.8000000000001}, {"DATE": "1955-09-30T00:00:00", "rain (mm)": 524.4000000000001}, {"DATE": "1956-09-30T00:00:00", "rain (mm)": 814.8}, {"DATE": "1957-09-30T00:00:00", "rain (mm)": 568.4}, {"DATE": "1958-09-30T00:00:00", "rain (mm)": 459.80000000000007}, {"DATE": "1959-09-30T00:00:00", "rain (mm)": 378.4}, {"DATE": "1960-09-30T00:00:00", "rain (mm)": 301.7}, {"DATE": "1961-09-30T00:00:00", "rain (mm)": 578.9}, {"DATE": "1962-09-30T00:00:00", "rain (mm)": 658.7}, {"DATE": "1963-09-30T00:00:00", "rain (mm)": 392.1000000000001}, {"DATE": "1964-09-30T00:00:00", "rain (mm)": 622.7}, {"DATE": "1965-09-30T00:00:00", "rain (mm)": 755.5}, {"DATE": "1966-09-30T00:00:00", "rain (mm)": 331.0}, {"DATE": "1967-09-30T00:00:00", "rain (mm)": 663.6}, {"DATE": "1968-09-30T00:00:00", "rain (mm)": 412.4}, {"DATE": "1969-09-30T00:00:00", "rain (mm)": 669.4}, {"DATE": "1970-09-30T00:00:00", "rain (mm)": 415.1}, {"DATE": "1971-09-30T00:00:00", "rain (mm)": 382.0}, {"DATE": "1972-09-30T00:00:00", "rain (mm)": 620.3999999999999}, {"DATE": "1973-09-30T00:00:00", "rain (mm)": 440.49999999999994}, {"DATE": "1974-09-30T00:00:00", "rain (mm)": 697.5}, {"DATE": "1975-09-30T00:00:00", "rain (mm)": 581.7}, {"DATE": "1976-09-30T00:00:00", "rain (mm)": 389.8}, {"DATE": "1977-09-30T00:00:00", "rain (mm)": 606.8}, {"DATE": "1978-09-30T00:00:00", "rain (mm)": 484.3}, {"DATE": "1979-09-30T00:00:00", "rain (mm)": 324.69999999999993}, {"DATE": "1980-09-30T00:00:00", "rain (mm)": 617.6000000000001}, {"DATE": "1981-09-30T00:00:00", "rain (mm)": 490.4}, {"DATE": "1982-09-30T00:00:00", "rain (mm)": 446.0}, {"DATE": "1983-09-30T00:00:00", "rain (mm)": 602.4}, {"DATE": "1984-09-30T00:00:00", "rain (mm)": 270.29999999999995}, {"DATE": "1985-09-30T00:00:00", "rain (mm)": 343.2}, {"DATE": "1986-09-30T00:00:00", "rain (mm)": 360.20000000000005}, {"DATE": "1987-09-30T00:00:00", "rain (mm)": 573.6}, {"DATE": "1988-09-30T00:00:00", "rain (mm)": 659.6}, {"DATE": "1989-09-30T00:00:00", "rain (mm)": 488.90000000000003}, {"DATE": "1990-09-30T00:00:00", "rain (mm)": 648.5}, {"DATE": "1991-09-30T00:00:00", "rain (mm)": 468.9}, {"DATE": "1992-09-30T00:00:00", "rain (mm)": 1064.4}, {"DATE": "1993-09-30T00:00:00", "rain (mm)": 577.9}, {"DATE": "1994-09-30T00:00:00", "rain (mm)": 350.9}, {"DATE": "1995-09-30T00:00:00", "rain (mm)": 804.6999999999999}, {"DATE": "1996-09-30T00:00:00", "rain (mm)": 488.20000000000005}, {"DATE": "1997-09-30T00:00:00", "rain (mm)": 619.1}, {"DATE": "1998-09-30T00:00:00", "rain (mm)": 489.6}, {"DATE": "1999-09-30T00:00:00", "rain (mm)": 226.50000000000003}]}}, {"mode": "vega-lite"});
-</script>
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'altair'</pre>
 </div>
-
 </div>
 
 </div>
