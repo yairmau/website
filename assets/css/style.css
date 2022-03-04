@@ -434,6 +434,17 @@ td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; p
 span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
 td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }*/
+/*for Jupyter Notebook HTML Code Cells modified from https://www.fast.ai/public/css/hyde.css*/
+.input_area pre, .input_area div { font-size: 130% !important; }
+
+.output_area pre, .output_area div { font-size: 130% !important; }
+
+.input_area pre { font-size: 130% !important; }
+
+.output_area pre { font-size: 130% !important; }
+
+.code_cell table { width: auto; }
+
 .highlight { background: #f0f3f3; }
 
 .highlight .hll { background-color: #d6d6d6; }

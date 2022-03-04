@@ -810,7 +810,7 @@
   
       ,"page5": {
           "title": "More",
-          "content": "Books . Artigos . Five-star Content .",
+          "content": "Books . Artigos . Five-star Content . import packages . import numpy as np import matplotlib.pyplot as plt import os from matplotlib import rcParams rcParams[&#39;font.family&#39;] = &#39;monospace&#39; . Text here with code, also some python code import numpy as np .",
           "url": "https://yairmau.github.io/website/more/",
           "relUrl": "/more/",
           "date": ""
