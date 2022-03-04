@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Markdown test",
-            "content": "Inline math: $ax^2+bx+c=0$ . Another equation: . x1,2=−b±b2−4ac2ax_{1,2} = frac{-b pm sqrt{b^2 - 4ac}}{2a}x1,2​=2a−b±b2−4ac . ​​ . Aligned equations: . begin{align} f(x) &amp;= sin(x) tag{1a} g(x) &amp;= sqrt{ cos(x)} tag{1b} h(x) &amp;= tan^2(x) tag{1c} end{align} . now some code: . import numpy as np for i in np.arange(10): print(np.sin(i)) .",
+            "content": "Inline math: $ax^2+bx+c=0$ . Another equation: . x1,2=−b±b2−4ac2ax_{1,2} = frac{-b pm sqrt{b^2 - 4ac}}{2a}x1,2​=2a−b±b2−4ac . ​​ . Aligned equations: . x=A(cos⁡θ−vsin⁡θ)y=B(sin⁡θ+vcos⁡θ)z=Cεv. begin{align} x &amp;= A ( cos theta - v sin theta) y &amp;= B ( sin theta + v cos theta) z &amp;= C varepsilon v. end{align}xyz​=A(cosθ−vsinθ)=B(sinθ+vcosθ)=Cεv.​​ . now some code: . import numpy as np for i in np.arange(10): print(np.sin(i)) .",
             "url": "https://yairmau.github.io/website/markdown/2022/03/04/test_md.html",
             "relUrl": "/markdown/2022/03/04/test_md.html",
             "date": " • Mar 4, 2022"
@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "jupyter test",
-            "content": "Inline math: $ax^2+bx+c=0$ . Another equation: . $$ x_{1,2} = frac{-b pm sqrt{b^2 - 4ac}}{2a} $$Aligned equations: . $$ begin{align} f(x) &amp;= sin(x) tag{1a} g(x) &amp;= sqrt{ cos(x)} tag{1b} h(x) &amp;= tan^2(x) tag{1c} end{align} $$now some code: . import numpy as np for i in np.arange(10): print(np.sin(i)) .",
+            "content": "Inline math: $ax^2+bx+c=0$ . Another equation: . $$ x_{1,2} = frac{-b pm sqrt{b^2 - 4ac}}{2a} $$Aligned equations: . $$ begin{align} x &amp;= A ( cos theta - v sin theta) y &amp;= B ( sin theta + v cos theta) z &amp;= C varepsilon v. end{align} $$now some code: . import numpy as np for i in np.arange(10): print(np.sin(i)) .",
             "url": "https://yairmau.github.io/website/jupyter/2022/03/04/test_jupyter.html",
             "relUrl": "/jupyter/2022/03/04/test_jupyter.html",
             "date": " • Mar 4, 2022"
