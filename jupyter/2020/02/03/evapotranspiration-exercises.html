@@ -155,7 +155,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      18 min read
+      17 min read
     
 </span></p>
 
@@ -1392,129 +1392,81 @@ $$<ul>
 </h2>
 <p>The Penman model is almost entirely a theory based formula for predicting evaporative flux. It can run on a much finer timescale, and requires a much wider variety of data than most models. In addition to temperature, the Penman functions on measurements of radiation, wind speed, elevation above sea level, vapour-pressure deficit, and heat flux density to the ground.</p>
 $$
-\begin{equation}
 E = \frac{1}{\lambda}\left[ \frac{\Delta}{\Delta+\gamma}Q_{ne}+ \frac{\gamma}{\Delta+\gamma}E_A \right],
-\end{equation}
 $$<p>where $Q_n$ is the available energy flux density</p>
 $$
-\begin{equation}
 Q_n = R_n - G,
-\end{equation}
 $$<p>and $E_A$ is the drying power of the air</p>
 $$
-\begin{equation}
 E_A = 6.43\cdot f(u)\cdot\text{VPD}.
-\end{equation}
 $$$$
-  \begin{equation}
-    \gamma = \frac{c_p\, P}{\lambda\cdot MW_\text{ratio}}
-  \end{equation}
-$$<p>$$
-  \begin{equation}
-    P = 101.3-0.01055 H
-  \end{equation}
-  $$</p>
-<p>$$
-  \begin{equation}
-    \lambda = 2.501 - 2.361\times 10^{-3}\,T
-  \end{equation}
-  $$</p>
-<ul>
+\gamma = \frac{c_p\, P}{\lambda\cdot MW_\text{ratio}}
+$$$$
+P = 101.3-0.01055 H
+$$$$
+\lambda = 2.501 - 2.361\times 10^{-3}\,T
+$$<ul>
 <li>$MW_\text{ratio}=0.622$: ratio molecular weight of water vapor/dry air</li>
 <li>$P$: atmospheric pressure (kPa). Can be either measured or inferred from station height above sea level (m).</li>
 <li>$\lambda$: latent heat of water vaporization (MJ kg$^{-1}$)</li>
 </ul>
-<p>
-$$R_n = (1-\alpha)R_s\!\! \downarrow -R_b \!\! \uparrow,$$
-</p>
-<p>where $\alpha$ (dimensionless) is the albedo.
+$$
+R_n = (1-\alpha)R_s\!\! \downarrow -R_b \!\! \uparrow,
+$$<p>where $\alpha$ (dimensionless) is the albedo.
 The net outgoing thermal radiation $R_b$ is given by</p>
-<p>
-$$R_b = \left( a\frac{R_s}{R_{so}+b} \right)R_{bo},$$
-</p>
-<p>where $R_{so}$ is the solar radiation on a cloudless day, and it depends on latitude and day of the year.
+$$
+R_b = \left( a\frac{R_s}{R_{so}+b} \right)R_{bo},
+$$<p>where $R_{so}$ is the solar radiation on a cloudless day, and it depends on latitude and day of the year.
 $R_{bo}$ is given by</p>
-<p>
-$$R_{bo} = \epsilon\, \sigma\, T^4_{Kelvin},$$
-</p>
-<p>where $\sigma=4.903\times 10^{-9}$ MJ m$^{-2}$ d$^{-1}$ K$^{-4}$, and $\epsilon$ is net net emissivity:</p>
-<p>
-$$\epsilon=-0.02+0.261 \exp\left(-7.77\times10^{-4}T_{Celcius}^2\right).$$
-</p>
-<p>The parameters $a$ and $b$ are determined for the climate of the area:</p>
+$$
+R_{bo} = \epsilon\, \sigma\, T^4_{Kelvin},
+$$<p>where $\sigma=4.903\times 10^{-9}$ MJ m$^{-2}$ d$^{-1}$ K$^{-4}$, and $\epsilon$ is net net emissivity:</p>
+$$
+\epsilon=-0.02+0.261 \exp\left(-7.77\times10^{-4}T_{Celcius}^2\right).
+$$<p>The parameters $a$ and $b$ are determined for the climate of the area:</p>
 <ul>
 <li>$a=1.0$, $b=0.0$ for humid areas,</li>
 <li>$a=1.2$, $b=-0.2$ for arid areas,</li>
-<li>
-<p>$a=1.1$, $b=-0.1$ for semihumid areas.</p>
-<p>$$
-\begin{equation}
-  G = 4.2\frac{T_{i+1}-T_{i-1}}{\Delta t}
-\end{equation}
-$$</p>
-</li>
+<li>$a=1.1$, $b=-0.1$ for semihumid areas.</li>
 </ul>
-<p>
-$$\text{VPD} = e_s - e_d.$$
-</p>
-<p>For temperatures ranging from 0 to 50 °C, the saturation vapor pressure can be calculated with</p>
 $$
-  \begin{equation}
-    e_s = \exp \left[ \frac{16.78\, T -116.9}{T+237.3} \right],
-  \end{equation}
+G = 4.2\frac{T_{i+1}-T_{i-1}}{\Delta t}
+$$$$
+\text{VPD} = e_s - e_d.
+$$<p>For temperatures ranging from 0 to 50 °C, the saturation vapor pressure can be calculated with</p>
+$$
+e_s = \exp \left[ \frac{16.78\, T -116.9}{T+237.3} \right],
 $$<p>and the actual vapor pressure is given by</p>
 $$
-  \begin{equation}
-    e_d = e_s \frac{RH}{100},
-  \end{equation}
+e_d = e_s \frac{RH}{100},
 $$$$
-  \begin{equation}
-    \Delta = \frac{\text{d} e_s}{\text{d}T} = e_s(T)\cdot \frac{4098.79}{(T+237.3)^2}.
-  \end{equation}
+\Delta = \frac{\text{d} e_s}{\text{d}T} = e_s(T)\cdot \frac{4098.79}{(T+237.3)^2}.
 $$$$
-  \begin{equation}
-    f(u) = 0.26(1.0 + 0.54\, u_2)
-  \end{equation}
+f(u) = 0.26(1.0 + 0.54\, u_2)
 $$<p>The various components of the equations above are:</p>
 <p>$$
-  \begin{equation}
     \Delta = 0.200 \cdot (0.00738\,T + 0.8072)^7 - 0.000116
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     \gamma = \frac{c_p\, P}{0.622 \lambda}
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     P = 101.3-0.01055 H
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     \lambda = 2.501 - 2.361\times 10^{-3}\,T
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     f_e(u) = 1.0 + 0.53\, u_2
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     G = 4.2\frac{T_{i+1}-T_{i-1}}{\Delta t}
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     e_s = \exp \left[ \frac{16.78\, T -116.9}{T+237.3} \right]
-  \end{equation}
   $$</p>
 <p>$$
-  \begin{equation}
     e_d = e_s \frac{RH}{100}
-  \end{equation}
   $$
 where $\Delta t$ is the time <em>in days</em> between midpoints of time periods $i+1$ and $i−1$, and $T$ is the air temperature (°C).</p>
 <ul>
@@ -2119,14 +2071,24 @@ where $\Delta t$ is the time <em>in days</em> between midpoints of time periods 
 <p>from: Ward &amp; Trimble, "Environmental Hydrology", 2nd Edition, page 99.</p>
 <ul>
 <li>Calculate 
-$$R_{bo} = \epsilon\, \sigma\, T^4_{Kelvin},$$
+$$
+R_{bo} = \epsilon\, \sigma\, T^4_{Kelvin},
+$$
 where
-$$\epsilon=-0.02+0.261 \exp\left(-7.77\times10^{-4}T_{Celcius}^2\right),$$<br>
-$$\sigma=4.903\times 10^{-9} \text{  MJ m$^{-2}$ d$^{-1}$ K$^{-4}$},$$
+$$
+\epsilon=-0.02+0.261 \exp\left(-7.77\times10^{-4}T_{Celcius}^2\right),
+$$<br>
+$$
+\sigma=4.903\times 10^{-9} \text{  MJ m$^{-2}$ d$^{-1}$ K$^{-4}$},
+$$
 and
-$$T_{Kelvin}=T_{Celcius}+273.15$$</li>
+$$
+T_{Kelvin}=T_{Celcius}+273.15
+$$</li>
 <li>Calculate 
-$$R_b = \left( a\frac{R_s}{R_{so}+b} \right)R_{bo},$$
+$$
+R_b = \left( a\frac{R_s}{R_{so}+b} \right)R_{bo},
+$$
 where  <ul>
 <li>for humid areas, $a=1.0$ and $b=0$,  </li>
 <li>for arid areas, $a=1.2$ and $b=-0.2$,  </li>
@@ -2134,7 +2096,9 @@ where  <ul>
 </ul>
 </li>
 <li>Finally, calculate 
-$$R_n = (1-\alpha)R_s\!\! \downarrow -R_b \!\! \uparrow,$$
+$$
+R_n = (1-\alpha)R_s\!\! \downarrow -R_b \!\! \uparrow,
+$$
 where  <ul>
 <li>$\alpha= 0.23$ for most green crops with a full cover</li>
 <li>$\alpha= 0.04$ for fresh asphalt</li>
@@ -2439,13 +2403,11 @@ where  <ul>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Calculate the vapor pressure deficit, VPD, add a new column to <code>df_pen</code>.</p>
-<p>
-$$e_d = e_s\cdot \frac{RH}{100}$$
-</p>
-<p>
-$$e_s = \exp\left(\frac{16.78\,T-116.9}{T+237.3}\right)$$
-</p>
-
+$$
+e_d = e_s\cdot \frac{RH}{100}
+$$$$
+e_s = \exp\left(\frac{16.78\,T-116.9}{T+237.3}\right)
+$$
 </div>
 </div>
 </div>
@@ -2764,19 +2726,13 @@ $$e_s = \exp\left(\frac{16.78\,T-116.9}{T+237.3}\right)$$
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Now that all variables have been defined, daily E_penman can be calculated.</p>
 $$
-\begin{equation}
 E_{tp} = \frac{\Delta}{\Delta+\gamma}Q_{ne}+ \frac{\gamma}{\Delta+\gamma}E_A
-\end{equation}
 $$<p>$Q_n$ is the available energy flux density:</p>
 $$
-\begin{equation}
 Q_n = R_n - G,
-\end{equation}
 $$<p>and $E_A$ is the drying power of the air:</p>
 $$
-\begin{equation}
 E_A = f_e(u)\cdot\text{VPD}
-\end{equation}
 $$<p>Add a new column <code>E_penman</code> to <code>df_pen</code>.</p>
 
 </div>
