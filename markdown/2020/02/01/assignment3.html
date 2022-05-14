@@ -181,12 +181,13 @@ window.onload = wrap_img;
 <p><strong>Choose one location in the US.</strong></p>
 
 <ol>
-  <li>
-    <p>Import streamflow data from USGS’s <a href="https://maps.waterdata.usgs.gov/mapper/index.html">National Water Information System</a>. Choose on the map any measuring station you see fit. Make sure there is available discharge data (usually given in cubic feet per second) in small time intervals, e.g., every 15 minutes.</p>
+  <li>Import streamflow data from USGS’s <a href="https://maps.waterdata.usgs.gov/mapper/index.html">National Water Information System</a>. Choose on the map any measuring station you see fit. Make sure there is available discharge data (usually given in cubic feet per second) in small time intervals, e.g., every 15 minutes.
+    <ul>
+      <li>Some of the sites provide precipitation data as well, then point 2 below is unnecessary.</li>
+      <li>On the map you can show “Atmospheric Sites” as well. You can download precipitation data from there.</li>
+    </ul>
   </li>
-  <li>
-    <p>Go to NOAA’s <a href="https://www.ncdc.noaa.gov/crn/qcdatasets.html">Climate Reference Network Data</a> website. The sub-hourly (5-min) data contains information on many variables, we are interested in precipitation.</p>
-  </li>
+  <li>Go to NOAA’s <a href="https://www.ncdc.noaa.gov/crn/qcdatasets.html">Climate Reference Network Data</a> website. The sub-hourly (5-min) data contains information on many variables, we are interested in precipitation.</li>
 </ol>
 
 <p><strong>Attention!</strong> Some os the USGS stations provide precipitation data. If you find one such station, step 2 above is unnecessary. If you only find discharge data in the USGS website, then make sure you choose two stations in very close proximity (USGS and NOAA). Because there are only a few high-resolution NOAA stations, you might want to start from there and then find discharge data for a stream near the NOAA station.</p>
