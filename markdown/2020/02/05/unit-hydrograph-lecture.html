@@ -174,6 +174,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#sources">Sources</a></li>
 <li class="toc-entry toc-h2"><a href="#linear-reservoir-model">Linear reservoir model</a></li>
+<li class="toc-entry toc-h2"><a href="#the-unit-hydrograph">The Unit Hydrograph</a></li>
 <li class="toc-entry toc-h2"><a href="#rainfall-runoff-models">Rainfall-Runoff Models</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#the-rational-method">The Rational Method</a></li>
@@ -195,7 +196,29 @@ window.onload = wrap_img;
 <p><a class="citation" href="#dingman2015physical">(Dingman, 2015)</a>
 <img src="/website/archive/hydrology/hydrology_figures/dingman-box10.3.png" alt=""></p>
 
-<p>The model above is called “linear” because in equation (10B3.2) the event-flow rate $q^* $ is directly proportional to storage $S^* $.</p>
+<p>The model above is called “linear” because in equation (10B3.2) the event-flow rate $q^* $ is directly proportional to storage $S^* $.
+Here is a depiction of the linear model, and how outflow depends on storage, from <a href="https://www.researchgate.net/publication/328788044_Comparative_analysis_of_the_effectiveness_of_the_conceptual_rainfall-runoff_hydrological_models_on_the_selected_rivers_in_Odra_and_Vistula_basins/fulltext/5be3004592851c6b27ad9fee/Comparative-analysis-of-the-effectiveness-of-the-conceptual-rainfall-runoff-hydrological-models-on-the-selected-rivers-in-Odra-and-Vistula-basins.pdf?origin=publication_detail">Mańko and Laskowski (2018)</a>.</p>
+
+<p><img src="/website/archive/hydrology/hydrology_figures/linear-reservoir-A.png" alt=""></p>
+
+<p><img src="/website/archive/hydrology/hydrology_figures/linear-reservoir-B.png" alt=""></p>
+
+<h2 id="the-unit-hydrograph">
+<a class="anchor" href="#the-unit-hydrograph" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Unit Hydrograph</h2>
+
+<p>Assumptions:</p>
+
+<ol>
+  <li>
+<strong>Time Invariance</strong>. The direct runoff response for a given effective rainfall in a catchment is always the same, irrespective of when it occurs.</li>
+  <li>
+<strong>Linear Response</strong>. The direct runoff response is a linear function of rainfall excess: $q^<em>(t) = f(p^</em>)$.
+    <ul>
+      <li>Homogeneity: $f(c\times p^<em>) = c\timesf(p^</em>) = c\times q^*(t)$.</li>
+      <li>Additivity: $f(p_1^* + p_2^<em>) = f(p_1^</em>)+f(p_2^<em>) = q_1^</em>(t)+q_2^*(t)$.</li>
+    </ul>
+  </li>
+</ol>
 
 <p><img src="/website/archive/hydrology/hydrology_figures/hyetograph_hydrograph1.png" alt=""></p>
 
