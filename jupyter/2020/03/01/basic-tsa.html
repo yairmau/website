@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Python Tutorial — basic time series analysis | Yair Mau</title>
+<meta name="generator" content="Jekyll v4.0.1" />
+<meta property="og:title" content="Python Tutorial — basic time series analysis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal website. Random stuff." />
+<meta property="og:description" content="Personal website. Random stuff." />
+<link rel="canonical" href="https://yairmau.github.io/website/jupyter/2020/03/01/basic-tsa.html" />
+<meta property="og:url" content="https://yairmau.github.io/website/jupyter/2020/03/01/basic-tsa.html" />
+<meta property="og:site_name" content="Yair Mau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-01T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Tutorial — basic time series analysis" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2020-03-01T00:00:00-06:00","datePublished":"2020-03-01T00:00:00-06:00","description":"Personal website. Random stuff.","headline":"Python Tutorial — basic time series analysis","mainEntityOfPage":{"@type":"WebPage","@id":"https://yairmau.github.io/website/jupyter/2020/03/01/basic-tsa.html"},"url":"https://yairmau.github.io/website/jupyter/2020/03/01/basic-tsa.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/website/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://yairmau.github.io/website/feed.xml" title="Yair Mau" /><link rel="shortcut icon" type="image/x-icon" href="/website/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+<!--  added by Yair  -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<!-- icons from here: https://iconify.design/icon-sets/?query=instructables -->
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+
+
+<link rel="stylesheet"
+      href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/default.min.css">
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+
+<link rel="stylesheet"
+      href="//unpkg.com/@highlightjs/cdn-assets@11.0.1/styles/default.min.css">
+<script src="//unpkg.com/@highlightjs/cdn-assets@11.0.1/highlight.min.js"></script>
+
+
+<!-- Mathjax Support -->
+<!-- <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script> -->
+
+<!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> -->
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML">
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      availableFonts: ["TeX"],
+    },
+    tex2jax: {
+      inlineMath: [['$','$'],["\\(","\\)"]]},
+      displayMath: [ ['$$','$$'], ['\[','\]'] ],
+    TeX: {
+      extensions: ["AMSmath.js", "AMSsymbols.js", "color.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    showProcessingMessages: false,
+    messageStyle: "none",
+    imageFont: null,
+    "AssistiveMML": { disabled: true }
+  });
+</script> -->
+
+</head><body>
+<header class="site-header navbar-fixed-top">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/website/" style="text-decoration:none">
+        <img src="/website/images/logo_SI.png" alt="Yair Mau" style="vertical-align: middle; padding-right:0.5em;" height="40" />
+          <span style="vertical-align: middle;">Yair Mau</span>
+      </a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+          <!-- Hard coded pages -->
+<!--           <a class="page-link" href="/research">Research</a>
+          <a class="page-link" href="/publications">Publications</a>
+          <a class="page-link" href="/group">Group</a>
+          <a class="page-link" href="/tutorials">Tutorials</a>
+          <a class="page-link" href="/more">More</a> --><a class="page-link" href="/website/blog/">Blog</a><a class="page-link" href="/website/more/">More</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Tutorial --- basic time series analysis</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-03-01T00:00:00-06:00" itemprop="datePublished">
+        Mar 1, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/website/categories/#jupyter">jupyter</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/yairmau/website/tree/master/_notebooks/2020-03-01-basic-tsa.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/website/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/yairmau/website/master?filepath=_notebooks%2F2020-03-01-basic-tsa.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/yairmau/website/blob/master/_notebooks/2020-03-01-basic-tsa.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/website/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fyairmau%2Fwebsite%2Fblob%2Fmaster%2F_notebooks%2F2020-03-01-basic-tsa.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/website/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h3"><a href="#First-graph">First graph </a></li>
+<li class="toc-entry toc-h3"><a href="#Two-columns-in-the-same-graph">Two columns in the same graph </a></li>
+<li class="toc-entry toc-h3"><a href="#Calculate-stuff">Calculate stuff </a></li>
+<li class="toc-entry toc-h3"><a href="#Two-y-axes">Two y axes </a></li>
+<li class="toc-entry toc-h2"><a href="#NaN,-Missing-data,-Outliers">NaN, Missing data, Outliers </a></li>
+<li class="toc-entry toc-h2"><a href="#Resample">Resample </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Downsampling">Downsampling </a></li>
+<li class="toc-entry toc-h3"><a href="#Filling-missing-data">Filling missing data </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Smoothing-noisy-data">Smoothing noisy data </a></li>
+<li class="toc-entry toc-h2"><a href="#Smoothing-noisy-data">Smoothing noisy data </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Moving-average-and-SavGol">Moving average and SavGol </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2020-03-01-basic-tsa.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Import packages.
+If you don't have a certain package, e.g. 'newpackage', just type<br>
+<code>pip install newpackage</code></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">urllib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
+<span class="kn">from</span> <span class="nn">pandas.tseries.frequencies</span> <span class="kn">import</span> <span class="n">to_offset</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">savgol_filter</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is how you download data from Thingspeak</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">filename1</span> <span class="o">=</span> <span class="s2">"test_elad.csv"</span>
+<span class="c1"># if file is not there, go fetch it from thingspeak</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename1</span><span class="p">):</span>
+    <span class="c1"># define what to download</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="s2">"1690490"</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="s2">"1,2,3,4,6,7"</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="s2">"30"</span>
+
+    <span class="c1"># https://www.mathworks.com/help/thingspeak/readdata.html</span>
+    <span class="c1"># format YYYY-MM-DD%20HH:NN:SS</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="s2">"2022-05-01%2000:00:00"</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="s2">"2022-05-08%2000:00:00"</span>
+
+    <span class="c1"># download using Thingspeak's API</span>
+    <span class="c1"># url = f"https://api.thingspeak.com/channels/{channels}/fields/{fields}.csv?minutes={minutes}"</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://api.thingspeak.com/channels/</span><span class="si">{</span><span class="n">channels</span><span class="si">}</span><span class="s2">/fields/</span><span class="si">{</span><span class="n">fields</span><span class="si">}</span><span class="s2">.csv?start=</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&amp;end=</span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c1"># save data to csv</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename1</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'UTF-8'</span><span class="p">))</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can load the data using Pandas. Here we create a "dataframe", which is a fancy name for a table.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename1</span><span class="p">)</span>
+<span class="c1"># rename columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"timestamp"</span><span class="p">,</span>
+                        <span class="s2">"field1"</span><span class="p">:</span> <span class="s2">"T1"</span><span class="p">,</span>
+                        <span class="s2">"field2"</span><span class="p">:</span> <span class="s2">"RH"</span><span class="p">,</span>
+                        <span class="s2">"field3"</span><span class="p">:</span> <span class="s2">"T2"</span><span class="p">,</span>
+                        <span class="s2">"field4"</span><span class="p">:</span> <span class="s2">"motion_sensor"</span><span class="p">,</span>
+                        <span class="s2">"field6"</span><span class="p">:</span> <span class="s2">"VWC"</span><span class="p">,</span>
+                        <span class="s2">"field7"</span><span class="p">:</span> <span class="s2">"VPD"</span><span class="p">,})</span>
+<span class="c1"># set timestamp as index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'timestamp'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'timestamp'</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'timestamp'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="First-graph">
+<a class="anchor" href="#First-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>First graph<a class="anchor-link" href="#First-graph"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'VPD'</span><span class="p">])</span>
+<span class="c1"># add labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"time"</span><span class="p">,</span>
+       <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"VPD (kPa)"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"my first graph"</span><span class="p">)</span>
+<span class="c1"># makes slanted dates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>  
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Two-columns-in-the-same-graph">
+<a class="anchor" href="#Two-columns-in-the-same-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two columns in the same graph<a class="anchor-link" href="#Two-columns-in-the-same-graph"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T1'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"SHT Temperature"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T2'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:orange"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"DS18B20 Temperature"</span><span class="p">)</span>
+<span class="c1"># add labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Time"</span><span class="p">,</span>
+       <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"Temperature (deg C)"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"two sensors"</span><span class="p">,</span>
+       <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">35</span><span class="p">],</span>
+       <span class="p">)</span>
+<span class="c1"># makes slanted dates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper right"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.legend.Legend at 0x7f99241ee350&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Calculate-stuff">
+<a class="anchor" href="#Calculate-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calculate stuff<a class="anchor-link" href="#Calculate-stuff"> </a>
+</h3>
+<p>You can calculate new things and save them as new columns of your dataframe.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">calculate_es</span><span class="p">(</span><span class="n">T</span><span class="p">):</span>
+    <span class="n">es</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">((</span><span class="mf">16.78</span> <span class="o">*</span> <span class="n">T</span> <span class="o">-</span> <span class="mf">116.9</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">T</span> <span class="o">+</span> <span class="mf">237.3</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">es</span>
+
+<span class="k">def</span> <span class="nf">calculate_ed</span><span class="p">(</span><span class="n">es</span><span class="p">,</span> <span class="n">rh</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">es</span> <span class="o">*</span> <span class="n">rh</span> <span class="o">/</span> <span class="mf">100.0</span>
+
+<span class="n">es</span> <span class="o">=</span> <span class="n">calculate_es</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T1'</span><span class="p">])</span>
+<span class="n">ed</span> <span class="o">=</span> <span class="n">calculate_ed</span><span class="p">(</span><span class="n">es</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'RH'</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'VPD2'</span><span class="p">]</span> <span class="o">=</span> <span class="n">es</span> <span class="o">-</span> <span class="n">ed</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>See if what you calculated makes sense.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'VPD'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"VPD from ESP32"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'VPD2'</span><span class="p">][::</span><span class="mi">100</span><span class="p">],</span> <span class="s2">"o"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"VPD from python"</span><span class="p">)</span>
+<span class="c1"># add labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Time"</span><span class="p">,</span>
+       <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"VPD (kPa)"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"VPD calculated twice"</span><span class="p">,</span>
+       <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+       <span class="p">)</span>
+<span class="c1"># makes slanted dates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper right"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.legend.Legend at 0x7f9925979a10&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Two-y-axes">
+<a class="anchor" href="#Two-y-axes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two y axes<a class="anchor-link" href="#Two-y-axes"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'VPD'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"VPD"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T1'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:cyan"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Temperature"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"Time"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"two y axes"</span><span class="p">,</span>
+       <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+       <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'VPD (kPa)'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'tab:red'</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">'left'</span><span class="p">]</span><span class="o">.</span><span class="n">set_color</span><span class="p">(</span><span class="s1">'red'</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">'Temperature (deg C)'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'tab:cyan'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Text(0, 0.5, 'Temperature (deg C)')</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="NaN,-Missing-data,-Outliers">
+<a class="anchor" href="#NaN,-Missing-data,-Outliers" aria-hidden="true"><span class="octicon octicon-link"></span></a>NaN, Missing data, Outliers<a class="anchor-link" href="#NaN,-Missing-data,-Outliers"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">start</span> <span class="o">=</span> <span class="s2">"2022-05-03 12:00:00"</span>
+<span class="n">end</span> <span class="o">=</span> <span class="s2">"2022-05-06 00:00:00"</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># plot using pandas' plot method</span>
+<span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">,</span> <span class="s1">'T2'</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+                             <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span>
+                             <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span>
+                             <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span>
+                             <span class="n">label</span><span class="o">=</span><span class="s2">"data"</span><span class="p">)</span>
+
+<span class="c1"># annotate examples here:</span>
+<span class="c1"># https://jakevdp.github.io/PythonDataScienceHandbook/04.09-text-and-annotation.html</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"NaN"</span><span class="p">,</span>                             <span class="c1"># text to write, if nothing, then ""</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s1">'2022-05-03 20:30:00'</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>    <span class="c1"># (x,y coordinates for the tip of the arrow)</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>                   <span class="c1"># xy as 'data' coordinates</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>                  <span class="c1"># xy coordinates for the text</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>        <span class="c1"># xytext relative to xy</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>   <span class="c1"># pretty arrow</span>
+           <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"outlier"</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s1">'2022-05-03 22:30:00'</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>
+           <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"missing rows"</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="s1">'2022-05-05 00:00:00'</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>
+           <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">'</span><span class="si">%d</span><span class="s1"> %b, %H:00'</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s2">"Temperature (deg C)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[Text(0.5, 0, ''), Text(0, 0.5, 'Temperature (deg C)')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The arrows (annotate) work because the plot was<br>
+<code>df['column'].plot()</code></p>
+<p>If you use the usual<br>
+<code>ax.plot(df['column'])</code><br>
+then you matplotlib will not understand timestamps as x-positions. In this case follow the instructions below.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">start</span> <span class="o">=</span> <span class="s2">"2022-05-03 12:00:00"</span>
+<span class="n">end</span> <span class="o">=</span> <span class="s2">"2022-05-06 00:00:00"</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">,</span> <span class="s1">'T2'</span><span class="p">],</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">'-'</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'o'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"data"</span><span class="p">)</span>
+
+<span class="n">t_nan</span> <span class="o">=</span> <span class="s1">'2022-05-03 20:30:00'</span>
+<span class="n">x_nan</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">t_nan</span><span class="p">,</span> <span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"NaN"</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x_nan</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">60</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>
+           <span class="p">)</span>
+<span class="n">t_outlier</span> <span class="o">=</span> <span class="s1">'2022-05-03 22:30:00'</span>
+<span class="n">x_outlier</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">t_outlier</span><span class="p">,</span> <span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"outlier"</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x_outlier</span><span class="p">,</span> <span class="mi">85</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="o">-</span><span class="mi">20</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>
+           <span class="p">)</span>
+<span class="n">t_missing</span> <span class="o">=</span> <span class="s1">'2022-05-05 00:00:00'</span>
+<span class="n">x_missing</span> <span class="o">=</span> <span class="n">mdates</span><span class="o">.</span><span class="n">date2num</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">t_missing</span><span class="p">,</span> <span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">"missing rows"</span><span class="p">,</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">x_missing</span><span class="p">,</span> <span class="mi">25</span><span class="p">),</span>
+            <span class="n">xycoords</span><span class="o">=</span><span class="s1">'data'</span><span class="p">,</span>
+            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">40</span><span class="p">),</span>
+            <span class="n">textcoords</span><span class="o">=</span><span class="s1">'offset points'</span><span class="p">,</span>
+            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s2">"-&gt;"</span><span class="p">)</span>
+           <span class="p">)</span>
+<span class="c1"># code for hours, days, etc</span>
+<span class="c1"># https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">'</span><span class="si">%d</span><span class="s1"> %b, %H:00'</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s2">"Temperature (deg C)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[Text(0.5, 0, ''), Text(0, 0.5, 'Temperature (deg C)')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">delta_index</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">to_series</span><span class="p">()</span><span class="o">.</span><span class="n">diff</span><span class="p">()</span> <span class="o">/</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="s1">'1 sec'</span><span class="p">)</span> <span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">delta_index</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">],</span>
+       <span class="n">xlabel</span><span class="o">=</span><span class="s2">"running index"</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">"$\Delta t$ (s)"</span><span class="p">,</span>
+       <span class="n">title</span><span class="o">=</span><span class="s2">"Time difference between consecutive rows"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(0.0, 100.0),
+ Text(0.5, 0, 'running index'),
+ Text(0, 0.5, '$\\Delta t$ (s)'),
+ Text(0.5, 1.0, 'Time difference between consecutive rows')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Resample">
+<a class="anchor" href="#Resample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resample<a class="anchor-link" href="#Resample"> </a>
+</h2>
+<h3 id="Downsampling">
+<a class="anchor" href="#Downsampling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Downsampling<a class="anchor-link" href="#Downsampling"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># Downsample to spaced out data points. Change the number below, see what happens.</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="s1">'15min'</span>
+<span class="n">df_resampled</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T2'</span><span class="p">]</span><span class="o">.</span><span class="n">resample</span><span class="p">(</span><span class="n">window_size</span><span class="p">)</span>  <span class="c1"># resample doesn't do anything yet, just divides data into buckets</span>
+                        <span class="o">.</span><span class="n">mean</span><span class="p">()</span>                 <span class="c1"># this is where stuff happens. you can also choose "sum", "max", etc</span>
+               <span class="p">)</span>
+<span class="c1"># optional, add half a window size to timestamp</span>
+<span class="n">df_resampled</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">df_resampled</span><span class="o">.</span><span class="n">index</span> <span class="o">+</span> <span class="n">to_offset</span><span class="p">(</span><span class="n">window_size</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'T2'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"original data"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_resampled</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">'x'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:orange"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"resampled </span><span class="si">{</span><span class="n">window_size</span><span class="si">}</span><span class="s2"> data"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s2">"temperature (deg C)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[Text(0.5, 0, 'time'), Text(0, 0.5, 'temperature (deg C)')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Filling-missing-data">
+<a class="anchor" href="#Filling-missing-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filling missing data<a class="anchor-link" href="#Filling-missing-data"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># see options for interpolation methods here:</span>
+<span class="c1"># https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.interpolate.html</span>
+<span class="n">df_interpolated1</span> <span class="o">=</span> <span class="n">df_resampled</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'time'</span><span class="p">)</span>
+<span class="n">df_interpolated2</span> <span class="o">=</span> <span class="n">df_resampled</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'nearest'</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_resampled</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:orange"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"resampled"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_interpolated1</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:purple"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"time-interpolated"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_interpolated2</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:cyan"</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=-</span><span class="mi">2</span><span class="p">,</span>
+        <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">"nearest-interpolated"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span><span class="o">=</span><span class="s2">"time"</span><span class="p">,</span>
+       <span class="n">ylabel</span><span class="o">=</span><span class="s2">"temperature (deg C)"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[Text(0.5, 0, 'time'), Text(0, 0.5, 'temperature (deg C)')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Smoothing-noisy-data">
+<a class="anchor" href="#Smoothing-noisy-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smoothing noisy data<a class="anchor-link" href="#Smoothing-noisy-data"> </a>
+</h2>
+<p>Let's first download data from a different project.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">filename2</span> <span class="o">=</span> <span class="s2">"test_peleg.csv"</span>
+<span class="c1"># if file is not there, go fetch it from thingspeak</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">filename2</span><span class="p">):</span>
+    <span class="c1"># define what to download</span>
+    <span class="n">channels</span> <span class="o">=</span> <span class="s2">"1708067"</span>
+    <span class="n">fields</span> <span class="o">=</span> <span class="s2">"1,2,3,4,5"</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="s2">"30"</span>
+
+    <span class="c1"># https://www.mathworks.com/help/thingspeak/readdata.html</span>
+    <span class="c1"># format YYYY-MM-DD%20HH:NN:SS</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="s2">"2022-05-15%2000:00:00"</span>
+    <span class="n">end</span> <span class="o">=</span> <span class="s2">"2022-05-25%2000:00:00"</span>
+
+    <span class="c1"># download using Thingspeak's API</span>
+    <span class="c1"># url = f"https://api.thingspeak.com/channels/{channels}/fields/{fields}.csv?minutes={minutes}"</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"https://api.thingspeak.com/channels/</span><span class="si">{</span><span class="n">channels</span><span class="si">}</span><span class="s2">/fields/</span><span class="si">{</span><span class="n">fields</span><span class="si">}</span><span class="s2">.csv?start=</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s2">&amp;end=</span><span class="si">{</span><span class="n">end</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="c1"># save data to csv</span>
+    <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename2</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">'UTF-8'</span><span class="p">))</span>
+    <span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename2</span><span class="p">)</span>
+<span class="c1"># rename columns</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"created_at"</span><span class="p">:</span> <span class="s2">"timestamp"</span><span class="p">,</span>
+                        <span class="s2">"field1"</span><span class="p">:</span> <span class="s2">"T"</span><span class="p">,</span>
+                        <span class="s2">"field2"</span><span class="p">:</span> <span class="s2">"Tw"</span><span class="p">,</span>
+                        <span class="s2">"field3"</span><span class="p">:</span> <span class="s2">"RH"</span><span class="p">,</span>
+                        <span class="s2">"field4"</span><span class="p">:</span> <span class="s2">"VPD"</span><span class="p">,</span>
+                        <span class="s2">"field5"</span><span class="p">:</span> <span class="s2">"dist"</span><span class="p">,</span>
+                        <span class="p">})</span>
+<span class="c1"># set timestamp as index</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'timestamp'</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'timestamp'</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">'timestamp'</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>entry_id</th>
+      <th>T</th>
+      <th>Tw</th>
+      <th>RH</th>
+      <th>VPD</th>
+      <th>dist</th>
+    </tr>
+    <tr>
+      <th>timestamp</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2022-05-18 20:09:31+00:00</th>
+      <td>24716</td>
+      <td>23.85</td>
+      <td>23.3125</td>
+      <td>65.32</td>
+      <td>1.02532</td>
+      <td>7.208</td>
+    </tr>
+    <tr>
+      <th>2022-05-18 20:10:32+00:00</th>
+      <td>24717</td>
+      <td>23.88</td>
+      <td>23.2500</td>
+      <td>65.32</td>
+      <td>1.02717</td>
+      <td>7.208</td>
+    </tr>
+    <tr>
+      <th>2022-05-18 20:11:33+00:00</th>
+      <td>24718</td>
+      <td>23.90</td>
+      <td>23.2500</td>
+      <td>65.23</td>
+      <td>1.03107</td>
+      <td>7.276</td>
+    </tr>
+    <tr>
+      <th>2022-05-18 20:12:33+00:00</th>
+      <td>24719</td>
+      <td>23.90</td>
+      <td>23.2500</td>
+      <td>65.19</td>
+      <td>1.03226</td>
+      <td>7.208</td>
+    </tr>
+    <tr>
+      <th>2022-05-18 20:13:34+00:00</th>
+      <td>24720</td>
+      <td>23.89</td>
+      <td>23.2500</td>
+      <td>65.15</td>
+      <td>1.03282</td>
+      <td>7.633</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2022-05-24 12:18:35+00:00</th>
+      <td>32711</td>
+      <td>27.47</td>
+      <td>26.1250</td>
+      <td>47.49</td>
+      <td>1.92397</td>
+      <td>8.925</td>
+    </tr>
+    <tr>
+      <th>2022-05-24 12:19:36+00:00</th>
+      <td>32712</td>
+      <td>27.47</td>
+      <td>26.1250</td>
+      <td>47.62</td>
+      <td>1.91921</td>
+      <td>8.925</td>
+    </tr>
+    <tr>
+      <th>2022-05-24 12:20:39+00:00</th>
+      <td>32713</td>
+      <td>27.47</td>
+      <td>26.1250</td>
+      <td>47.96</td>
+      <td>1.90675</td>
+      <td>8.925</td>
+    </tr>
+    <tr>
+      <th>2022-05-24 12:21:40+00:00</th>
+      <td>32714</td>
+      <td>27.47</td>
+      <td>26.1875</td>
+      <td>47.75</td>
+      <td>1.91444</td>
+      <td>8.925</td>
+    </tr>
+    <tr>
+      <th>2022-05-24 12:22:41+00:00</th>
+      <td>32715</td>
+      <td>27.49</td>
+      <td>26.1875</td>
+      <td>47.94</td>
+      <td>1.90971</td>
+      <td>8.925</td>
+    </tr>
+  </tbody>
+</table>
+<p>8000 rows × 6 columns</p>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Smoothing-noisy-data">
+<a class="anchor" href="#Smoothing-noisy-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smoothing noisy data<a class="anchor-link" href="#Smoothing-noisy-data"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'RH'</span><span class="p">],</span> <span class="s1">'.'</span><span class="p">)</span>
+<span class="c1"># add labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"time"</span><span class="p">,</span>
+       <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"RH (%)"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"Relative Humidity"</span><span class="p">)</span>
+<span class="c1"># makes slanted dates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>  
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Moving-average-and-SavGol">
+<a class="anchor" href="#Moving-average-and-SavGol" aria-hidden="true"><span class="octicon octicon-link"></span></a>Moving average and SavGol<a class="anchor-link" href="#Moving-average-and-SavGol"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1"># apply a rolling average of size "window_size",</span>
+<span class="c1"># it can be either by number of points, or by window time</span>
+<span class="c1"># window_size = 30  # number of measurements</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="s1">'120min'</span>  <span class="c1"># minutes</span>
+<span class="n">RH_smooth</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'RH'</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window_size</span><span class="p">,</span> <span class="n">center</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
+<span class="n">RH_smooth</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'RH'</span><span class="p">:</span> <span class="s1">'rolling_avg'</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">RH_smooth</span><span class="p">[</span><span class="s1">'SG'</span><span class="p">]</span> <span class="o">=</span> <span class="n">savgol_filter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'RH'</span><span class="p">],</span> <span class="n">window_length</span><span class="o">=</span><span class="mi">121</span><span class="p">,</span> <span class="n">polyorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'RH'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:blue"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"data"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">RH_smooth</span><span class="p">[</span><span class="s1">'rolling_avg'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:orange"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"moving average"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">RH_smooth</span><span class="p">[</span><span class="s1">'SG'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"tab:red"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Savitzky-Golay filter"</span><span class="p">)</span>
+<span class="c1"># add labels and title</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlabel</span> <span class="o">=</span> <span class="s2">"time"</span><span class="p">,</span>
+       <span class="n">ylabel</span> <span class="o">=</span> <span class="s2">"RH (%)"</span><span class="p">,</span>
+       <span class="n">title</span> <span class="o">=</span> <span class="s2">"Relative Humidity"</span><span class="p">)</span>
+<span class="c1"># makes slanted dates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gcf</span><span class="p">()</span><span class="o">.</span><span class="n">autofmt_xdate</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.legend.Legend at 0x7f9911b95f90&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>How does moving average work?<br>
+<img src="https://e2eml.school/images/conv1d/stride_1.gif" alt=""></p>
+<p>How does the Savitzky–Golay filter work?<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Lissage_sg3_anim.gif" alt=""></p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><a class="u-url" href="/website/jupyter/2020/03/01/basic-tsa.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/website/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <img src="/website/images/logo_SI.png" alt="Yair Mau" style="vertical-align: middle; padding-left:0em" height="80" />
+      </div>
+      <div class="footer-col">
+        <p>Yair Mau<br>
+           Personal website. Random stuff.<br>
+           </p>
+      </div>
+    </div>
+
+  </div>
+   <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/yairmau" target="_blank" title="yairmau"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MauYair" target="_blank" title="MauYair"><svg class="svg-icon grey"><use xlink:href="/website/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+</foot
+</body>
+
+</html>
