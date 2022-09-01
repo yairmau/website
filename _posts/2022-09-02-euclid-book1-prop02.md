@@ -2,7 +2,7 @@
 toc: true
 layout: post
 title: Book 1, Proposition 02
-description: Problem
+description: Make a line segment of the same length of another, starting from a given point.
 categories: [markdown]
 toc: false
 tags: [euclid]

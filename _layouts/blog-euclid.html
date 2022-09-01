@@ -55,7 +55,7 @@ layout: default
     {%- endif -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%-d %B %Y" -%}
-      {%- for post in site.tags.euclid -%}
+      {%- for post in site.tags.euclid reversed -%}
       <li>
         {%- include post_list_image_card.html -%}
       </li>
