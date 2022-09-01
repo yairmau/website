@@ -1,0 +1,235 @@
+/*-----------------------------------*/
+/*--- IMPORT STYLES FOR FASTPAGES ---*/
+@import "minima/fastpages-styles";   
+// @import "minima/alerts";   
+
+
+/*-----------------------------------*/
+/*----- ADD YOUR STYLES BELOW -------*/
+
+
+// If you want to turn off dark background for syntax highlighting, comment or delete the below line.
+//@import "minima/fastpages-dracula-highlight_3"; 
+//@import "minima/fastpages-dracula-highlight"; 
+// @import "minima/tomorrow_highlight"; 
+//@import "minima/pastie";
+//@import "minima/base16.light"; 
+//@import "minima/igorpro"; 
+
+@import "minima/base16-tomorrow-css"; 
+//@import "minima/manni"; 
+//@import "minima/autumn";
+//@import "minima/base16-solarized";
+//@import "minima/tomorrow";
+// read this : http://vgaidarji.me/blog/2016/02/27/obsidian-theme-for-rouge-syntax-highlighter/
+
+
+// thick line above footer
+// dark red color
+$website-color:           #8b0000 !default;
+$website-color-light:     lighten($website-color, 30%) !default;
+$website-color-dark:      darken($website-color, 15%) !default;
+$website-light-gray:      #ddd;
+/**
+ * Links
+ */
+a {
+    &:link {
+      color: $website-color;
+    }
+
+    &:visited {
+      color: $website-color;
+    }
+
+    &:active {
+      color: $website-color;
+    }
+}
+
+table {
+  @include relative-font-size(1.0);
+}
+
+code {
+  font-size: 100% !important;
+  background-color: #fbfbfb !important;
+}
+
+// makes latex font a bit larger than regular font (20px)
+// also makes font gray like the rest of regular text
+.katex {
+  font-size: 25px !important;
+  color: #515151;
+}
+
+// in case latex is in h2 header, make it a bit larger
+h2 .katex  {
+  font-size: 130% !important;
+} 
+
+// "pre code" without comma means both the content is code, and pre means it is a block. with a comma, "pre, code" it means either pre or code or both. below we remove the background color only for block code
+pre code {
+  display: block;
+  //background: none;
+  //@include relative-font-size(2.125) !important;;
+  font-size: 130% !important;
+  //background-color: #fbfbfb !important;
+  //border: 10px;
+}
+
+pre, code {
+  padding: 0px 0px;  // padding is the surrounding frame
+  background-color: #fbfbfb !important;
+}
+
+
+// thicker horizontal line
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 3px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+// increases font of site-nav, makes it vertically centered
+.page-link {
+  @include relative-font-size(1.125);
+  vertical-align: middle;
+}
+
+
+// sticky header
+// https://getflywheel.com/layout/create-sticky-website-header-how-to/
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  background-color: white;
+  border-bottom: 5px solid $website-color;
+  border-top: 5px solid $website-color;
+}
+
+// move content down because of fixed header
+.page, .post, .home, .blog, {
+  padding-top: $spacing-unit * 1.865;
+}
+
+// move anchor down because of fixed header
+// "anchor" is the link you click to an h2
+:target::before {
+      content: "";
+      display: block;
+      margin-top: -$spacing-unit * 2.2;
+      height: $spacing-unit * 2.2;
+}
+
+// rotating fontawesome icons
+// https://stackoverflow.com/questions/34378940/rotating-a-font-awesome-icon-on-hover/34379054
+.svv:hover {
+    animation: fa-spin 2s linear;
+}
+@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+
+
+// thick line above footer
+$brand-color:           #828282 !default;
+$brand-color-light:     lighten($brand-color, 40%) !default;
+$brand-color-dark:      darken($brand-color, 25%) !default;
+
+.site-footer {
+  border-top: 5px solid $website-color;
+}
+
+
+
+// my button
+.my_button {
+  @include relative-font-size(1.3);
+  background-color: $website-color;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.my_button:hover {
+  background: $website-light-gray;
+  color: $website-color;
+  /*border: 1px solid #6e0014;*/
+}
+
+.my_button_small {
+  @include relative-font-size(1.0);
+  background-color: $website-color;
+  border: none;
+  color: white;
+  padding: 6px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.my_button_small:hover {
+  background: $website-light-gray;
+  color: $website-color;
+  /*border: 1px solid #6e0014;*/
+}
+
+// horizontal line
+.my_hr {
+  border-top: 3px solid #ccc;
+}
+
+// make non-headings slightly lighter
+.flash, flash-warn {
+   font-size: 20px;
+   color: #515151;
+}
+
+.iconify{
+  position: relative;
+  font-size: 130%;
+  bottom: -0.1em;
+}
+
+.largericon{
+  font-size: 150%;
+}
+
+li {
+  h3, h4 {
+  margin-top:.05rem !important;
+  margin-bottom:.05rem !important;
+  }
+  .post-meta-description {
+    color: rgb(88, 88, 88);
+    font-size: 85%;
+    margin-top:.05rem !important;
+    margin-bottom:.05rem !important;
+  }
+}
+
+// Custom styling for homepage post previews
+.my-post-date{
+  font-size: 70%;
+  font-weight: bold;
+}
+
+
+// Custom styling for homepage post previews
+//.my-blog-post{
+//  margin-top: .25em !important;
+//  margin-bottom: .25em !important;
+//  font-size: 205%;
+//}
