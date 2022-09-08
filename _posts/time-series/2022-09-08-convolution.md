@@ -9,7 +9,7 @@ tags: [time-series]
 ---
 
 This is the temperature for Tel Aviv, between 2 and 5 of January 2022.
-Data in in intervals of 10 minutes, and was downloaded from the Israel Meteorological Service.
+Data is in intervals of 10 minutes, and was downloaded from the Israel Meteorological Service.
 
 ![](/website/archive/timeseries/convolution_TA_temperature_2022.png)
 
@@ -19,6 +19,7 @@ Can we find ways of getting smoother curves?
 ## Convolution
 
 Convolution is a fancy word for averaging a time series using a running window.
+We will use the terms **convolution, running average, and rolling average** interchangeably. 
 See the animation below.
 We take all temperature values inside a window of width 500 minutes (51 points), and average them with equal weights.
 The weights profile is called `kernel`.
@@ -49,7 +50,7 @@ We used a gaussian kernel with 60-minute standard deviation (the window in the a
 
 ## Math
 
-The definition of a convolution between signal $f(t)$ with kernel $k(t)$ is
+The definition of a convolution between signal $f(t)$ and kernel $k(t)$ is
 
 $$
 (f * k)(t) = \int f(\tau)k(t-\tau)d\tau.
@@ -57,6 +58,7 @@ $$
 
 The expression $f*k$ denotes the convolution of these two functions.
 The argument of $k$ is $t-\tau$, meaning that the kernel runs from left to right (as $t$ does), and at every point the two signals ($f$ and $k$) are multiplied together.
+It is the product of the signal with the weight function $k$ that gives us an average.
 Because of $-\tau$, the kernel is flipped backwards, but this has no effect to symmetric kernels, like to ones in the examples above.
 Finally, the actual running average is not the convolution, but
 
@@ -77,8 +79,8 @@ df['temperature'].rolling(window='20', center=True).mean()
 ```
 
 * `window=20` means that the width of the window is 20 points. Pandas lets us define a window width in time units, for example, `window='120min'`.
-* `center=True` is needed in order to assign the result of averaging to the center of the window.
-* `mean()` is the actual calculation, the average of temperature over the window. The `rolling` part does not compute anything, it just creates a moving window, and we are free to calculate whatever we want. Try to calculate the standard deviation of the maximum, for example.
+* `center=True` is needed in order to assign the result of averaging to the center of the window. Make it `False` and see what happens.
+* `mean()` is the actual calculation, the average of temperature over the window. The `rolling` part does not compute anything, it just creates a moving window, and we are free to calculate whatever we want. Try to calculate the standard deviation or the maximum, for example.
 
 It is implicit in the command above a "rectangular" kernel. What if we want other shapes?
 
