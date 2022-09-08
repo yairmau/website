@@ -172,7 +172,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <p>This is the temperature for Tel Aviv, between 2 and 5 of January 2022.
-Data in in intervals of 10 minutes, and was downloaded from the Israel Meteorological Service.</p>
+Data is in intervals of 10 minutes, and was downloaded from the Israel Meteorological Service.</p>
 
 <p><img src="/website/archive/timeseries/convolution_TA_temperature_2022.png" alt="" /></p>
 
@@ -182,6 +182,7 @@ Can we find ways of getting smoother curves?</p>
 <h2 id="convolution">Convolution</h2>
 
 <p>Convolution is a fancy word for averaging a time series using a running window.
+We will use the terms <strong>convolution, running average, and rolling average</strong> interchangeably. 
 See the animation below.
 We take all temperature values inside a window of width 500 minutes (51 points), and average them with equal weights.
 The weights profile is called <code class="language-python highlighter-rouge"><span class="n">kernel</span></code>.</p>
@@ -212,12 +213,13 @@ We used a gaussian kernel with 60-minute standard deviation (the window in the a
 
 <h2 id="math">Math</h2>
 
-<p>The definition of a convolution between signal $f(t)$ with kernel $k(t)$ is</p>
+<p>The definition of a convolution between signal $f(t)$ and kernel $k(t)$ is</p>
 
 <span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo stretchy="false">(</mo><mi>f</mi><mo>∗</mo><mi>k</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mo>∫</mo><mi>f</mi><mo stretchy="false">(</mo><mi>τ</mi><mo stretchy="false">)</mo><mi>k</mi><mo stretchy="false">(</mo><mi>t</mi><mo>−</mo><mi>τ</mi><mo stretchy="false">)</mo><mi>d</mi><mi>τ</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">(f * k)(t) = \int f(\tau)k(t-\tau)d\tau.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.22225em;vertical-align:-0.86225em;"></span><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011249999999999316em;">∫</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.1132em;">τ</span><span class="mord">.</span></span></span></span></span>
 
 <p>The expression $f*k$ denotes the convolution of these two functions.
 The argument of $k$ is $t-\tau$, meaning that the kernel runs from left to right (as $t$ does), and at every point the two signals ($f$ and $k$) are multiplied together.
+It is the product of the signal with the weight function $k$ that gives us an average.
 Because of $-\tau$, the kernel is flipped backwards, but this has no effect to symmetric kernels, like to ones in the examples above.
 Finally, the actual running average is not the convolution, but</p>
 
@@ -236,8 +238,8 @@ For example, in order to calculate the running average of temperature using a re
 
 <ul>
   <li><code class="language-python highlighter-rouge"><span class="n">window</span><span class="o">=</span><span class="mi">20</span></code> means that the width of the window is 20 points. Pandas lets us define a window width in time units, for example, <code class="language-python highlighter-rouge"><span class="n">window</span><span class="o">=</span><span class="s">'120min'</span></code>.</li>
-  <li><code class="language-python highlighter-rouge"><span class="n">center</span><span class="o">=</span><span class="bp">True</span></code> is needed in order to assign the result of averaging to the center of the window.</li>
-  <li><code class="language-python highlighter-rouge"><span class="n">mean</span><span class="p">()</span></code> is the actual calculation, the average of temperature over the window. The <code class="language-python highlighter-rouge"><span class="n">rolling</span></code> part does not compute anything, it just creates a moving window, and we are free to calculate whatever we want. Try to calculate the standard deviation of the maximum, for example.</li>
+  <li><code class="language-python highlighter-rouge"><span class="n">center</span><span class="o">=</span><span class="bp">True</span></code> is needed in order to assign the result of averaging to the center of the window. Make it <code class="language-python highlighter-rouge"><span class="bp">False</span></code> and see what happens.</li>
+  <li><code class="language-python highlighter-rouge"><span class="n">mean</span><span class="p">()</span></code> is the actual calculation, the average of temperature over the window. The <code class="language-python highlighter-rouge"><span class="n">rolling</span></code> part does not compute anything, it just creates a moving window, and we are free to calculate whatever we want. Try to calculate the standard deviation or the maximum, for example.</li>
 </ul>
 
 <p>It is implicit in the command above a “rectangular” kernel. What if we want other shapes?</p>
