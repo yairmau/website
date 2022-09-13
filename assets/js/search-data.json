@@ -875,10 +875,10 @@
 
   
       ,"page2": {
-          "title": "More",
-          "content": "Books . Artigos . Five-star Content . import packages . import numpy as np import matplotlib.pyplot as plt import os from matplotlib import rcParams rcParams[&#39;font.family&#39;] = &#39;monospace&#39; . Text here with code, also some python code import numpy as np .",
-          "url": "https://yairmau.github.io/website/more/",
-          "relUrl": "/more/",
+          "title": "Colors",
+          "content": "Default Matplotlib colormaps . Click Here Colormap Reference . . Matplotlib colormap tricks . Click Here . . Lightning Design System . Click Here . | | . Hayk An’s color scale generator . Make your colormap in seconds Click Here . . Coolors . Color palette generator. Copy #hex color in seconds. Gradient, Monochromatic, Click Here . . Color Pals . Roni Kaufman’s extremely pleasing palettes. Click Here . . Wes Anderson Palettes . Click Here . . Palettable . Color palettes for Python. Click Here . . # how to import colormap from palettable.colorbrewer.qualitative import Dark2_7 # how to retrieve color list Dark2_7.hex_colors . Image Color Picker . Click Here Upload your own image, use a picture from the internet, load a whole website! . . ColorBrewer 2.0 . Click Here . . Specifying Matplotlib Colors . xkcd, tableau, css Click Here. List of named colors . . Changing Lightness of Matplotlib Color . import matplotlib.colors import colorsys import numpy as np def add_lightness(color_name, L): &quot;&quot;&quot; Receives a color name (&quot;red&quot;, &quot;tab:blue&quot;, &quot;xkcd:green&quot;, etc), Returns RGB values of same color with lightness L added to it (can be negative too) &quot;&quot;&quot; color_hls = colorsys.rgb_to_hls(*matplotlib.colors.to_rgb(color_name)) new_color_hls = np.array(color_hls) new_color_hls[1] = new_color_hls[1] + L if new_color_hls[1] &gt; 1.0: new_color_hls[1] = 1.0 if new_color_hls[1] &lt; 0.0: new_color_hls[1] = 0.0 new_shade_rgb = colorsys.hls_to_rgb(*new_color_hls) return new_shade_rgb add_lightness(&quot;gold&quot;, 0.1) .",
+          "url": "https://yairmau.github.io/website/more/colors/",
+          "relUrl": "/more/colors/",
           "date": ""
       }
       
@@ -919,6 +919,17 @@
 
   
       ,"page6": {
+          "title": "More",
+          "content": "Books . Artigos . Five-star Content . Colors .",
+          "url": "https://yairmau.github.io/website/more/",
+          "relUrl": "/more/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page7": {
           "title": "Art",
           "content": "",
           "url": "https://yairmau.github.io/website/blog/art/",
@@ -929,7 +940,7 @@
   
 
   
-      ,"page7": {
+      ,"page8": {
           "title": "",
           "content": " This is my personal website.  I put here a lot of random stuff.  Use the menu above to navigate. . .   Click here if you are looking for my professional website. . . . Piet Hein Problems worthy   of attack prove their worth   by hitting back. .",
           "url": "https://yairmau.github.io/website/",
@@ -940,7 +951,7 @@
   
 
   
-      ,"page8": {
+      ,"page9": {
           "title": "Euclid's Elements",
           "content": "",
           "url": "https://yairmau.github.io/website/blog/euclid/",
@@ -951,7 +962,7 @@
   
 
   
-      ,"page9": {
+      ,"page10": {
           "title": "Blog",
           "content": "Geek thoughts . This is where I write about random geek/math/puzzles stuff . Art . Art, origami, mathematical constructions, music, random projects . Euclid’s Elements . Some of Euclid’s Elements propositions, heavily inspired by Oliver Byrne. . . . . Selected blogposts . Here are a few blogposts that you might find interesting .",
           "url": "https://yairmau.github.io/website/blog/",
@@ -962,7 +973,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "Geek stuff",
           "content": "",
           "url": "https://yairmau.github.io/website/blog/geek/",
@@ -989,7 +1000,7 @@
   
 
   
-      ,"page17": {
+      ,"page18": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://yairmau.github.io/website/robots.txt",
