@@ -10,7 +10,10 @@ title: More
 
 ## <i class="fas fa-star fa-fw svv" aria-hidden="true"></i> [Five-star Content](/website/more/five-stars/)
 
-###  import packages
+## <i class="fas fa-palette fa-fw svv" aria-hidden="true"></i> [Colors](/website/more/colors/)
+
+
+<!-- ###  import packages
 
 ```python
 import numpy as np
@@ -20,4 +23,4 @@ from matplotlib import rcParams
 rcParams['font.family'] = 'monospace'
 ```
 
-Text here with `code`, also some python code `import numpy as np`
+Text here with `code`, also some python code `import numpy as np` -->
