@@ -32,6 +32,22 @@ toc: true
 
 <!-- ![](https://www.lightningdesignsystem.com/assets/images/guidelines/charts/586-image1.png) ![](https://www.lightningdesignsystem.com/assets/images/guidelines/charts/586-image2.png) -->
 
+
+## Hayk An’s color scale generator
+
+Make your colormap in **seconds**  
+[Click Here](https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white)
+
+![](/website/archive/colors/Hayk-An-generator.png)
+
+## Coolors
+
+Color palette generator. Copy #hex color in seconds.  
+[Gradient](https://coolors.co/palettes/popular/gradient), [Monochromatic](https://coolors.co/palettes/popular/monochromatic),
+[Click Here](https://coolors.co)
+
+![](/website/archive/colors/coolors.png)
+
 ## Color Pals
 
 Roni Kaufman's extremely pleasing palettes.  
